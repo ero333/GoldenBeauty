@@ -425,11 +425,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 793584127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8027a7940f222f94b958e523a0d5973f, type: 3}
+  m_Script: {fileID: 11500000, guid: e4185fc8dc162954a9d8e437ca3857e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cajaDialogo: {fileID: 1531171716}
-  opcion1: {fileID: 1712113371}
+  textAssetData: {fileID: 4900000, guid: 98878c0a8fe7a2144823389cd6d6a20f, type: 3}
+  nodoActual: 0
+  textoNodo: 
+  myDialogueList:
+    lectura: []
 --- !u!1 &1531171714
 GameObject:
   m_ObjectHideFlags: 0
