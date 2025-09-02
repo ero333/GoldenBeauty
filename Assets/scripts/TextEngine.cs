@@ -22,7 +22,7 @@ public class TextEngine : MonoBehaviour
     public GameObject boton3;
 
     public string textoOpcion1;
-    public bool opcion1press = false; //si el boton es apretado...
+    public int optionNum; //si el boton es apretado...
     [SerializeField] public int opcion1value;
 
 
@@ -152,36 +152,65 @@ public class TextEngine : MonoBehaviour
                 cajaDialogo.text += x;
                 yield return new WaitForSeconds(0.01f);
             }
-            foreach (char x in textoOpcion1)
+
+            // Mostrar opciones si existen
+            if (myDialogueList.lectura[nodoActual].opcion1 != null)
             {
-                cajaOpcion1.text += x;
+                boton1.SetActive(true);
+                opcion1value = int.Parse(myDialogueList.lectura[nodoActual].opcion1);
+                textoOpcion1 = myDialogueList.lectura[opcion1value - 1].Texto;
+
+                foreach (char x in textoOpcion1)
+                {
+                    cajaOpcion1.text += x;
+                }
             }
+
             yield return StartCoroutine(WaitForInput(KeyCode.Z));
         }
-
     }
-
 
     public IEnumerator WaitForInput(KeyCode key)
     {
-        yield return new WaitUntil(() => Input.GetKeyDown(key));
-        cajaDialogo.text = "";
-        nodoActual = int.Parse(myDialogueList.lectura[nodoActual].next);
-        textoNodo = myDialogueList.lectura[nodoActual].Texto; //esta es la funcion principal que determina, segun el nodo actual, que tengo mostrar
-
-        if (myDialogueList.lectura[nodoActual].opcion1 != null) //si hay opciones a elegir...
+        // Si hay opciones, esperar a que el usuario elija una
+        if (myDialogueList.lectura[nodoActual].opcion1 != null)
         {
-            boton1.SetActive(true); //aparece la opcion con el boton
-            opcion1value = int.Parse(myDialogueList.lectura[nodoActual].opcion1); //almaceno el valor que figura en la celda
-            textoOpcion1 = myDialogueList.lectura[opcion1value - 1].Texto; //el valor de celda indica el texto que figura
+            optionNum = 0; // Resetear la opción
+            esperandoOpcion = true;
+
+            // Esperar a que el usuario haga clic en un botón
+            yield return new WaitUntil(() => optionNum == 1);
+
+            esperandoOpcion = false;
+
+            // Ejecutar la opción seleccionada
+            if (optionNum == 1)
+            {
+                nodoActual = int.Parse(myDialogueList.lectura[opcion1value - 1].nodo);
+                textoNodo = myDialogueList.lectura[nodoActual - 1].Texto;
+            }
+
+            // Limpiar y ocultar botón
+            cajaOpcion1.text = "";
+            boton1.SetActive(false);
+            cajaDialogo.text = "";
 
         }
         else
         {
-            boton1.SetActive(false);
+            // Si no hay opciones, esperar la tecla normal
+            yield return new WaitUntil(() => Input.GetKeyDown(key));
+            cajaDialogo.text = "";
+            nodoActual = int.Parse(myDialogueList.lectura[nodoActual].next);
+            textoNodo = myDialogueList.lectura[nodoActual].Texto;
         }
-
     }
+
+    // Función del botón modificada
+   
+
+    // Variable adicional que necesitas agregar
+    private bool esperandoOpcion = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -192,12 +221,19 @@ public class TextEngine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void OnButtonClick()
     {
-        opcion1press = true;
-        Debug.Log("pressed");
+        if (esperandoOpcion)
+        {
+            optionNum = 1;
+            Debug.Log($"Botón clickeado - optionNum: {optionNum}");
+        }
+        else
+        {
+            Debug.Log("Botón clickeado pero no se espera opción actualmente");
+        }
     }
 }
