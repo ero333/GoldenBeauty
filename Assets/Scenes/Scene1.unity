@@ -722,25 +722,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf55d9453c97e443af33ce0d2d1ee43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneController: {fileID: 1120110968}
   cajaDialogo: {fileID: 1531171716}
   cajaOpcion1: {fileID: 675378014}
   cajaOpcion2: {fileID: 2113437930}
   cajaOpcion3: {fileID: 691852166}
-  textAssetData: {fileID: 4900000, guid: 9fbd62dc5dc15d740be5a622303831a5, type: 3}
+  textAssetData: {fileID: 4900000, guid: ff8042d9d27547b4fbe45d64d32b7e4f, type: 3}
   nodoActual: 0
   textoNodo: 
   boton1: {fileID: 1835711643}
   boton2: {fileID: 409135939}
   boton3: {fileID: 1780444352}
-  textoOpcion1: 
-  textoOpcion2: 
-  textoOpcion3: 
-  optionNum: 0
   opcion1value: 0
   opcion2value: 0
   opcion3value: 0
   myDialogueList:
     lectura: []
+--- !u!1 &1120110967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120110969}
+  - component: {fileID: 1120110968}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1120110968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120110967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12229f9c4f1e7a4b820fa9d84158c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1120110969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120110967}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8373427, y: -0.40771258, z: 12.209228}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1531171714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,6 +1287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf55d9453c97e443af33ce0d2d1ee43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneController: {fileID: 0}
   cajaDialogo: {fileID: 0}
   cajaOpcion1: {fileID: 0}
   cajaOpcion2: {fileID: 0}
@@ -1256,10 +1298,6 @@ MonoBehaviour:
   boton1: {fileID: 0}
   boton2: {fileID: 0}
   boton3: {fileID: 0}
-  textoOpcion1: 
-  textoOpcion2: 
-  textoOpcion3: 
-  optionNum: 0
   opcion1value: 0
   opcion2value: 0
   opcion3value: 0
@@ -1419,3 +1457,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 793584131}
   - {fileID: 2086748508}
+  - {fileID: 1120110969}

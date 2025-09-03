@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +10,8 @@ using UnityEngine.UI;
 
 public class TextEngine : MonoBehaviour
 {
+    public SceneController sceneController;
+
     public Text cajaDialogo;
     public Text cajaOpcion1;
     public Text cajaOpcion2;
@@ -22,11 +24,11 @@ public class TextEngine : MonoBehaviour
     public GameObject boton2;
     public GameObject boton3;
 
-    public string textoOpcion1;
-    public string textoOpcion2;
-    public string textoOpcion3;
-    
-    public int optionNum; //si el boton es apretado...
+    private string textoOpcion1;
+    private string textoOpcion2;
+    private string textoOpcion3;
+
+    private int optionNum; //si el boton es apretado...
     [SerializeField] public int opcion1value;
     [SerializeField] public int opcion2value;
     public int opcion3value;
@@ -61,13 +63,13 @@ public class TextEngine : MonoBehaviour
 
         string[] lines = textAssetData.text.Split('\n');
 
-        // FILTRAR lÌneas v·lidas de manera m·s agresiva
+        // FILTRAR l√≠neas v√°lidas de manera m√°s agresiva
         List<string> validLines = new List<string>();
         for (int i = 0; i < lines.Length; i++)
         {
             string line = lines[i].Trim();
 
-            // Saltar lÌneas completamente vacÌas o que solo tengan comas
+            // Saltar l√≠neas completamente vac√≠as o que solo tengan comas
             if (string.IsNullOrEmpty(line) || line == "," || line == ",,,,,")
                 continue;
 
@@ -81,14 +83,14 @@ public class TextEngine : MonoBehaviour
         int tableSize = validLines.Count;
         myDialogueList.lectura = new Lectura[tableSize];
 
-        // Procesar SOLO las lÌneas v·lidas
+        // Procesar SOLO las l√≠neas v√°lidas
         for (int i = 0; i < validLines.Count; i++)
         {
             string[] fields = ParseCSVLine(validLines[i]);
 
             if (fields.Length < 6)
             {
-                Debug.LogWarning($"LÌnea {i} tiene solo {fields.Length} campos: {validLines[i]}");
+                Debug.LogWarning($"L√≠nea {i} tiene solo {fields.Length} campos: {validLines[i]}");
                 continue;
             }
 
@@ -143,108 +145,106 @@ public class TextEngine : MonoBehaviour
         return fields.ToArray();
     }
 
-
-
     public IEnumerator WriteText()
     {
-        // Write first dialog
         nodoActual = 0;
         textoNodo = myDialogueList.lectura[nodoActual].Texto;
 
-        while (textoNodo != null)
+        while (textoNodo != null) // mientras haya texto
         {
+            // limpiar caja principal antes de escribir
+            cajaDialogo.text = "";
+
+            // escribir nodo actual letra por letra
             foreach (char x in textoNodo)
             {
                 cajaDialogo.text += x;
                 yield return new WaitForSeconds(0.01f);
             }
 
-            // Mostrar opciones si existen
-            if (myDialogueList.lectura[nodoActual].opcion1 != null)
-            {
-                boton1.SetActive(true);
-                opcion1value = int.Parse(myDialogueList.lectura[nodoActual].opcion1);
-                textoOpcion1 = myDialogueList.lectura[opcion1value - 1].Texto;
-
-                foreach (char x in textoOpcion1)
-                {
-                    cajaOpcion1.text += x;
-                }
-            }
-
-            if (myDialogueList.lectura[nodoActual].opcion2 != null)
-            {
-                boton2.SetActive(true);
-                opcion2value = int.Parse(myDialogueList.lectura[nodoActual].opcion2);
-                textoOpcion2 = myDialogueList.lectura[opcion2value - 1].Texto;
-
-                foreach (char x in textoOpcion2)
-                {
-                    cajaOpcion2.text += x;
-                }
-            }
-
-            if (myDialogueList.lectura[nodoActual].opcion3 != null)
-            {
-                boton3.SetActive(true);
-                opcion3value = int.Parse(myDialogueList.lectura[nodoActual].opcion3);
-                textoOpcion3 = myDialogueList.lectura[opcion3value - 1].Texto;
-
-                foreach (char x in textoOpcion3)
-                {
-                    cajaOpcion3.text += x;
-                }
-            }
-
-            yield return StartCoroutine(WaitForInput(KeyCode.Z));
-        }
-    }
-
-    public IEnumerator WaitForInput(KeyCode key)
-    {
-        // Si hay opciones disponibles
-        if (myDialogueList.lectura[nodoActual].opcion1 != null ||
-            myDialogueList.lectura[nodoActual].opcion2 != null ||
-            myDialogueList.lectura[nodoActual].opcion3 != null)
-        {
-            optionNum = 0;
-            esperandoOpcion = true;
-            yield return new WaitUntil(() => optionNum > 0);
-            esperandoOpcion = false;
-
-            // Determinar quÈ opciÛn fue seleccionada
-            int siguienteNodo = 0;
-            if (optionNum == 1)
-            {
-                siguienteNodo = int.Parse(myDialogueList.lectura[opcion1value - 1].nodo);
-            }
-            else if (optionNum == 2)
-            {
-                siguienteNodo = int.Parse(myDialogueList.lectura[opcion2value - 1].nodo);
-            }
-            else if (optionNum == 3)
-            {
-                siguienteNodo = int.Parse(myDialogueList.lectura[opcion3value - 1].nodo);
-            }
-
-            nodoActual = siguienteNodo - 1; // Ajustar Ìndice (asumiendo que los nodos empiezan en 1)
-            textoNodo = myDialogueList.lectura[nodoActual].Texto;
-
-            // Limpiar todos los botones
+            // limpiar opciones previas
             cajaOpcion1.text = "";
             cajaOpcion2.text = "";
             cajaOpcion3.text = "";
             boton1.SetActive(false);
             boton2.SetActive(false);
             boton3.SetActive(false);
-            cajaDialogo.text = "";
+
+            // mostrar opciones si existen
+            if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion1))
+            {
+                boton1.SetActive(true);
+                opcion1value = int.Parse(myDialogueList.lectura[nodoActual].opcion1);
+                textoOpcion1 = myDialogueList.lectura[opcion1value - 1].Texto;
+                cajaOpcion1.text = textoOpcion1;
+            }
+
+            if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion2))
+            {
+                boton2.SetActive(true);
+                opcion2value = int.Parse(myDialogueList.lectura[nodoActual].opcion2);
+                textoOpcion2 = myDialogueList.lectura[opcion2value - 1].Texto;
+                cajaOpcion2.text = textoOpcion2;
+            }
+
+            if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion3))
+            {
+                boton3.SetActive(true);
+                opcion3value = int.Parse(myDialogueList.lectura[nodoActual].opcion3);
+                textoOpcion3 = myDialogueList.lectura[opcion3value - 1].Texto;
+                cajaOpcion3.text = textoOpcion3;
+            }
+
+            // esperar input (Z o bot√≥n)
+            yield return StartCoroutine(WaitForInput(KeyCode.Z));
+        }
+    }
+
+
+    public IEnumerator WaitForInput(KeyCode key)
+    {
+        // Si hay opciones disponibles
+        if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion1) ||
+            !string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion2) ||
+            !string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion3))
+        {
+            optionNum = 0;
+            esperandoOpcion = true;
+            yield return new WaitUntil(() => optionNum > 0);
+            esperandoOpcion = false;
+
+            int siguienteNodo = 0;
+            if (optionNum == 1)
+                siguienteNodo = int.Parse(myDialogueList.lectura[opcion1value - 1].nodo);
+            else if (optionNum == 2)
+                siguienteNodo = int.Parse(myDialogueList.lectura[opcion2value - 1].nodo);
+            else if (optionNum == 3)
+                siguienteNodo = int.Parse(myDialogueList.lectura[opcion3value - 1].nodo);
+
+            nodoActual = siguienteNodo - 1;
+            textoNodo = myDialogueList.lectura[nodoActual].Texto;
         }
         else
         {
+            // no hay opciones -> avanzar con Z
             yield return new WaitUntil(() => Input.GetKeyDown(key));
-            cajaDialogo.text = "";
-            nodoActual = int.Parse(myDialogueList.lectura[nodoActual].next);
-            textoNodo = myDialogueList.lectura[nodoActual].Texto;
+
+            if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].next))
+            {
+                nodoActual = int.Parse(myDialogueList.lectura[nodoActual].next) - 1;
+                textoNodo = myDialogueList.lectura[nodoActual].Texto;
+
+                if (nodoActual == 40 - 1)
+                {
+                    sceneController.PasarNivel();
+                    yield break;
+                }
+            }
+            else
+            {
+                // fin del di√°logo
+                textoNodo = null;
+            }
         }
     }
 
@@ -255,11 +255,11 @@ public class TextEngine : MonoBehaviour
         if (esperandoOpcion)
         {
             optionNum = 1;
-            Debug.Log($"BotÛn 1 clickeado - optionNum: {optionNum}");
+            Debug.Log($"Bot√≥n 1 clickeado - optionNum: {optionNum}");
         }
         else
         {
-            Debug.Log("BotÛn 1 clickeado pero no se espera opciÛn actualmente");
+            Debug.Log("Bot√≥n 1 clickeado pero no se espera opci√≥n actualmente");
         }
     }
 
@@ -268,11 +268,11 @@ public class TextEngine : MonoBehaviour
         if (esperandoOpcion)
         {
             optionNum = 2;
-            Debug.Log($"BotÛn 2 clickeado - optionNum: {optionNum}");
+            Debug.Log($"Bot√≥n 2 clickeado - optionNum: {optionNum}");
         }
         else
         {
-            Debug.Log("BotÛn 2 clickeado pero no se espera opciÛn actualmente");
+            Debug.Log("Bot√≥n 2 clickeado pero no se espera opci√≥n actualmente");
         }
     }
 
@@ -281,11 +281,11 @@ public class TextEngine : MonoBehaviour
         if (esperandoOpcion)
         {
             optionNum = 3;
-            Debug.Log($"BotÛn 3 clickeado - optionNum: {optionNum}");
+            Debug.Log($"Bot√≥n 3 clickeado - optionNum: {optionNum}");
         }
         else
         {
-            Debug.Log("BotÛn 3 clickeado pero no se espera opciÛn actualmente");
+            Debug.Log("Bot√≥n 3 clickeado pero no se espera opci√≥n actualmente");
         }
     }
     // Start is called before the first frame update
@@ -299,7 +299,5 @@ public class TextEngine : MonoBehaviour
     void Update()
     {
         
-    }
-
-    
+    }    
 }
