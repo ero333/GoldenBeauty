@@ -28,11 +28,10 @@ public class TextEngine : MonoBehaviour
     private string textoOpcion2;
     private string textoOpcion3;
 
-    private int optionNum; //si el boton es apretado...
+    private int optionNum; // si el botón es apretado...
     [SerializeField] public int opcion1value;
     [SerializeField] public int opcion2value;
     public int opcion3value;
-
 
     [System.Serializable]
     public class Lectura
@@ -43,6 +42,9 @@ public class TextEngine : MonoBehaviour
         public string opcion1;
         public string opcion2;
         public string opcion3;
+        public string back;
+        public string personaje;
+        public string nosotros;
     }
 
     [System.Serializable]
@@ -53,7 +55,6 @@ public class TextEngine : MonoBehaviour
 
     public Lista myDialogueList = new Lista();
 
-
     void ReadCSV()
     {
         if (textAssetData == null)
@@ -63,17 +64,14 @@ public class TextEngine : MonoBehaviour
 
         string[] lines = textAssetData.text.Split('\n');
 
-        // FILTRAR líneas válidas de manera más agresiva
         List<string> validLines = new List<string>();
         for (int i = 0; i < lines.Length; i++)
         {
             string line = lines[i].Trim();
 
-            // Saltar líneas completamente vacías o que solo tengan comas
             if (string.IsNullOrEmpty(line) || line == "," || line == ",,,,,")
                 continue;
 
-            // Saltar la fila de encabezados (asumiendo que contiene texto como "nodo", "texto", etc.)
             if (i == 0 && (line.ToLower().Contains("nodo") || line.ToLower().Contains("texto")))
                 continue;
 
@@ -83,30 +81,33 @@ public class TextEngine : MonoBehaviour
         int tableSize = validLines.Count;
         myDialogueList.lectura = new Lectura[tableSize];
 
-        // Procesar SOLO las líneas válidas
         for (int i = 0; i < validLines.Count; i++)
         {
             string[] fields = ParseCSVLine(validLines[i]);
 
-            if (fields.Length < 6)
+            if (fields.Length < 9)
             {
-                Debug.LogWarning($"Línea {i} tiene solo {fields.Length} campos: {validLines[i]}");
-                continue;
+                Debug.LogWarning($"⚠️ Línea {i + 1} tiene solo {fields.Length} columnas: {validLines[i]}");
+                Array.Resize(ref fields, 9);
             }
 
             myDialogueList.lectura[i] = new Lectura()
             {
-                nodo = fields[0].Trim(),
-                Texto = fields[1].Trim(),
-                next = fields[2].Trim(),
-                opcion1 = fields[3].Trim(),
-                opcion2 = fields[4].Trim(),
-                opcion3 = fields[5].Trim()
+                nodo = fields[0]?.Trim(),
+                Texto = fields[1]?.Trim(),
+                next = fields[2]?.Trim(),
+                opcion1 = fields[3]?.Trim(),
+                opcion2 = fields[4]?.Trim(),
+                opcion3 = fields[5]?.Trim(),
+                back = fields[6]?.Trim(),
+                personaje = fields[7]?.Trim(),
+                nosotros = fields[8]?.Trim()
             };
         }
 
-        Debug.Log($"Total de nodos cargados: {myDialogueList.lectura.Length}");
+        Debug.Log($"✅ Total de nodos cargados: {myDialogueList.lectura.Length}");
     }
+
     private string[] ParseCSVLine(string line)
     {
         List<string> fields = new List<string>();
@@ -150,19 +151,16 @@ public class TextEngine : MonoBehaviour
         nodoActual = 0;
         textoNodo = myDialogueList.lectura[nodoActual].Texto;
 
-        while (textoNodo != null) // mientras haya texto
+        while (textoNodo != null)
         {
-            // limpiar caja principal antes de escribir
             cajaDialogo.text = "";
 
-            // escribir nodo actual letra por letra
             foreach (char x in textoNodo)
             {
                 cajaDialogo.text += x;
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForSeconds(0.004f);
             }
 
-            // limpiar opciones previas
             cajaOpcion1.text = "";
             cajaOpcion2.text = "";
             cajaOpcion3.text = "";
@@ -170,7 +168,6 @@ public class TextEngine : MonoBehaviour
             boton2.SetActive(false);
             boton3.SetActive(false);
 
-            // mostrar opciones si existen
             if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion1))
             {
                 boton1.SetActive(true);
@@ -195,11 +192,10 @@ public class TextEngine : MonoBehaviour
                 cajaOpcion3.text = textoOpcion3;
             }
 
-            // esperar input (Z o botón)
+            // ⬇️ Aquí usamos la versión modificada
             yield return StartCoroutine(WaitForInput(KeyCode.Z));
         }
     }
-
 
     public IEnumerator WaitForInput(KeyCode key)
     {
@@ -210,40 +206,68 @@ public class TextEngine : MonoBehaviour
         {
             optionNum = 0;
             esperandoOpcion = true;
-            yield return new WaitUntil(() => optionNum > 0);
+
+            // 🔹 Espera hasta que se elija una opción O se presione X
+            yield return new WaitUntil(() =>
+                optionNum > 0 || Input.GetKeyDown(KeyCode.X));
+
             esperandoOpcion = false;
 
-            int siguienteNodo = 0;
-            if (optionNum == 1)
-                siguienteNodo = int.Parse(myDialogueList.lectura[opcion1value - 1].nodo);
-            else if (optionNum == 2)
-                siguienteNodo = int.Parse(myDialogueList.lectura[opcion2value - 1].nodo);
-            else if (optionNum == 3)
-                siguienteNodo = int.Parse(myDialogueList.lectura[opcion3value - 1].nodo);
-
-            nodoActual = siguienteNodo - 1;
-            textoNodo = myDialogueList.lectura[nodoActual].Texto;
-        }
-        else
-        {
-            // no hay opciones -> avanzar con Z
-            yield return new WaitUntil(() => Input.GetKeyDown(key));
-
-            if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].next))
+            if (Input.GetKeyDown(KeyCode.X))
             {
-                nodoActual = int.Parse(myDialogueList.lectura[nodoActual].next) - 1;
-                textoNodo = myDialogueList.lectura[nodoActual].Texto;
-
-                if (nodoActual == 40 - 1)
+                // retrocede SOLO si la celda back tiene un número válido
+                if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].back) &&
+                    int.TryParse(myDialogueList.lectura[nodoActual].back, out int backNodo))
                 {
-                    sceneController.PasarNivel();
-                    yield break;
+                    nodoActual = backNodo - 1;
+                    textoNodo = myDialogueList.lectura[nodoActual].Texto;
                 }
             }
             else
             {
-                // fin del diálogo
-                textoNodo = null;
+                int siguienteNodo = 0;
+                if (optionNum == 1)
+                    siguienteNodo = int.Parse(myDialogueList.lectura[opcion1value - 1].nodo);
+                else if (optionNum == 2)
+                    siguienteNodo = int.Parse(myDialogueList.lectura[opcion2value - 1].nodo);
+                else if (optionNum == 3)
+                    siguienteNodo = int.Parse(myDialogueList.lectura[opcion3value - 1].nodo);
+
+                nodoActual = siguienteNodo - 1;
+                textoNodo = myDialogueList.lectura[nodoActual].Texto;
+            }
+        }
+        else
+        {
+            // 🔹 Espera Z o X cuando no hay opciones
+            yield return new WaitUntil(() => Input.GetKeyDown(key) || Input.GetKeyDown(KeyCode.X));
+
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].back) &&
+                    int.TryParse(myDialogueList.lectura[nodoActual].back, out int backNodo))
+                {
+                    nodoActual = backNodo - 1;
+                    textoNodo = myDialogueList.lectura[nodoActual].Texto;
+                }
+            }
+            else if (Input.GetKeyDown(key))
+            {
+                if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].next))
+                {
+                    nodoActual = int.Parse(myDialogueList.lectura[nodoActual].next) - 1;
+                    textoNodo = myDialogueList.lectura[nodoActual].Texto;
+
+                    if (nodoActual == 40 - 1)
+                    {
+                        sceneController.PasarNivel();
+                        yield break;
+                    }
+                }
+                else
+                {
+                    textoNodo = null;
+                }
             }
         }
     }
@@ -288,16 +312,15 @@ public class TextEngine : MonoBehaviour
             Debug.Log("Botón 3 clickeado pero no se espera opción actualmente");
         }
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         ReadCSV();
         StartCoroutine(WriteText());
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
-    }    
+
+    }
 }
