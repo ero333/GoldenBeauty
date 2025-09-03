@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class DragMultipleObjects : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class DragMultipleObjects : MonoBehaviour
     private Dictionary<GameObject, Vector3> originalPositions = new Dictionary<GameObject, Vector3>(); //define cosas
     private Dictionary<GameObject, Color> originalColors = new Dictionary<GameObject, Color>(); //define los colores originales para la opacidad
 
+
+    public static bool mouseSuelto = false; //bool para saber si apretamos o no el mouse
 
     void Start()
     {
@@ -20,6 +23,19 @@ public class DragMultipleObjects : MonoBehaviour
 
     void Update()
     {
+
+        // Cuando presiono click
+        if (Input.GetMouseButtonDown(0))
+        {
+            mouseSuelto = false;
+        }
+
+        // Cuando suelto click
+        if (Input.GetMouseButtonUp(0))
+        {
+            mouseSuelto = true;
+        }
+
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //toma la pos del mouse
         mousePosition.z = 0; //para que no se corra al iniciar (?
 
@@ -51,8 +67,9 @@ public class DragMultipleObjects : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && selectedObject) //si suelto...
         {
-            selectedObject = null;
-            ResetAllObjects();
+            /*selectedObject = null;
+            ResetAllObjects();*/
+            StartCoroutine(Amongas());
         }
 
         
@@ -132,4 +149,13 @@ public class DragMultipleObjects : MonoBehaviour
             sr.color = color;
         }
     }
+
+    private IEnumerator Amongas()
+    {
+        selectedObject = null;
+        yield return new WaitForSeconds(0.1f);
+        ResetAllObjects();
+    }
 }
+
+
