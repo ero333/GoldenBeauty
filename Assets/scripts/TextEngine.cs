@@ -12,7 +12,8 @@ public class TextEngine : MonoBehaviour
 {
     public Text cajaDialogo;
     public Text cajaOpcion1;
-
+    public Text cajaOpcion2;
+    public Text cajaOpcion3;
 
     public TextAsset textAssetData;
     [SerializeField] public int nodoActual = 0;
@@ -22,8 +23,13 @@ public class TextEngine : MonoBehaviour
     public GameObject boton3;
 
     public string textoOpcion1;
+    public string textoOpcion2;
+    public string textoOpcion3;
+    
     public int optionNum; //si el boton es apretado...
     [SerializeField] public int opcion1value;
+    [SerializeField] public int opcion2value;
+    public int opcion3value;
 
 
     [System.Serializable]
@@ -166,39 +172,75 @@ public class TextEngine : MonoBehaviour
                 }
             }
 
+            if (myDialogueList.lectura[nodoActual].opcion2 != null)
+            {
+                boton2.SetActive(true);
+                opcion2value = int.Parse(myDialogueList.lectura[nodoActual].opcion2);
+                textoOpcion2 = myDialogueList.lectura[opcion2value - 1].Texto;
+
+                foreach (char x in textoOpcion2)
+                {
+                    cajaOpcion2.text += x;
+                }
+            }
+
+            if (myDialogueList.lectura[nodoActual].opcion3 != null)
+            {
+                boton3.SetActive(true);
+                opcion3value = int.Parse(myDialogueList.lectura[nodoActual].opcion3);
+                textoOpcion3 = myDialogueList.lectura[opcion3value - 1].Texto;
+
+                foreach (char x in textoOpcion3)
+                {
+                    cajaOpcion3.text += x;
+                }
+            }
+
             yield return StartCoroutine(WaitForInput(KeyCode.Z));
         }
     }
 
     public IEnumerator WaitForInput(KeyCode key)
     {
-        // Si hay opciones, esperar a que el usuario elija una
-        if (myDialogueList.lectura[nodoActual].opcion1 != null)
+        // Si hay opciones disponibles
+        if (myDialogueList.lectura[nodoActual].opcion1 != null ||
+            myDialogueList.lectura[nodoActual].opcion2 != null ||
+            myDialogueList.lectura[nodoActual].opcion3 != null)
         {
-            optionNum = 0; // Resetear la opción
+            optionNum = 0;
             esperandoOpcion = true;
-
-            // Esperar a que el usuario haga clic en un botón
-            yield return new WaitUntil(() => optionNum == 1);
-
+            yield return new WaitUntil(() => optionNum > 0);
             esperandoOpcion = false;
 
-            // Ejecutar la opción seleccionada
+            // Determinar qué opción fue seleccionada
+            int siguienteNodo = 0;
             if (optionNum == 1)
             {
-                nodoActual = int.Parse(myDialogueList.lectura[opcion1value - 1].nodo);
-                textoNodo = myDialogueList.lectura[nodoActual - 1].Texto;
+                siguienteNodo = int.Parse(myDialogueList.lectura[opcion1value - 1].nodo);
+            }
+            else if (optionNum == 2)
+            {
+                siguienteNodo = int.Parse(myDialogueList.lectura[opcion2value - 1].nodo);
+            }
+            else if (optionNum == 3)
+            {
+                siguienteNodo = int.Parse(myDialogueList.lectura[opcion3value - 1].nodo);
             }
 
-            // Limpiar y ocultar botón
-            cajaOpcion1.text = "";
-            boton1.SetActive(false);
-            cajaDialogo.text = "";
+            nodoActual = siguienteNodo - 1; // Ajustar índice (asumiendo que los nodos empiezan en 1)
+            textoNodo = myDialogueList.lectura[nodoActual].Texto;
 
+            // Limpiar todos los botones
+            cajaOpcion1.text = "";
+            cajaOpcion2.text = "";
+            cajaOpcion3.text = "";
+            boton1.SetActive(false);
+            boton2.SetActive(false);
+            boton3.SetActive(false);
+            cajaDialogo.text = "";
         }
         else
         {
-            // Si no hay opciones, esperar la tecla normal
             yield return new WaitUntil(() => Input.GetKeyDown(key));
             cajaDialogo.text = "";
             nodoActual = int.Parse(myDialogueList.lectura[nodoActual].next);
@@ -206,11 +248,46 @@ public class TextEngine : MonoBehaviour
         }
     }
 
-    // Función del botón modificada
-   
-
-    // Variable adicional que necesitas agregar
     private bool esperandoOpcion = false;
+
+    public void OnButton1Click()
+    {
+        if (esperandoOpcion)
+        {
+            optionNum = 1;
+            Debug.Log($"Botón 1 clickeado - optionNum: {optionNum}");
+        }
+        else
+        {
+            Debug.Log("Botón 1 clickeado pero no se espera opción actualmente");
+        }
+    }
+
+    public void OnButton2Click()
+    {
+        if (esperandoOpcion)
+        {
+            optionNum = 2;
+            Debug.Log($"Botón 2 clickeado - optionNum: {optionNum}");
+        }
+        else
+        {
+            Debug.Log("Botón 2 clickeado pero no se espera opción actualmente");
+        }
+    }
+
+    public void OnButton3Click()
+    {
+        if (esperandoOpcion)
+        {
+            optionNum = 3;
+            Debug.Log($"Botón 3 clickeado - optionNum: {optionNum}");
+        }
+        else
+        {
+            Debug.Log("Botón 3 clickeado pero no se espera opción actualmente");
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -224,16 +301,5 @@ public class TextEngine : MonoBehaviour
         
     }
 
-    public void OnButtonClick()
-    {
-        if (esperandoOpcion)
-        {
-            optionNum = 1;
-            Debug.Log($"Botón clickeado - optionNum: {optionNum}");
-        }
-        else
-        {
-            Debug.Log("Botón clickeado pero no se espera opción actualmente");
-        }
-    }
+    
 }
