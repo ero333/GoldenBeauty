@@ -1410,13 +1410,6 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-<<<<<<< HEAD
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 31da4277b01417a4daca85d950b11b3d, type: 3}
-=======
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: c983c8578d6e82d4c85f648aee7200ea, type: 3}
->>>>>>> e9cded74607973e10f43f89b70c2beea8ee70a47
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3661,11 +3654,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2067194548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 3a6544c8a4d678c4bb4cd29ffc2a2a81, type: 3}
-=======
-  m_Script: {fileID: 11500000, guid: edfbdfe7d3d4d7847a1018d4fde2d2a8, type: 3}
->>>>>>> e9cded74607973e10f43f89b70c2beea8ee70a47
   m_Name: 
   m_EditorClassIdentifier: 
   selectableObjects:
