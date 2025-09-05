@@ -5,6 +5,22 @@ TagManager:
   serializedVersion: 2
   tags:
   - opcion1
+  - opcion2
+  - opcion3
+  - herramienta
+  - cabeza
+  - Accesorios-1
+  - Accesorios-2
+  - Accesorios-3
+  - Pelo-1
+  - Pelo-2
+  - Pelo-3
+  - Ropa-1
+  - Ropa-2
+  - Ropa-3
+  - Rostro-1
+  - Rostro-2
+  - Rostro-3
   layers:
   - Default
   - TransparentFX
