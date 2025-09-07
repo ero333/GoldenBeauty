@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ganaryperder : MonoBehaviour
+public class Ganaryperder : MonoBehaviour
 {
     [Header("Accesorios Valores")] 
     public GameObject accesorio_1;
