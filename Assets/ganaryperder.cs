@@ -127,7 +127,7 @@ public class Ganaryperder : MonoBehaviour
             Suma_Final += ValorRopa_3;
         }
 
-        if (Suma_Final > Valordeganar)
+        if (Suma_Final >= Valordeganar)
         {
             GanarNivel = true;
             Debug.Log("GANASTEEEEE");
