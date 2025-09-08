@@ -7,10 +7,14 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class TextEngine : MonoBehaviour
 {
     public SceneController sceneController;
+    private PlayerInput playerInput;
+    private InputAction forwardAction;
+    private InputAction backAction;
 
     public Text cajaDialogo;
     public Text cajaOpcion1;
@@ -23,6 +27,12 @@ public class TextEngine : MonoBehaviour
     public GameObject boton1;
     public GameObject boton2;
     public GameObject boton3;
+
+    public bool IsButton1Selected { get; private set; }
+    public bool IsButton2Selected { get; private set; }
+    public bool IsButton3Selected { get; private set; }
+    
+
 
     public string textoOpcion1;
     public string textoOpcion2;
@@ -166,7 +176,7 @@ public class TextEngine : MonoBehaviour
             foreach (char x in textoNodo)
             {
                 cajaDialogo.text += x;
-                yield return new WaitForSeconds(0.003f);
+                yield return new WaitForSeconds(0.001f);
             }
 
             cajaOpcion1.text = "";
@@ -201,7 +211,8 @@ public class TextEngine : MonoBehaviour
             }
 
             // ⬇️ Aquí usamos la versión modificada
-            yield return StartCoroutine(WaitForInput(KeyCode.Z));
+            //yield return StartCoroutine(WaitForInput(KeyCode.Z));
+            yield return StartCoroutine(WaitForInput());
 
         }
     }
@@ -280,6 +291,101 @@ public class TextEngine : MonoBehaviour
             }
         }
     }
+    public IEnumerator WaitForInput()
+    {
+        // Habilitar acciones necesarias
+        forwardAction.Enable();
+        backAction.Enable();
+        GameObject selectedObject = EventSystem.current.currentSelectedGameObject;
+
+        // Check if either button is currently selected
+        IsButton1Selected = selectedObject == boton1.gameObject;
+        IsButton2Selected = selectedObject == boton2.gameObject;
+        IsButton3Selected = selectedObject == boton3.gameObject;
+
+        bool inputReceived = false;
+
+        // Si hay opciones disponibles
+        if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion1) ||
+            !string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion2) ||
+            !string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion3))
+        {
+            optionNum = 0;
+            esperandoOpcion = true;
+
+            // Esperar hasta que se elija una opción O se presione back (X)
+            yield return new WaitUntil(() =>
+                optionNum > 0 || backAction.triggered);
+
+            esperandoOpcion = false;
+
+            if (backAction.triggered)
+            {
+                // Retrocede si la celda back tiene un número válido
+                if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].back) &&
+                    int.TryParse(myDialogueList.lectura[nodoActual].back, out int backNodo))
+                {
+                    nodoActual = backNodo - 1;
+                    textoNodo = myDialogueList.lectura[nodoActual].Texto;
+                }
+            }
+            else
+            {
+                int siguienteNodo = 0;
+                if (optionNum == 1)
+                    siguienteNodo = int.Parse(myDialogueList.lectura[opcion1value - 1].nodo);
+                else if (optionNum == 2)
+                    siguienteNodo = int.Parse(myDialogueList.lectura[opcion2value - 1].nodo);
+                else if (optionNum == 3)
+                    siguienteNodo = int.Parse(myDialogueList.lectura[opcion3value - 1].nodo);
+
+                nodoActual = siguienteNodo - 1;
+                textoNodo = myDialogueList.lectura[nodoActual].Texto;
+            }
+        }
+        else
+        {
+            yield return new WaitUntil(() =>
+                forwardAction.triggered || backAction.triggered);
+
+            if (backAction.triggered)
+            {
+                if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].back) &&
+                    int.TryParse(myDialogueList.lectura[nodoActual].back, out int backNodo))
+                {
+                    nodoActual = backNodo - 1;
+                    textoNodo = myDialogueList.lectura[nodoActual].Texto;
+                }
+            }
+            else if (forwardAction.triggered)
+            {
+                /*
+             
+                */
+                if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].next))
+                {
+                    nodoActual = int.Parse(myDialogueList.lectura[nodoActual].next) - 1;
+                    textoNodo = myDialogueList.lectura[nodoActual].Texto;
+
+                    if (nodoActual == 40 - 1)
+                    {
+                        sceneController.PasarNivel();
+                        yield break;
+                    }
+                }
+                else
+                {
+                    textoNodo = null;
+                }
+            }
+        }
+
+        // Deshabilitar acciones
+        forwardAction.Disable();
+        backAction.Disable();
+
+
+    }
 
     public void Names()
     {
@@ -335,6 +441,9 @@ public class TextEngine : MonoBehaviour
 
     void Start()
     {
+        playerInput = GetComponent<PlayerInput>();
+        forwardAction = playerInput.actions.FindAction("PlayerMap/Forward");
+        backAction = playerInput.actions.FindAction("PlayerMap/Back");
         ReadCSV();
         StartCoroutine(WriteText());
         StartCoroutine(TutoText());
@@ -356,4 +465,5 @@ public class TextEngine : MonoBehaviour
         yield return new WaitForSeconds(10f);
         tutorialText.SetActive(false);
     }
+
 }
