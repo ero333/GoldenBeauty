@@ -18,6 +18,7 @@ public class LevelSelect : MonoBehaviour
     public Button button4;
     public Button button5;
     public Button button6;
+    
 
     // These will be true when the respective button is selected
     public bool IsButton1Selected { get; private set; }
@@ -27,6 +28,8 @@ public class LevelSelect : MonoBehaviour
     public bool IsButton5Selected { get; private set; }
     public bool IsButton6Selected { get; private set; }
 
+
+    
     void Update()
     {
         // Get the currently selected GameObject from EventSystem
@@ -40,12 +43,17 @@ public class LevelSelect : MonoBehaviour
         IsButton5Selected = selectedObject == button5.gameObject;
         IsButton6Selected = selectedObject == button6.gameObject;
 
+
+        
+
         // Optional: Debug output to verify it's working
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            Debug.Log("ZZZZZZZZZZZZZZ");
+
             if (IsButton1Selected)
             {
-                sceneController.LoadScene("Scene1");
+                sceneController.LoadScene("Nivel 1 Dialogo");
                 Debug.Log("Button 1 is selected.");
 
             }
@@ -74,10 +82,15 @@ public class LevelSelect : MonoBehaviour
                 sceneController.LoadScene("Scene6");
                 Debug.Log("Button 6 is selected.");
             }
+
+            
+
             else
             {
                 Debug.Log("No button is selected.");
             }
+
+        
         }
     }
 }
