@@ -7,10 +7,13 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class Menuinicio : MonoBehaviour
 {
-
+    private PlayerInput playerInput;
+    private InputAction forwardAction;
+    private InputAction backAction;
 
     public SceneController sceneController;
     public Button buttonStart;
@@ -24,7 +27,9 @@ public class Menuinicio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerInput = GetComponent<PlayerInput>();
+        forwardAction = playerInput.actions.FindAction("PlayerMap/Forward");
+        backAction = playerInput.actions.FindAction("PlayerMap/Back");
     }
 
     // Update is called once per frame
@@ -37,7 +42,7 @@ public class Menuinicio : MonoBehaviour
         IsButtonMenu = selectedObject == buttonMenu.gameObject;
 
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (forwardAction.triggered)
         {
             if (IsButtonStart)
             {

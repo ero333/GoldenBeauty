@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 30290355}
   - component: {fileID: 30290354}
   m_Layer: 5
-  m_Name: 2 (1)
+  m_Name: volver al menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 2038188593}
+    m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 344915861}
   - component: {fileID: 344915860}
   m_Layer: 5
-  m_Name: 2
+  m_Name: "ir a cr\xE9ditos"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 2038188592}
+  m_FirstSelected: {fileID: 30290352}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &744617927
@@ -603,6 +603,7 @@ GameObject:
   - component: {fileID: 984906824}
   - component: {fileID: 984906823}
   - component: {fileID: 984906822}
+  - component: {fileID: 984906826}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -711,6 +712,36 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &984906826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984906820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: c87bb30284efd9846adb313befa54ef6, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerMap
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 1872441919}
 --- !u!1 &1242007301
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +970,7 @@ GameObject:
   - component: {fileID: 2038188594}
   - component: {fileID: 2038188593}
   m_Layer: 5
-  m_Name: 1
+  m_Name: "abrir sal\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

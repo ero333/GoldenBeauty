@@ -7,10 +7,14 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class LevelSelect : MonoBehaviour
 {
     public SceneController sceneController;
+    private PlayerInput playerInput;
+    private InputAction forwardAction;
+    private InputAction backAction;
 
     public Button button1;
     public Button button2;
@@ -28,10 +32,18 @@ public class LevelSelect : MonoBehaviour
     public bool IsButton5Selected { get; private set; }
     public bool IsButton6Selected { get; private set; }
 
-
+    void Start()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        forwardAction = playerInput.actions.FindAction("PlayerMap/Forward");
+        backAction = playerInput.actions.FindAction("PlayerMap/Back");
+    }
     
     void Update()
+
     {
+        //forwardAction.Enable();
+        //backAction.Enable();
         // Get the currently selected GameObject from EventSystem
         GameObject selectedObject = EventSystem.current.currentSelectedGameObject;
 
@@ -47,7 +59,7 @@ public class LevelSelect : MonoBehaviour
         
 
         // Optional: Debug output to verify it's working
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (forwardAction.triggered)
         {
             Debug.Log("ZZZZZZZZZZZZZZ");
 
