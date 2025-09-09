@@ -43,14 +43,11 @@ public class ganaryperder : MonoBehaviour
     private int Suma_Final;
     public int Valordeganar;
     public bool GanarNivel;
-    
-    
+
+    public GameObject botonGanar;
+    public GameObject botonPerder;
 
     
-
-    
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -131,12 +128,13 @@ public class ganaryperder : MonoBehaviour
         {
             GanarNivel = true;
             Debug.Log("GANASTEEEEE");
+            botonGanar.SetActive(true);
         }
 
         if (!GanarNivel) 
         {
             Debug.Log("perdiste");
-
+            botonPerder.SetActive(true);
         
         }
 

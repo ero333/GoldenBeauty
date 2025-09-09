@@ -43,11 +43,9 @@ public class Ganaryperder : MonoBehaviour
     private int Suma_Final;
     public int Valordeganar;
     public bool GanarNivel;
-    
-    
 
-    
-
+    public GameObject botonGanar;
+    public GameObject botonPerder;
     
 
 
@@ -127,20 +125,21 @@ public class Ganaryperder : MonoBehaviour
             Suma_Final += ValorRopa_3;
         }
 
-        if (Suma_Final >= Valordeganar)
+        if (Suma_Final > Valordeganar)
         {
             GanarNivel = true;
             Debug.Log("GANASTEEEEE");
+            botonGanar.SetActive(true);
         }
 
-        if (!GanarNivel) 
+        if (!GanarNivel)
         {
             Debug.Log("perdiste");
+            botonPerder.SetActive(true);
 
-        
         }
 
-       
+
     }
 
     public void Ganar()

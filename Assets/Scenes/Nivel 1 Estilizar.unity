@@ -865,6 +865,8 @@ MonoBehaviour:
   ValorRopa_3: 0
   Valordeganar: 2
   GanarNivel: 0
+  botonGanar: {fileID: 951218694}
+  botonPerder: {fileID: 1917867315}
 --- !u!4 &473546822
 Transform:
   m_ObjectHideFlags: 0
@@ -1558,7 +1560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1578,8 +1580,8 @@ Canvas:
   m_GameObject: {fileID: 921617867}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1655763119}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1590,7 +1592,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!224 &921617871
 RectTransform:
@@ -1757,12 +1759,12 @@ GameObject:
   - component: {fileID: 951218697}
   - component: {fileID: 951218696}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SigBueno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &951218695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1780,8 +1782,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -543.3, y: -323.4}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -332.97, y: -187.07999}
+  m_SizeDelta: {x: 108.05, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951218696
 MonoBehaviour:
@@ -2486,7 +2488,7 @@ GameObject:
   - component: {fileID: 1381373464}
   - component: {fileID: 1381373463}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Siguiente
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2509,8 +2511,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 424, y: -287}
-  m_SizeDelta: {x: 144.4101, y: 27.0769}
+  m_AnchoredPosition: {x: 286, y: -188.54}
+  m_SizeDelta: {x: 97.53, y: 27.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1381373463
 MonoBehaviour:
@@ -3414,12 +3416,12 @@ GameObject:
   - component: {fileID: 1917867318}
   - component: {fileID: 1917867317}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: SigMalo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1917867316
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3437,8 +3439,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -543.3, y: -280.19998}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -332.97, y: -147}
+  m_SizeDelta: {x: 108.05, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1917867317
 MonoBehaviour:
@@ -3933,10 +3935,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ganar
+  m_text: Siguiente
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a162b05fabbb92d4c8cf4a16f5be310a, type: 2}
+  m_sharedMaterial: {fileID: -2903683349078876223, guid: a162b05fabbb92d4c8cf4a16f5be310a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3960,8 +3962,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 16.75
+  m_fontSizeBase: 16.75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
