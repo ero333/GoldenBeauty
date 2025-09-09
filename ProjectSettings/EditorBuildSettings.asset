@@ -32,4 +32,5 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestBarra.unity
     guid: 00972031c3b4d8144aac86fba69ad94a
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: c87bb30284efd9846adb313befa54ef6, type: 3}
