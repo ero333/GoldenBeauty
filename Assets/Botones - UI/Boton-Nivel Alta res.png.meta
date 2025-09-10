@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b0aec0e2de55f7445ae360d8d74e5fa6
+guid: 8b6c39a05ab39f74f9f505d58bfd3175
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,20 +93,433 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: Nivel 1 - Default
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 760
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad93cbfa0e17732459ff48aa98817bdf
+      internalID: 568824666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 2 - Default
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 760
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7d2888a72d1da4196091558e31e127
+      internalID: 1614623908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 3 - Default
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 760
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eaa1cdfc8aefc34a885eb7836617dcc
+      internalID: -61874019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 4 - Default
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 760
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1760d49ddbb8ca148914186435c9cbd9
+      internalID: -1851327893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 5 - Default
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 760
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0f47b6f7d1d614489824d4c0fd45ff
+      internalID: -241270199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 6 - Default
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 760
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73aa14033a4fce84ebbd0de663771a43
+      internalID: -257920824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 1 - Pressed
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 470
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7135a131dd2c24c8cffef0a20e582a
+      internalID: 2048585178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 2 - Pressed
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 470
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b62ae925bca7fd48bec1e7592873b6c
+      internalID: -1151975514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 3 - Pressed
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 470
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d201176b2520b4683b5b83a0e81916
+      internalID: 441660072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 4 - Pressed
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 470
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b548d6870f8d94397c1620c139f6f2
+      internalID: -140050578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 5 - Pressed
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 470
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8acff0dc325a12e4595b3f82b3878c3a
+      internalID: -420979895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 6 - Pressed
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 470
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1ad29f55055084e8d14a685f45cfe9
+      internalID: -1407135340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 1 - Hover
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 120
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbb8bd2af2c919499530883eb63ab4c
+      internalID: 365443108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 2 - Hover
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 120
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72dc40dd4fe9e50449454fafb6075e3e
+      internalID: 1485840000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 3 - Hover
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 120
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b2909aa3fd1f648a0c6948f81687ef
+      internalID: 484424620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 4 - Hover
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 120
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8efa9dd44e72cd4a80bda100c8e63a9
+      internalID: -982761763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 5 - Hover
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 120
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abf146d767d97f48bd8f41d7dc8d40d
+      internalID: 131252442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel 6 - Hover
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 120
+        width: 260
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94e91ec6fd854943b4f9edc5391f9f9
+      internalID: 1990224344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -901.25, y: -422.5}
+      - {x: -901.25, y: 452.5}
+      - {x: -637.5, y: 452.5}
+      - {x: -637.5, y: -422.5}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nivel 1 - Default: 568824666
+      Nivel 1 - Hover: 365443108
+      Nivel 1 - Pressed: 2048585178
+      Nivel 2 - Default: 1614623908
+      Nivel 2 - Hover: 1485840000
+      Nivel 2 - Pressed: -1151975514
+      Nivel 3 - Default: -61874019
+      Nivel 3 - Hover: 484424620
+      Nivel 3 - Pressed: 441660072
+      Nivel 4 - Default: -1851327893
+      Nivel 4 - Hover: -982761763
+      Nivel 4 - Pressed: -140050578
+      Nivel 5 - Default: -241270199
+      Nivel 5 - Hover: 131252442
+      Nivel 5 - Pressed: -420979895
+      Nivel 6 - Default: -257920824
+      Nivel 6 - Hover: 1990224344
+      Nivel 6 - Pressed: -1407135340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
