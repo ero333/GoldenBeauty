@@ -71,27 +71,27 @@ public class LevelSelect : MonoBehaviour
             }
             else if (IsButton2Selected)
             {
-                sceneController.LoadScene("Scene2");
+                sceneController.LoadScene("Nivel 2 Dialogo");
                 Debug.Log("Button 2 is selected.");
             }
             else if (IsButton3Selected)
             {
-                sceneController.LoadScene("Scene3");
+                sceneController.LoadScene("Nivel 3 Dialogo");
                 Debug.Log("Button 3 is selected.");
             }
             else if (IsButton4Selected)
             {
-                sceneController.LoadScene("Scene4");
+                sceneController.LoadScene("Nivel 4 Dialogo");
                 Debug.Log("Button 4 is selected.");
             }
             else if (IsButton5Selected)
             {
-                sceneController.LoadScene("Scene5");
+                sceneController.LoadScene("Nivel 5 Dialogo");
                 Debug.Log("Button 5 is selected.");
             }
             else if (IsButton6Selected)
             {
-                sceneController.LoadScene("Scene6");
+                sceneController.LoadScene("Nivel 6 Dialogo");
                 Debug.Log("Button 6 is selected.");
             }
 
