@@ -21,6 +21,11 @@ public class ActivaCapas : MonoBehaviour
     public GameObject Ropa_2;
     public GameObject Ropa_3;
 
+    public GameObject accesorio_0;
+    public GameObject Pelo_0;
+    public GameObject Rostro_0;
+    public GameObject Ropa_0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +53,7 @@ public class ActivaCapas : MonoBehaviour
                 accesorio_1.SetActive(true);
                 accesorio_2.SetActive(false);
                 accesorio_3.SetActive(false);
+                accesorio_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -59,6 +65,7 @@ public class ActivaCapas : MonoBehaviour
                 accesorio_1.SetActive(false);
                 accesorio_2.SetActive(true);
                 accesorio_3.SetActive(false);
+                accesorio_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -70,6 +77,7 @@ public class ActivaCapas : MonoBehaviour
                 accesorio_1.SetActive(false);
                 accesorio_2.SetActive(false);
                 accesorio_3.SetActive(true);
+                accesorio_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -85,6 +93,7 @@ public class ActivaCapas : MonoBehaviour
                 Pelo_1.SetActive(true);
                 Pelo_2.SetActive(false);
                 Pelo_3.SetActive(false);
+                Pelo_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -96,6 +105,7 @@ public class ActivaCapas : MonoBehaviour
                 Pelo_1.SetActive(false);
                 Pelo_2.SetActive(true);
                 Pelo_3.SetActive(false);
+                Pelo_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -107,6 +117,7 @@ public class ActivaCapas : MonoBehaviour
                 Pelo_1.SetActive(false);
                 Pelo_2.SetActive(false);
                 Pelo_3.SetActive(true);
+                Pelo_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -122,6 +133,7 @@ public class ActivaCapas : MonoBehaviour
                 Rostro_1.SetActive(true);
                 Rostro_2.SetActive(false);
                 Rostro_3.SetActive(false);
+                Rostro_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -133,6 +145,7 @@ public class ActivaCapas : MonoBehaviour
                 Rostro_1.SetActive(false);
                 Rostro_2.SetActive(true);
                 Rostro_3.SetActive(false);
+                Rostro_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -144,6 +157,7 @@ public class ActivaCapas : MonoBehaviour
                 Rostro_1.SetActive(false);
                 Rostro_2.SetActive(false);
                 Rostro_3.SetActive(true);
+                Rostro_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -158,6 +172,7 @@ public class ActivaCapas : MonoBehaviour
                 Ropa_1.SetActive(true);
                 Ropa_2.SetActive(false);
                 Ropa_3.SetActive(false);
+                Ropa_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -169,6 +184,7 @@ public class ActivaCapas : MonoBehaviour
                 Ropa_1.SetActive(false);
                 Ropa_2.SetActive(true);
                 Ropa_3.SetActive(false);
+                Ropa_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -180,6 +196,7 @@ public class ActivaCapas : MonoBehaviour
                 Ropa_1.SetActive(false);
                 Ropa_2.SetActive(false);
                 Ropa_3.SetActive(true);
+                Ropa_0.SetActive(false);
 
                 DragMultipleObjects.mouseSuelto = false;
             }
