@@ -29,6 +29,12 @@ public class LoopFinalBueno : MonoBehaviour
             Amongas();
         }
 
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Amongas();
+        }
+
     }
 
 
