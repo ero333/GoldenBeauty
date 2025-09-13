@@ -1075,6 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99db3852889ed2248aef5e773a324041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneController: {fileID: 1960406181}
   accesorio_1: {fileID: 0}
   accesorio_2: {fileID: 0}
   accesorio_3: {fileID: 1257756493}

@@ -171,6 +171,15 @@ public class TextEngine : MonoBehaviour
 
         while (textoNodo != null)
         {
+            if (myDialogueList.lectura[nodoActual].personaje == "1")
+            {
+                nombrePersonaje.text = nombreSlot.name;
+            }
+            else
+            {
+                nombrePersonaje.text = "Yo";
+            }
+
             cajaDialogo.text = "";
 
             foreach (char x in textoNodo)
@@ -186,6 +195,7 @@ public class TextEngine : MonoBehaviour
             boton2.SetActive(false);
             boton3.SetActive(false);
 
+            
             if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion1))
             {
                 boton1.SetActive(true);
@@ -387,17 +397,7 @@ public class TextEngine : MonoBehaviour
 
     }
 
-    public void Names()
-    {
-        if (myDialogueList.lectura[nodoActual].personaje == "1")
-        {
-            nombrePersonaje.text = nombreSlot.name;
-        }
-        else
-        {
-            nombrePersonaje.text = "Yo";
-        }
-    }
+   
     private bool esperandoOpcion = false;
 
     public void OnButton1Click()
@@ -455,7 +455,6 @@ public class TextEngine : MonoBehaviour
         {
             sceneController.PasarNivel();
         }
-        Names();
     }
 
     public IEnumerator TutoText()

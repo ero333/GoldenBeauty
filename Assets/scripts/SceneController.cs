@@ -10,10 +10,10 @@ public class SceneController : MonoBehaviour
             SceneManager.LoadScene("Scene1");
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        /*if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             SceneManager.LoadScene("Scene2");
-        }
+        }*/
     }
 
     public void PasarNivel()

@@ -1,15 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
+//using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+//using static System.Net.Mime.MediaTypeNames;
 
-public class LevelSelect : MonoBehaviour
+public class LevelSelectManager : MonoBehaviour
 {
     public SceneController sceneController;
     private PlayerInput playerInput;
@@ -22,7 +18,6 @@ public class LevelSelect : MonoBehaviour
     public Button button4;
     public Button button5;
     public Button button6;
-    
 
     // These will be true when the respective button is selected
     public bool IsButton1Selected { get; private set; }
@@ -37,10 +32,63 @@ public class LevelSelect : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         forwardAction = playerInput.actions.FindAction("PlayerMap/Forward");
         backAction = playerInput.actions.FindAction("PlayerMap/Back");
-    }
-    
-    void Update()
 
+        // NUEVO: Configurar estado de los botones según progreso
+        SetupButtonsState();
+    }
+
+    // NUEVO MÉTODO: Configurar qué botones están activos
+    void SetupButtonsState()
+    {
+        // Cargar datos guardados
+        GameManager.Instance.LoadGameData();
+
+        // Configurar cada botón según si está desbloqueado
+        button1.interactable = GameManager.Instance.IsLevelUnlocked(1);
+        button2.interactable = GameManager.Instance.IsLevelUnlocked(2);
+        button3.interactable = GameManager.Instance.IsLevelUnlocked(3);
+        button4.interactable = GameManager.Instance.IsLevelUnlocked(4);
+        button5.interactable = GameManager.Instance.IsLevelUnlocked(5);
+        button6.interactable = GameManager.Instance.IsLevelUnlocked(6);
+
+        // Opcional: Cambiar apariencia de botones bloqueados
+        UpdateButtonAppearance();
+    }
+
+    // NUEVO MÉTODO: Actualizar apariencia visual de botones
+    void UpdateButtonAppearance()
+    {
+        SetButtonStyle(button1, 1);
+        SetButtonStyle(button2, 2);
+        SetButtonStyle(button3, 3);
+        SetButtonStyle(button4, 4);
+        SetButtonStyle(button5, 5);
+        SetButtonStyle(button6, 6);
+    }
+
+    void SetButtonStyle(Button button, int levelNumber)
+    {
+        if (!button.interactable)
+        {
+            // Botón bloqueado
+            button.image.color = Color.gray;
+            Text buttonText = button.GetComponentInChildren<Text>();
+            if (buttonText != null)
+                buttonText.text = "BLOQUEADO";
+        }
+        else if (levelNumber <= GameManager.Instance.nvlSuperado)
+        {
+            // Botón de nivel completado
+            button.image.color = Color.green;
+        }
+        else
+        {
+            // Botón desbloqueado pero no completado
+            button.image.color = Color.white;
+        }
+    }
+
+    void Update()
     {
         //forwardAction.Enable();
         //backAction.Enable();
@@ -55,54 +103,51 @@ public class LevelSelect : MonoBehaviour
         IsButton5Selected = selectedObject == button5.gameObject;
         IsButton6Selected = selectedObject == button6.gameObject;
 
-
-        
-
         // Optional: Debug output to verify it's working
         if (forwardAction.triggered)
         {
             Debug.Log("ZZZZZZZZZZZZZZ");
 
-            if (IsButton1Selected)
+            if (IsButton1Selected && button1.interactable)
             {
                 sceneController.LoadScene("Nivel 1 Dialogo");
                 Debug.Log("Button 1 is selected.");
-
             }
-            else if (IsButton2Selected)
+            else if (IsButton2Selected && button2.interactable)
             {
                 sceneController.LoadScene("Nivel 2 Dialogo");
                 Debug.Log("Button 2 is selected.");
             }
-            else if (IsButton3Selected)
+            else if (IsButton3Selected && button3.interactable)
             {
                 sceneController.LoadScene("Nivel 3 Dialogo");
                 Debug.Log("Button 3 is selected.");
             }
-            else if (IsButton4Selected)
+            else if (IsButton4Selected && button4.interactable)
             {
                 sceneController.LoadScene("Nivel 4 Dialogo");
                 Debug.Log("Button 4 is selected.");
             }
-            else if (IsButton5Selected)
+            else if (IsButton5Selected && button5.interactable)
             {
                 sceneController.LoadScene("Nivel 5 Dialogo");
                 Debug.Log("Button 5 is selected.");
             }
-            else if (IsButton6Selected)
+            else if (IsButton6Selected && button6.interactable)
             {
                 sceneController.LoadScene("Nivel 6 Dialogo");
                 Debug.Log("Button 6 is selected.");
             }
-
-            
-
             else
             {
-                Debug.Log("No button is selected.");
+                Debug.Log("No button is selected or button is locked.");
             }
-
-        
         }
+    }
+
+    // NUEVO: Método para refrescar los botones (útil si cambia el progreso)
+    public void RefreshButtons()
+    {
+        SetupButtonsState();
     }
 }

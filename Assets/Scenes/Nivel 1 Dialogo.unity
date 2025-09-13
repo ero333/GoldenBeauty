@@ -1525,7 +1525,6 @@ GameObject:
   - component: {fileID: 1835711647}
   - component: {fileID: 1835711646}
   - component: {fileID: 1835711645}
-  - component: {fileID: 1835711648}
   m_Layer: 5
   m_Name: "bot\xF3n 1"
   m_TagString: Untagged
@@ -1647,39 +1646,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835711643}
   m_CullTransparentMesh: 1
---- !u!114 &1835711648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835711643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf55d9453c97e443af33ce0d2d1ee43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneController: {fileID: 0}
-  cajaDialogo: {fileID: 0}
-  cajaOpcion1: {fileID: 0}
-  cajaOpcion2: {fileID: 0}
-  cajaOpcion3: {fileID: 0}
-  textAssetData: {fileID: 0}
-  nodoActual: 0
-  textoNodo: 
-  boton1: {fileID: 0}
-  boton2: {fileID: 0}
-  boton3: {fileID: 0}
-  textoOpcion1: 
-  textoOpcion2: 
-  textoOpcion3: 
-  opcion1value: 0
-  opcion2value: 0
-  nombrePersonaje: {fileID: 0}
-  nombreSlot: {fileID: 0}
-  tutorialText: {fileID: 0}
-  myDialogueList:
-    lectura: []
 --- !u!1 &1931190543
 GameObject:
   m_ObjectHideFlags: 0
