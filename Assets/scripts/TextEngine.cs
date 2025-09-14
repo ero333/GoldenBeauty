@@ -11,6 +11,7 @@ using UnityEngine.InputSystem;
 
 public class TextEngine : MonoBehaviour
 {
+    public GameObject pauseSquare;
     public SceneController sceneController;
     private PlayerInput playerInput;
     private InputAction forwardAction;
@@ -455,6 +456,27 @@ public class TextEngine : MonoBehaviour
         {
             sceneController.PasarNivel();
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            pauseSquare.SetActive(!pauseSquare.activeSelf);
+
+            if (playerInput.enabled)
+            {
+                playerInput.enabled = false;
+                Time.timeScale = 0f;
+                Debug.Log("paused!");
+                DisableButton();
+            }
+            else
+            {
+                playerInput.enabled = true;
+                Time.timeScale = 1f;
+                Debug.Log("playing");
+                EnableButton();
+            }
+
+        }
     }
 
     public IEnumerator TutoText()
@@ -465,4 +487,45 @@ public class TextEngine : MonoBehaviour
         tutorialText.SetActive(false);
     }
 
+    public void DisableButton()
+    {
+
+        Button buttonComponent1 = boton1.GetComponent<Button>();
+        if (buttonComponent1 != null)
+        {
+            buttonComponent1.interactable = false;
+        }
+
+        Button buttonComponent2 = boton2.GetComponent<Button>();
+        if (buttonComponent2 != null)
+        {
+            buttonComponent2.interactable = false;
+        }
+
+        Button buttonComponent3 = boton3.GetComponent<Button>();
+        if (buttonComponent3 != null)
+        {
+            buttonComponent3.interactable = false;
+        }
+    }
+
+    public void EnableButton()
+    {
+        Button buttonComponent1 = boton1.GetComponent<Button>();
+        if (buttonComponent1 != null)
+        {
+            buttonComponent1.interactable = true;
+        }
+        Button buttonComponent2 = boton2.GetComponent<Button>();
+        if (buttonComponent2 != null)
+        {
+            buttonComponent2.interactable = true;
+        }
+
+        Button buttonComponent3 = boton3.GetComponent<Button>();
+        if (buttonComponent3 != null)
+        {
+            buttonComponent3.interactable = true;
+        }
+    }
 }

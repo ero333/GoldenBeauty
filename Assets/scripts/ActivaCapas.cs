@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ActivaCapas : MonoBehaviour
 {
-
+    public GameObject pauseSquare;
     public GameObject accesorio_1;
     public GameObject accesorio_2;
     public GameObject accesorio_3;
@@ -38,6 +38,7 @@ public class ActivaCapas : MonoBehaviour
 
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //toma la pos del mouse
         mousePosition.z = 0; //para que no se corra al iniciar (?
+
 
     }
 
