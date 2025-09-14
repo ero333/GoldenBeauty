@@ -11,7 +11,6 @@ using UnityEngine.InputSystem;
 
 public class TextEngine : MonoBehaviour
 {
-    public GameObject pauseSquare;
     public SceneController sceneController;
     private PlayerInput playerInput;
     private InputAction forwardAction;
@@ -32,8 +31,6 @@ public class TextEngine : MonoBehaviour
     public bool IsButton1Selected { get; private set; }
     public bool IsButton2Selected { get; private set; }
     public bool IsButton3Selected { get; private set; }
-    
-
 
     public string textoOpcion1;
     public string textoOpcion2;
@@ -51,6 +48,11 @@ public class TextEngine : MonoBehaviour
 
     //leyenda tutorial
     public GameObject tutorialText;
+
+    //pausa
+    public GameObject pauseSquare;
+    public GameObject pauseCanvas;
+    public GameObject alerta;
 
     [System.Serializable]
     public class Lectura
@@ -440,6 +442,28 @@ public class TextEngine : MonoBehaviour
         }
     }
 
+    public void OnButton4Click() // reanudar
+    {
+        playerInput.enabled = true;
+        Time.timeScale = 1f;
+        pauseSquare.SetActive(!pauseSquare.activeSelf);
+        pauseCanvas.SetActive(!pauseCanvas.activeSelf);
+        EnableButton();
+    }
+
+    public void OnButton5Click() //volver a inicio
+    {
+        alerta.SetActive(true);
+    }
+
+    public void OnButton6Click() //confirmación
+    {
+        sceneController.LoadScene("levelSelect");
+    }
+    public void OnButton7Click() //rechazar
+    {
+        alerta.SetActive(false);
+    }
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -460,6 +484,7 @@ public class TextEngine : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             pauseSquare.SetActive(!pauseSquare.activeSelf);
+            pauseCanvas.SetActive(!pauseCanvas.activeSelf);
 
             if (playerInput.enabled)
             {
