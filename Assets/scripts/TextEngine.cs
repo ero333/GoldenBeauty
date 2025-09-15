@@ -31,8 +31,6 @@ public class TextEngine : MonoBehaviour
     public bool IsButton1Selected { get; private set; }
     public bool IsButton2Selected { get; private set; }
     public bool IsButton3Selected { get; private set; }
-    
-
 
     public string textoOpcion1;
     public string textoOpcion2;
@@ -50,6 +48,11 @@ public class TextEngine : MonoBehaviour
 
     //leyenda tutorial
     public GameObject tutorialText;
+
+    //pausa
+    public GameObject pauseSquare;
+    public GameObject pauseCanvas;
+    public GameObject alerta;
 
     [System.Serializable]
     public class Lectura
@@ -171,6 +174,15 @@ public class TextEngine : MonoBehaviour
 
         while (textoNodo != null)
         {
+            if (myDialogueList.lectura[nodoActual].personaje == "1")
+            {
+                nombrePersonaje.text = nombreSlot.name;
+            }
+            else
+            {
+                nombrePersonaje.text = "Yo";
+            }
+
             cajaDialogo.text = "";
 
             foreach (char x in textoNodo)
@@ -186,6 +198,7 @@ public class TextEngine : MonoBehaviour
             boton2.SetActive(false);
             boton3.SetActive(false);
 
+            
             if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].opcion1))
             {
                 boton1.SetActive(true);
@@ -387,17 +400,7 @@ public class TextEngine : MonoBehaviour
 
     }
 
-    public void Names()
-    {
-        if (myDialogueList.lectura[nodoActual].personaje == "1")
-        {
-            nombrePersonaje.text = nombreSlot.name;
-        }
-        else
-        {
-            nombrePersonaje.text = "Yo";
-        }
-    }
+   
     private bool esperandoOpcion = false;
 
     public void OnButton1Click()
@@ -439,6 +442,28 @@ public class TextEngine : MonoBehaviour
         }
     }
 
+    public void OnButton4Click() // reanudar
+    {
+        playerInput.enabled = true;
+        Time.timeScale = 1f;
+        pauseSquare.SetActive(!pauseSquare.activeSelf);
+        pauseCanvas.SetActive(!pauseCanvas.activeSelf);
+        EnableButton();
+    }
+
+    public void OnButton5Click() //volver a inicio
+    {
+        alerta.SetActive(true);
+    }
+
+    public void OnButton6Click() //confirmación
+    {
+        sceneController.LoadScene("levelSelect");
+    }
+    public void OnButton7Click() //rechazar
+    {
+        alerta.SetActive(false);
+    }
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -455,7 +480,28 @@ public class TextEngine : MonoBehaviour
         {
             sceneController.PasarNivel();
         }
-        Names();
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            pauseSquare.SetActive(!pauseSquare.activeSelf);
+            pauseCanvas.SetActive(!pauseCanvas.activeSelf);
+
+            if (playerInput.enabled)
+            {
+                playerInput.enabled = false;
+                Time.timeScale = 0f;
+                Debug.Log("paused!");
+                DisableButton();
+            }
+            else
+            {
+                playerInput.enabled = true;
+                Time.timeScale = 1f;
+                Debug.Log("playing");
+                EnableButton();
+            }
+
+        }
     }
 
     public IEnumerator TutoText()
@@ -466,4 +512,45 @@ public class TextEngine : MonoBehaviour
         tutorialText.SetActive(false);
     }
 
+    public void DisableButton()
+    {
+
+        Button buttonComponent1 = boton1.GetComponent<Button>();
+        if (buttonComponent1 != null)
+        {
+            buttonComponent1.interactable = false;
+        }
+
+        Button buttonComponent2 = boton2.GetComponent<Button>();
+        if (buttonComponent2 != null)
+        {
+            buttonComponent2.interactable = false;
+        }
+
+        Button buttonComponent3 = boton3.GetComponent<Button>();
+        if (buttonComponent3 != null)
+        {
+            buttonComponent3.interactable = false;
+        }
+    }
+
+    public void EnableButton()
+    {
+        Button buttonComponent1 = boton1.GetComponent<Button>();
+        if (buttonComponent1 != null)
+        {
+            buttonComponent1.interactable = true;
+        }
+        Button buttonComponent2 = boton2.GetComponent<Button>();
+        if (buttonComponent2 != null)
+        {
+            buttonComponent2.interactable = true;
+        }
+
+        Button buttonComponent3 = boton3.GetComponent<Button>();
+        if (buttonComponent3 != null)
+        {
+            buttonComponent3.interactable = true;
+        }
+    }
 }

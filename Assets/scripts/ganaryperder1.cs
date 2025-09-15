@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ganaryperder : MonoBehaviour
 {
+    public SceneController sceneController;
     [Header("Accesorios Valores")] 
     public GameObject accesorio_1;
     public GameObject accesorio_2;
@@ -58,7 +59,10 @@ public class Ganaryperder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown("2"))
+        {
+            sceneController.PasarNivel();
+        }
     }
 
     private IEnumerator aura()
