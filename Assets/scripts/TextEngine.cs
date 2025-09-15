@@ -54,6 +54,8 @@ public class TextEngine : MonoBehaviour
     public GameObject pauseCanvas;
     public GameObject alerta;
 
+    public GameObject diario;
+
     [System.Serializable]
     public class Lectura
     {
@@ -169,6 +171,8 @@ public class TextEngine : MonoBehaviour
 
     public IEnumerator WriteText()
     {
+        diario.SetActive(true);
+        yield return new WaitUntil(() => diario.activeSelf == false);
         nodoActual = 0;
         textoNodo = myDialogueList.lectura[nodoActual].Texto;
 
@@ -463,6 +467,10 @@ public class TextEngine : MonoBehaviour
     public void OnButton7Click() //rechazar
     {
         alerta.SetActive(false);
+    }
+    public void OnButton8Click() //diario
+    {
+        diario.SetActive(false);
     }
     void Start()
     {
