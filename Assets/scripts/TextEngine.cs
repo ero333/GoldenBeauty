@@ -27,6 +27,7 @@ public class TextEngine : MonoBehaviour
     public GameObject boton1;
     public GameObject boton2;
     public GameObject boton3;
+    public GameObject botonReanudar;
 
     public bool IsButton1Selected { get; private set; }
     public bool IsButton2Selected { get; private set; }
@@ -457,6 +458,7 @@ public class TextEngine : MonoBehaviour
 
     public void OnButton5Click() //volver a inicio
     {
+        botonReanudar.SetActive(false);
         alerta.SetActive(true);
     }
 
@@ -467,11 +469,31 @@ public class TextEngine : MonoBehaviour
     public void OnButton7Click() //rechazar
     {
         alerta.SetActive(false);
+        botonReanudar.SetActive(true);
     }
     public void OnButton8Click() //diario
     {
         diario.SetActive(false);
     }
+    public void OnButton9Click() //pausa
+    {
+        pauseSquare.SetActive(!pauseSquare.activeSelf);
+        pauseCanvas.SetActive(!pauseCanvas.activeSelf);
+
+        if (playerInput.enabled)
+        {
+            playerInput.enabled = false;
+            Time.timeScale = 0f;
+            DisableButton();
+        }
+        else
+        {
+            playerInput.enabled = true;
+            Time.timeScale = 1f;
+            EnableButton();
+        }
+    
+}
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -498,14 +520,12 @@ public class TextEngine : MonoBehaviour
             {
                 playerInput.enabled = false;
                 Time.timeScale = 0f;
-                Debug.Log("paused!");
                 DisableButton();
             }
             else
             {
                 playerInput.enabled = true;
                 Time.timeScale = 1f;
-                Debug.Log("playing");
                 EnableButton();
             }
 
