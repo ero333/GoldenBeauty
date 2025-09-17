@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Menuinicio : MonoBehaviour
 {
@@ -19,11 +20,14 @@ public class Menuinicio : MonoBehaviour
     public Button buttonStart;
     public Button buttonCredits;
     public Button buttonMenu;
+    public Button buttonRate;
 
 
     public bool IsButtonStart { get; private set; }
     public bool IsButtonCredits { get; private set; }
     public bool IsButtonMenu { get; private set; }
+    public bool IsButtonRate { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +44,7 @@ public class Menuinicio : MonoBehaviour
         IsButtonStart = selectedObject == buttonStart.gameObject;
         IsButtonCredits = selectedObject == buttonCredits.gameObject;
         IsButtonMenu = selectedObject == buttonMenu.gameObject;
+        IsButtonRate = selectedObject == buttonRate.gameObject;
 
 
         if (forwardAction.triggered)
@@ -61,6 +66,21 @@ public class Menuinicio : MonoBehaviour
                 sceneController.LoadScene("Menu inicio");
                 Debug.Log("creditos is selected.");
             }
+            else if (IsButtonRate) {
+                sceneController.LoadScene("Calificar");
+                Debug.Log("creditos is selected.");
+            }
         }
+
+        if (SceneManager.GetActiveScene().name == "Creditos")
+        {
+            StartCoroutine(RatingSoon());
+            
+        }
+    }
+    public IEnumerator RatingSoon ()
+    {
+        yield return new WaitForSeconds(10f);
+        sceneController.LoadScene("Calificar");
     }
 }

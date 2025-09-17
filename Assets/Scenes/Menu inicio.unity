@@ -1072,6 +1072,7 @@ MonoBehaviour:
   buttonStart: {fileID: 817644196}
   buttonCredits: {fileID: 1466022412}
   buttonMenu: {fileID: 1427220068}
+  buttonRate: {fileID: 940161705}
 --- !u!114 &2030239512
 MonoBehaviour:
   m_ObjectHideFlags: 0

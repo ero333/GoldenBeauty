@@ -41,5 +41,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: e1eb91a4c1ae7ab47bc6c1ae85dfcb10
+  - enabled: 1
+    path: Assets/Scenes/Calificar.unity
+    guid: 91422213bbab5ea448ff8d701bcb5f90
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: c87bb30284efd9846adb313befa54ef6, type: 3}
