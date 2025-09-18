@@ -10,6 +10,9 @@ public class DragMultipleObjects : MonoBehaviour
     private Dictionary<GameObject, Vector3> originalPositions = new Dictionary<GameObject, Vector3>(); //define cosas
     private Dictionary<GameObject, Color> originalColors = new Dictionary<GameObject, Color>(); //define los colores originales para la opacidad
 
+    public bool vivo;
+    public GameObject menuDePausa;
+
 
     public static bool mouseSuelto = false; //bool para saber si apretamos o no el mouse
 
@@ -19,11 +22,31 @@ public class DragMultipleObjects : MonoBehaviour
         {
             originalPositions[obj] = obj.transform.position; //asigna la posicion del mouse
         }
+
+        vivo = true;
     }
 
     void Update()
     {
 
+        if (vivo == true) 
+        {
+            movimiento();
+        }
+
+        if (menuDePausa.activeInHierarchy)
+        {
+            vivo = false;
+        }
+
+        else 
+        {
+            vivo = true;
+        }
+    }
+       
+    public void movimiento()
+    {
         // Cuando presiono click
         if (Input.GetMouseButtonDown(0))
         {
@@ -41,7 +64,7 @@ public class DragMultipleObjects : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) //cuando clickeo...
         {
-            Collider2D targetCollider = Physics2D.OverlapPoint(mousePosition); 
+            Collider2D targetCollider = Physics2D.OverlapPoint(mousePosition);
 
             if (targetCollider) //si el collider coinicide...
             {
@@ -72,7 +95,7 @@ public class DragMultipleObjects : MonoBehaviour
             StartCoroutine(Amongas());
         }
 
-        
+
         if (Input.GetKeyDown(KeyCode.R)) //reset
         {
             ResetAllObjects();
@@ -93,7 +116,7 @@ public class DragMultipleObjects : MonoBehaviour
             }
         }
     }
-       
+
         public void ResetAllObjects()
     {
         foreach (GameObject obj in selectableObjects)
