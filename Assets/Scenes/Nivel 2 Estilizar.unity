@@ -1695,20 +1695,20 @@ MonoBehaviour:
   Pelo_2: {fileID: 64769707}
   Pelo_3: {fileID: 185629931}
   ValorPelo_1: 1
-  ValorPelo_2: 1
-  ValorPelo_3: 0
+  ValorPelo_2: 0
+  ValorPelo_3: 1
   Rostro_1: {fileID: 1820499802}
   Rostro_2: {fileID: 668306315}
   Rostro_3: {fileID: 2050903877}
-  ValorRostro_1: 1
-  ValorRostro_2: 1
-  ValorRostro_3: 0
+  ValorRostro_1: 0
+  ValorRostro_2: 0
+  ValorRostro_3: 1
   Ropa_1: {fileID: 623397818}
   Ropa_2: {fileID: 582824999}
   Ropa_3: {fileID: 324656628}
   ValorRopa_1: 1
-  ValorRopa_2: 1
-  ValorRopa_3: 0
+  ValorRopa_2: 0
+  ValorRopa_3: 1
   Valordeganar: 2
   GanarNivel: 0
   botonGanar: {fileID: 241899677}
