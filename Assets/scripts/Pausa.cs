@@ -9,6 +9,7 @@ public class Pausa : MonoBehaviour
     public GameObject menuDePausa;
     public GameObject fondoDePausa;
     public GameObject botonDePausa;
+    public GameObject Alerta;
 
     public GameObject AnimacionMenuDePausa;
 
@@ -49,6 +50,14 @@ public class Pausa : MonoBehaviour
     public void VolverAlInicio()
     {
         SceneManager.LoadScene("Menu inicio");
+    }
+    public void OnButtonClick ()
+    {
+        Alerta.SetActive(true);
+    }
+    public void OnButton2Click ()
+    {
+        Alerta.SetActive(false);
     }
 
 }

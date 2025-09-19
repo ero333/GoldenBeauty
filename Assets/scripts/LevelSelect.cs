@@ -150,4 +150,8 @@ public class LevelSelectManager : MonoBehaviour
     {
         SetupButtonsState();
     }
+    public void OnButtonClick()
+    {
+        sceneController.LoadScene("Menu inicio");
+    }
 }

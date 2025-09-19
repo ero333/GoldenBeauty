@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1180dbe4aebe8c74b9913d829debea32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 1
+  levelNumber: 2
   completeOnStart: 1
   delay: 0.5
 --- !u!4 &915370423
@@ -1739,7 +1739,7 @@ MonoBehaviour:
   buttonStart: {fileID: 0}
   buttonCredits: {fileID: 2029719597}
   buttonMenu: {fileID: 486346192}
-  buttonRate: {fileID: 0}
+  buttonRate: {fileID: 137556333}
 --- !u!114 &1513663710
 MonoBehaviour:
   m_ObjectHideFlags: 0
