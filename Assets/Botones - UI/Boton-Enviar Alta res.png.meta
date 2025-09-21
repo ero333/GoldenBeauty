@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: faa5d9791003e63499cc2cc5e6e06c21
+guid: e88c0480f78022c4686678d0c48e86bf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 110
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Boton-Enviar Alta res_0
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 650
+        width: 500
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daaaad035b191cd458ee52cec77e9bd5
+      internalID: 913390409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boton-Enviar Alta res_1
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 450
+        width: 500
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07aa79d839cd6b54cb89f3dc19db5037
+      internalID: 627674030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boton-Enviar Alta res_2
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 230
+        width: 500
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbca5efb0cffd594cbfcce68015f7996
+      internalID: 1949362293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boton-Enviar Alta res_0: 913390409
+      Boton-Enviar Alta res_1: 627674030
+      Boton-Enviar Alta res_2: 1949362293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
