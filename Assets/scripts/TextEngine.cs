@@ -6,8 +6,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TextEngine : MonoBehaviour
 {
@@ -492,8 +493,11 @@ public class TextEngine : MonoBehaviour
             Time.timeScale = 1f;
             EnableButton();
         }
-    
-}
+    }
+    public void OnButton10Click() //skip
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
