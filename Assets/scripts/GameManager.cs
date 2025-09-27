@@ -94,4 +94,9 @@ public class GameManager : MonoBehaviour
             ResetProgress();
         }
     }
+
+
+
+    //eventos de recoleccion de data acá
+
 }

@@ -962,6 +962,7 @@ GameObject:
   - component: {fileID: 2030239508}
   - component: {fileID: 2030239511}
   - component: {fileID: 2030239512}
+  - component: {fileID: 2030239513}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1103,6 +1104,18 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerMap
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 24704601}
+--- !u!114 &2030239513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030239505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07658d7229ae2b54bbf402feabf4accf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

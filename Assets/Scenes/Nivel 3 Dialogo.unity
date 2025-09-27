@@ -1695,7 +1695,7 @@ MonoBehaviour:
   cajaOpcion1: {fileID: 675378014}
   cajaOpcion2: {fileID: 2113437930}
   cajaOpcion3: {fileID: 691852166}
-  textAssetData: {fileID: 4900000, guid: 61cf3e0e1e89ebf46b7b5fb8e2827330, type: 3}
+  textAssetData: {fileID: 4900000, guid: dde87fa6d0cec2242916ca2272841989, type: 3}
   nodoActual: 0
   textoNodo: 
   boton1: {fileID: 1835711643}
