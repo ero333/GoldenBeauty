@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static StaticVariables;
 
 public class TextEngine : MonoBehaviour
 {
@@ -506,6 +507,7 @@ public class TextEngine : MonoBehaviour
         ReadCSV();
         StartCoroutine(WriteText());
         StartCoroutine(TutoText());
+        
     }
 
     void Update()

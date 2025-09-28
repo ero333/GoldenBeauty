@@ -691,7 +691,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -711,10 +717,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 0cf908f0-83a1-477f-af48-0d2419e1eb9f
+  cloudProjectId: 6108610b-3b7b-42a2-9cfc-6812439d6082
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: VN attempt
+  projectName: GoldenBeautyCloud
   organizationId: andresmora2k4
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
