@@ -37,7 +37,7 @@ public class LevelSelectManager : MonoBehaviour
 
         LevelStartEvent LevelStart = new LevelStartEvent
         {
-            level.SessionData = level,
+            //level.SessionData = level,
         };
         // NUEVO: Configurar estado de los botones según progreso
         SetupButtonsState();
