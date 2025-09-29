@@ -1768,25 +1768,25 @@ MonoBehaviour:
   accesorio_1: {fileID: 426336235}
   accesorio_2: {fileID: 2015493970}
   accesorio_3: {fileID: 1893610118}
-  ValorAccesorio_1: 1
+  ValorAccesorio_1: 0
   ValorAccesorio_2: 0
-  ValorAccesorio_3: 0
+  ValorAccesorio_3: 1
   Pelo_1: {fileID: 148771976}
   Pelo_2: {fileID: 64769707}
   Pelo_3: {fileID: 185629931}
   ValorPelo_1: 1
-  ValorPelo_2: 1
+  ValorPelo_2: 0
   ValorPelo_3: 0
   Rostro_1: {fileID: 1820499802}
   Rostro_2: {fileID: 668306315}
   Rostro_3: {fileID: 2050903877}
-  ValorRostro_1: 0
+  ValorRostro_1: 1
   ValorRostro_2: 1
   ValorRostro_3: 0
   Ropa_1: {fileID: 623397818}
   Ropa_2: {fileID: 582824999}
   Ropa_3: {fileID: 324656628}
-  ValorRopa_1: 0
+  ValorRopa_1: 1
   ValorRopa_2: 1
   ValorRopa_3: 0
   Valordeganar: 2
