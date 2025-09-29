@@ -1,17 +1,92 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using Unity.Services.Analytics;
 using Unity.Services.Core;
-using AnalyticsEvent = Unity.Services.Analytics.Event;
+using Unity.Services.Analytics;
+using AnalyticsEventBase = Unity.Services.Analytics.Event;
 
 public class EventManager : MonoBehaviour
 {
-    public class LevelStartEvent : AnalyticsEvent
+    // Singleton (opcional, para llamarlo desde cualquier script)
+    public static EventManager Instance { get; private set; }
+
+    async void Awake()
     {
-        public LevelStartEvent() : base("LevelStart")
+        if (Instance == null)
         {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            await UnityServices.InitializeAsync();
         }
-        public int level { set { SetParameter("level", value); } }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
+
+    public void LogEvent(string eventName, Dictionary<string, object> parameters = null)
+    {
+        var customEvent = new CustomEvent(eventName);
+        if (parameters != null)
+        {
+            foreach (var kv in parameters)
+            {
+                customEvent[kv.Key] = kv.Value;
+            }
+        }
+
+        AnalyticsService.Instance.RecordEvent(customEvent);
+        AnalyticsService.Instance.Flush();
+    }
+
+    // 🚨 ESTE MÉTODO DEBE IR AQUÍ, no dentro de AnalyticsEvents
+    public void LogLevelStart(int level)
+    {
+        var ev = AnalyticsEvents.CreateLevelStartEvent(level);
+        AnalyticsService.Instance.RecordEvent(ev);
+        AnalyticsService.Instance.Flush();
+    }
+
+    public void LogLevelComplete(int level)
+    {
+        var ev = new CustomEvent("level_complete");
+        ev["level"] = level;
+        AnalyticsService.Instance.RecordEvent(ev);
+        AnalyticsService.Instance.Flush();
+    }
+    public void LogCalificar(int arte, int historia, int diversion)
+    {
+        var ev = AnalyticsEvents.CreateCalificarEvent(arte, historia, diversion);
+        AnalyticsService.Instance.RecordEvent(ev);
+        AnalyticsService.Instance.Flush();
+    }
+
+
+    public static class AnalyticsEvents
+    {
+        public static CustomEvent CreateLevelStartEvent(int level)
+        {
+            var ev = new CustomEvent("level_start");
+            ev["level"] = level;
+            return ev;
+        }
+
+        public static CustomEvent CreateLevelCompleteEvent(int level)
+        {
+            var ev = new CustomEvent("level_complete");
+            ev["level"] = level;
+            return ev;
+        }
+
+        public static CustomEvent CreateCalificarEvent(int arte, int historia, int diversion)
+        {
+            var ev = new CustomEvent("calificar");
+            ev["arte"] = arte;
+            ev["historia"] = historia;
+            ev["diversion"] = diversion;
+            return ev;
+        }
+
+    }
+
+
 }
