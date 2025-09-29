@@ -9,6 +9,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using static EventManager;
+using static StaticVariables;
 
 public class Calificar : MonoBehaviour
 {
@@ -65,6 +67,7 @@ public class Calificar : MonoBehaviour
     }
     public void OnButtonClick()
     {
+       // EventManager.Instance.LogLevelStart(1);
         sceneController.LoadScene("Menu inicio");
     }
 

@@ -1,14 +1,17 @@
 //using System.Diagnostics;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using static StaticVariables;
 using static EventManager;
-//using static System.Net.Mime.MediaTypeNames;
+using static StaticVariables;
 
 public class LevelSelectManager : MonoBehaviour
 {
+    //LevelStartEvent levelStart = new LevelStartEvent();
+    //levelStart.level = SessionData.level;
+    
     public SceneController sceneController;
     private PlayerInput playerInput;
     private InputAction forwardAction;
@@ -35,10 +38,7 @@ public class LevelSelectManager : MonoBehaviour
         forwardAction = playerInput.actions.FindAction("PlayerMap/Forward");
         backAction = playerInput.actions.FindAction("PlayerMap/Back");
 
-        LevelStartEvent LevelStart = new LevelStartEvent
-        {
-            //level.SessionData = level,
-        };
+       
         // NUEVO: Configurar estado de los botones según progreso
         SetupButtonsState();
     }
@@ -96,6 +96,7 @@ public class LevelSelectManager : MonoBehaviour
 
     void Update()
     {
+
         //forwardAction.Enable();
         //backAction.Enable();
         // Get the currently selected GameObject from EventSystem
@@ -116,37 +117,38 @@ public class LevelSelectManager : MonoBehaviour
 
             if (IsButton1Selected && button1.interactable)
             {
+                EventManager.Instance.LogLevelStart(1);
+                Debug.Log("Button 1 is selected.");
                 SessionData.level = 1;
                 sceneController.LoadScene("Nivel 1 Dialogo");
-                Debug.Log("Button 1 is selected.");
             }
             else if (IsButton2Selected && button2.interactable)
             {
-                SessionData.level = 2;
+                EventManager.Instance.LogLevelStart(2);
                 sceneController.LoadScene("Nivel 2 Dialogo");
                 Debug.Log("Button 2 is selected.");
             }
             else if (IsButton3Selected && button3.interactable)
             {
-                SessionData.level = 3;
+                EventManager.Instance.LogLevelStart(3);
                 sceneController.LoadScene("Nivel 3 Dialogo");
                 Debug.Log("Button 3 is selected.");
             }
             else if (IsButton4Selected && button4.interactable)
             {
-                SessionData.level = 4;
+                EventManager.Instance.LogLevelStart(4);
                 sceneController.LoadScene("Nivel 4 Dialogo");
                 Debug.Log("Button 4 is selected.");
             }
             else if (IsButton5Selected && button5.interactable)
             {
-                SessionData.level = 5;
+                EventManager.Instance.LogLevelStart(5);
                 sceneController.LoadScene("Nivel 5 Dialogo");
                 Debug.Log("Button 5 is selected.");
             }
             else if (IsButton6Selected && button6.interactable)
             {
-                SessionData.level = 6;
+                EventManager.Instance.LogLevelStart(6);
                 sceneController.LoadScene("Nivel 6 Dialogo");
                 Debug.Log("Button 6 is selected.");
             }
