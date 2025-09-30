@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,22 +15,22 @@ using static StaticVariables;
 public class Calificar : MonoBehaviour
 {
     public SceneController sceneController;
-    public GameObject[] hoverAreas; // 5 objetos SOLO para detecciÛn (siempre activos)
+    public GameObject[] hoverAreas; // 5 objetos SOLO para detecci√≥n (siempre activos)
     public GameObject[] starSprites; // 5 sprites visuales (se activan/desactivan)
 
     private Camera mainCamera;
+    private int hoveredIndex = -1;
+    private int selectedRating = -1;
 
     private void Start()
     {
         mainCamera = Camera.main;
 
-        // Asegurar que todas las ·reas de hover estÈn ACTIVAS
         foreach (GameObject area in hoverAreas)
         {
             if (area != null) area.SetActive(true);
         }
 
-        // Todas las estrellas visuales INACTIVAS al inicio
         foreach (GameObject star in starSprites)
         {
             if (star != null) star.SetActive(false);
@@ -39,11 +39,28 @@ public class Calificar : MonoBehaviour
 
     private void Update()
     {
-        int hoveredIndex = -1;
+        UpdateHoveredIndex();
+
+        // Detectar clic izquierdo del mouse
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            if (hoveredIndex >= 0)
+            {
+                selectedRating = hoveredIndex;
+                Debug.Log($"‚≠ê Calificaci√≥n seleccionada: {selectedRating + 1}");
+            }
+        }
+
+        UpdateStarVisuals();
+    }
+
+    private void UpdateHoveredIndex()
+    {
+        hoveredIndex = -1;
+
         Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePosition2D = new Vector2(mouseWorldPosition.x, mouseWorldPosition.y);
 
-        // Detectar hover en las ·reas siempre activas
         for (int i = 0; i < hoverAreas.Length; i++)
         {
             if (hoverAreas[i] == null) continue;
@@ -55,21 +72,29 @@ public class Calificar : MonoBehaviour
                 break;
             }
         }
+    }
 
-        // Actualizar las estrellas visuales
+    private void UpdateStarVisuals()
+    {
+        int starsToShow = hoveredIndex >= 0 ? hoveredIndex : selectedRating;
+
         for (int i = 0; i < starSprites.Length; i++)
         {
             if (starSprites[i] != null)
             {
-                starSprites[i].SetActive(i <= hoveredIndex);
+                starSprites[i].SetActive(i <= starsToShow && starsToShow >= 0);
             }
         }
     }
+
     public void OnButtonClick()
     {
-       // EventManager.Instance.LogLevelStart(1);
+        // Aqu√≠ podr√≠as enviar el evento de calificaci√≥n con selectedRating + 1
+        // EventManager.Instance.LogEvent("calificar", new Dictionary<string, object> { { "arte", selectedRating + 1 } });
+
         sceneController.LoadScene("Menu inicio");
     }
-
 }
+
+
 
