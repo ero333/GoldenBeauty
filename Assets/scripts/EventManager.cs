@@ -3,6 +3,7 @@ using UnityEngine;
 using Unity.Services.Core;
 using Unity.Services.Analytics;
 using AnalyticsEventBase = Unity.Services.Analytics.Event;
+using System.Linq;
 
 public class EventManager : MonoBehaviour
 {
@@ -32,6 +33,13 @@ public class EventManager : MonoBehaviour
             {
                 customEvent[kv.Key] = kv.Value;
             }
+
+            // 🔍 Log de depuración
+            Debug.Log($"[Analytics] Enviando evento: {eventName} con parámetros: {string.Join(", ", parameters.Select(kv => $"{kv.Key}: {kv.Value}"))}");
+        }
+        else
+        {
+            Debug.Log($"[Analytics] Enviando evento: {eventName} sin parámetros.");
         }
 
         AnalyticsService.Instance.RecordEvent(customEvent);
@@ -77,16 +85,16 @@ public class EventManager : MonoBehaviour
             return ev;
         }
 
-        public static CustomEvent CreateCalificarEvent(int arte, int historia, int diversion)
+        public static CustomEvent CreateCalificarEvent(int? arte = null, int? historia = null, int? diversion = null)
         {
             var ev = new CustomEvent("calificar");
-            ev["arte"] = arte;
-            ev["historia"] = historia;
-            ev["diversion"] = diversion;
+            if (arte.HasValue) ev["arte"] = arte.Value;
+            if (historia.HasValue) ev["historia"] = historia.Value;
+            if (diversion.HasValue) ev["diversion"] = diversion.Value;
             return ev;
         }
 
-    }
 
+    }
 
 }
