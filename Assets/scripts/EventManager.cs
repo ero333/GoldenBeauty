@@ -56,7 +56,7 @@ public class EventManager : MonoBehaviour
 
     public void LogLevelComplete(int level)
     {
-        var ev = new CustomEvent("level_complete");
+        var ev = new CustomEvent("LevelComplete");
         ev["level"] = level;
         AnalyticsService.Instance.RecordEvent(ev);
         AnalyticsService.Instance.Flush();
@@ -73,24 +73,24 @@ public class EventManager : MonoBehaviour
     {
         public static CustomEvent CreateLevelStartEvent(int level)
         {
-            var ev = new CustomEvent("level_start");
+            var ev = new CustomEvent("LevelStart");
             ev["level"] = level;
             return ev;
         }
 
         public static CustomEvent CreateLevelCompleteEvent(int level)
         {
-            var ev = new CustomEvent("level_complete");
+            var ev = new CustomEvent("LevelComplete");
             ev["level"] = level;
             return ev;
         }
 
-        public static CustomEvent CreateCalificarEvent(int? arte = null, int? historia = null, int? diversion = null)
+        public static CustomEvent CreateCalificarEvent(int? art = null, int? lore = null, int? fun = null)
         {
-            var ev = new CustomEvent("calificar");
-            if (arte.HasValue) ev["arte"] = arte.Value;
-            if (historia.HasValue) ev["historia"] = historia.Value;
-            if (diversion.HasValue) ev["diversion"] = diversion.Value;
+            var ev = new CustomEvent("Rate");
+            if (art.HasValue) ev["art"] = art.Value;
+            if (lore.HasValue) ev["lore"] = lore.Value;
+            if (fun.HasValue) ev["fun"] = fun.Value;
             return ev;
         }
 
