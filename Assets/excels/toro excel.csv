@@ -3,26 +3,26 @@ nodo,Texto,next,opcion1,opcion2,opcion3,back,personaje,nosotros
 2,"Buenos... días, señor Ramírez. Debo ser honesto, asumí que había encontrado otro estilista. Digo, no viene aquí hace meses.",3,,,,1,0,1
 3,"Tengo empleados personales, por lo que no es necesario ir a un local para recibir el servicio.",4,,,,2,1,0
 4,"Entiendo. Entonces, ¿Qué lo trae por aquí, si ya tiene sus empleados?",5,,,,3,0,1
-5,...Hoy tengo una conferencia muy importante. Debo decidir con mi equipo nuestro proyecto anual de R&D. El problema es que noto cierta ineficiencia.,6,,,,4,1,0
+5,...Hoy tengo una conferencia donde mi equipo debe decidir el proyecto anual de R&D. El problema es que noto cierta ineficiencia.,6,,,,4,1,0
 6,"¿Es malo dando conferencias, señor?",7,,,,5,0,1
-7,"Para nada. Es mi equipo el ineficiente. Cada vez que hablo, se congelan, y acaban proponiendo barbaridades. No sé que les pasa.",,8,9,10,6,1,0
+7,"Para nada. Es mi equipo el ineficiente. Cada vez que hablo, se congelan y proponen barbaridades. No sé que les pasa.",,8,9,10,6,1,0
 8,"Suenan algo incompetentes, sí. Qué mala suerte...",11,,,,7,0,1
 9,"Quizás es el ambiente de oficina. Es algo opresivo, si me permite decirlo. Puede estar bajándoles los ánimos",12,,,,7,0,1
 10,¿Es posible que usted sea el motivo?,13,,,,7,0,1
-11,"No lo sé. ¿Puede que sea esta paranoia nueva de los cambiaformas? En fin, si no van a tomarselo en serio, yo debo esforzarme el doble.",14,,,,8,1,0
-12,"No veo ningún problema con una oficina. Blanca, limpia y geométrica, como un copo de nieve. Diría que es relajante, inclusive.",15,,,,9,1,0
+11,"No lo sé. ¿Puede que sea esta paranoia nueva de los cambiaformas? En fin, no se lo toman en serio.",14,,,,8,1,0
+12,"No veo ningún problema con una oficina. Blanca, limpia y geométrica. Diría que es relajante, inclusive.",15,,,,9,1,0
 13,¿Acaso está insinuando cierta mediocridad en mi parte?,16,,,,10,1,0
 14,"Claro, comprendo. Entonces, ¿Un estilo super duper serio y de empresario responsable?",17,,,,11,0,1
 15,"Pero eso es su punto de vista, y ellos pueden tener otro. Yo sugeriría un estilo algo más cálido para alivinianar el clima",18,,,,12,0,1
-16,"No, no. Usted es un gran empresario, y puede que eso intimide a sus empleados. Deben sentir que se meterán en problemas si se equivocan.",19,,,,13,0,1
-17,"¡Exacto! Aunque... ahora que lo pienso... ese fue el mismo estilo que usé ayer... y ante-ayer... Rayos, ¿Tú qué crees?",,20,21,22,14,1,0
-18,"Elevar sus espíritus para motivar su desempeño. Suena deceptivamente infantil, pero al diablo, dime, ¿Qué sugieres?",,20,21,22,15,1,0
-19,"¿Piensan eso? ¡Debería despedirlos por semejante estupidez! Hmmm, pensándolo bien, quizás tenga un punto. ¿Qué tiene en mente?",,20,21,22,16,1,0
-20,"Si necesita buenas ideas, debe comandar respeto. Un estilo elegante, hiper producido, no le vendría mal.",23,,,,7,0,1
+16,"No, no, pero puede que intimide a sus empleados. Deben sentir que se meterán en problemas si se equivocan.",19,,,,13,0,1
+17,¡Exacto! Aunque... ese fue el mismo estilo que usé ayer... y ante-ayer... ¿Tú qué crees?,,20,21,22,14,1,0
+18,"Elevar sus espíritus para motivar su desempeño. Suena deceptivamente infantil, pero dime, ¿Qué sugieres?",,20,21,22,15,1,0
+19,"¿Piensan eso? ¡Debería despedirlos por semejante estupidez! Hmmm, pensándolo bien, ¿Qué tiene en mente?",,20,21,22,16,1,0
+20,"Si necesita buenas ideas, debe generar respeto. Un estilo elegante, híper producido, no le vendría mal.",23,,,,7,0,1
 21,Muéstrele un poco de rebeldía. Sorpréndalos con su mal modo y afán por el caos. Ayudará a romper el hielo.,24,,,,7,0,1
-22,"Si sus empleados le tienen miedo, debe verse como alguien inofensivo y agradable. Solo así podrán trabajar con normalidad.",25,,,,7,0,1
+22,"Si sus empleados le tienen miedo, debe verse como alguien agradable. Solo así podrán trabajar con normalidad.",25,,,,7,0,1
 23,"Sabe, eso es exactamente lo mismo que me dicen mis asistentes. Pero bueno, ya vine aquí, haga su magia.",26,,,,20,1,0
-24,"¿Estilo rock? ¿Usted cree que soy un metalero con crisis de identidad? Puedo querer un cambio, pero no exageremos, por favor.",27,,,,21,1,0
+24,"¿Estilo rock? ¿Usted cree que soy un metalero con crisis de identidad? Puedo querer un cambio, pero no exageremos.",27,,,,21,1,0
 25,Grrr... ¿Acaso es así como todo el mundo me ve? ¿Como alguien enojón e intolerante?,,30,31,,22,1,0
 26,Veré qué puedo hacer.,40,,,,23,0,1
 27,"Oh vamos señor Ramirez. Dijo que quería un cambio, y yo le ofrezco uno. Serán cosas sutiles, no se preocupe.",28,,,,24,0,1

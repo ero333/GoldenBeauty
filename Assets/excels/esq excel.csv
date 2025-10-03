@@ -1,6 +1,6 @@
 nodo,Texto,next,opcion1,opcion2,opcion3,back,personaje,nosotros
 1,"¡BUENOS DÍAS, mi queridísimo estilista! Hoy es el debut de mi gran show, y debo verme increíble para la ocasión.",2,,,,,1,0
-2,"Señor esqueleto, es un placer tenerlo devuelta. Me enteré de su nuevo programa, espero poder verlo hoy a la noche.",3,,,,2,0,1
+2,"Señor Fémur, es un placer tenerlo devuelta. Me enteré de su nuevo programa, espero poder verlo hoy a la noche.",3,,,,2,0,1
 3,"Oh, no sabes cuanto me alegra oir eso. Pero basta de palabreríos, necesito sus servicios lo más pronto posible.",4,,,,3,1,0
 4,"Wow, noto mucha emoción. Muy bien, dígame qué es lo que quiere y le prometo dejarlo de maravilla.",5,,,,4,0,1
 5,"No lo se... Estoy emocionado, pero estos ejecutivos son muy estrictos,y si mi estilo no es de de su agrado?",,6,7,8,5,1,0
