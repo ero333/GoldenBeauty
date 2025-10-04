@@ -63,16 +63,22 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel 4 Estilizar.unity
     guid: 35800e628fc7acc4baa143b28fbec6a1
   - enabled: 1
-    path: Assets/Scenes/Creditos.unity
-    guid: e1eb91a4c1ae7ab47bc6c1ae85dfcb10
+    path: Assets/Scenes/Nivel 4 Final Bueno.unity
+    guid: 2dadda7c0739fff48a712fa3ba4ea799
   - enabled: 1
-    path: Assets/Scenes/Calificar.unity
-    guid: 91422213bbab5ea448ff8d701bcb5f90
+    path: Assets/Scenes/Nivel 4 Final Malo.unity
+    guid: 54a39757b016bc942b46a9a51ce8b0e8
   - enabled: 1
     path: Assets/Scenes/Nivel 6 Dialogo.unity
     guid: 3b7e8fde49d046c4c90707d12e07c85e
   - enabled: 1
     path: Assets/Scenes/Nivel 6 Estilizar.unity
     guid: ea0261687fcccbd4cbfe97e8cdc2c681
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: e1eb91a4c1ae7ab47bc6c1ae85dfcb10
+  - enabled: 1
+    path: Assets/Scenes/Calificar.unity
+    guid: 91422213bbab5ea448ff8d701bcb5f90
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: c87bb30284efd9846adb313befa54ef6, type: 3}
