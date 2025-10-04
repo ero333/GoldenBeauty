@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: c54dc2a8f84e58e4ca6a4f126c0ab73a
   - enabled: 1
+    path: Assets/Scenes/Nivel  1 Diario.unity
+    guid: 70c1a8ba8b683a842a052e1e0b1c3e5c
+  - enabled: 1
     path: Assets/Scenes/Nivel 1 Dialogo.unity
     guid: 3a0846c4f0b02da43bac476fd82e8515
   - enabled: 1
@@ -44,6 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel 2 Final Malo.unity
     guid: 785f8a7a3640c2141a7d16dc15b8eb43
+  - enabled: 1
+    path: Assets/Scenes/Nivel  3 Diario.unity
+    guid: eb08d26bd1f184047a9fadf92a127cc9
   - enabled: 1
     path: Assets/Scenes/Nivel 3 Dialogo.unity
     guid: 37a6f81ebddfd3841a3187483c2d8c4b
