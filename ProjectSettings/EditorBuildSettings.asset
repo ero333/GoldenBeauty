@@ -63,6 +63,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel 3 Final Malo.unity
     guid: 88966ff4a5b9c40478857d7306f5849b
   - enabled: 1
+    path: Assets/Scenes/Nivel 4 Diario.unity
+    guid: 904447a6166f4b8479ee0a0af1b1ebac
+  - enabled: 1
     path: Assets/Scenes/Nivel 4 Dialogo.unity
     guid: 915892698e5842342a354924f262d812
   - enabled: 1
