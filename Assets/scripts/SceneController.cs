@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
 
-    public int nivelToro;
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -32,11 +30,6 @@ public class SceneController : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-    }
-
-    public void DiarioToro()
-    {
-        SceneManager.LoadScene("Scene11");
     }
 
 }
