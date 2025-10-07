@@ -246,7 +246,7 @@ Transform:
   m_GameObject: {fileID: 38725277}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.069, y: 1.4189, z: 0}
+  m_LocalPosition: {x: -7.069, y: 1.476, z: 0}
   m_LocalScale: {x: 0.9039, y: 0.9039, z: 0.9039}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -331,7 +331,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.2, y: 2, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 780923660}
@@ -736,7 +736,7 @@ SpriteRenderer:
   m_Size: {x: 2.1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &158492803
@@ -1104,7 +1104,7 @@ GameObject:
   - component: {fileID: 295458599}
   m_Layer: 0
   m_Name: Rostro-3
-  m_TagString: Accesorios-3
+  m_TagString: Rostro-3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1152,7 +1152,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &295458600
 SpriteRenderer:
@@ -1215,7 +1215,7 @@ Transform:
   m_GameObject: {fileID: 295458598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9470001, y: -3.156, z: 0}
+  m_LocalPosition: {x: -4.554, y: -3.17, z: 0}
   m_LocalScale: {x: 0.8830935, y: 0.8830935, z: 0.8830935}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2160,7 +2160,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.2, y: 2, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 780923660}
@@ -2243,7 +2243,7 @@ Transform:
   m_GameObject: {fileID: 668306315}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.217, y: 1.86, z: 0}
+  m_LocalPosition: {x: -0.2, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2680,7 +2680,7 @@ GameObject:
   - component: {fileID: 847438861}
   m_Layer: 0
   m_Name: Rostro-1
-  m_TagString: Accesorios-1
+  m_TagString: Rostro-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2728,7 +2728,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &847438862
 SpriteRenderer:
@@ -2791,7 +2791,7 @@ Transform:
   m_GameObject: {fileID: 847438860}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.916, y: 1.43, z: 0}
+  m_LocalPosition: {x: -4.523, y: 1.43, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2942,7 +2942,7 @@ GameObject:
   - component: {fileID: 919493761}
   m_Layer: 0
   m_Name: Accesorios-3
-  m_TagString: Rostro-3
+  m_TagString: Accesorios-3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3008,7 +3008,7 @@ Transform:
   m_GameObject: {fileID: 919493758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.571, y: -3.1445, z: 0}
+  m_LocalPosition: {x: -1.9150002, y: -3.1445, z: 0}
   m_LocalScale: {x: 0.8915124, y: 0.8915124, z: 0.8915124}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3179,7 +3179,7 @@ GameObject:
   - component: {fileID: 923602532}
   m_Layer: 0
   m_Name: Accesorios-1
-  m_TagString: Rostro-1
+  m_TagString: Accesorios-1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3245,7 +3245,7 @@ Transform:
   m_GameObject: {fileID: 923602529}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.563, y: 1.3629, z: 0}
+  m_LocalPosition: {x: -1.907, y: 1.52, z: 0}
   m_LocalScale: {x: 0.8013565, y: 0.8013565, z: 0.8013565}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3612,7 +3612,7 @@ GameObject:
   - component: {fileID: 991594042}
   m_Layer: 0
   m_Name: Rostro-2
-  m_TagString: Accesorios-2
+  m_TagString: Rostro-2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3660,7 +3660,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &991594043
 SpriteRenderer:
@@ -3723,7 +3723,7 @@ Transform:
   m_GameObject: {fileID: 991594041}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.898, y: -0.879, z: 0}
+  m_LocalPosition: {x: -4.505, y: -0.879, z: 0}
   m_LocalScale: {x: 0.9014373, y: 0.9014373, z: 0.9014373}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4981,15 +4981,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 08f7a6b7d6c1ca54bb1fa8e07662a117, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.5, y: 12.1625}
+  m_Size: {x: 8.4, y: 9.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1655763117
@@ -5445,7 +5445,7 @@ GameObject:
   - component: {fileID: 1752299781}
   m_Layer: 0
   m_Name: Accesorios-2
-  m_TagString: Rostro-2
+  m_TagString: Accesorios-2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5511,7 +5511,7 @@ Transform:
   m_GameObject: {fileID: 1752299778}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5128, y: -0.8797, z: 0}
+  m_LocalPosition: {x: -1.8567994, y: -0.8797, z: 0}
   m_LocalScale: {x: 0.8554863, y: 0.8554863, z: 0.8554863}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5696,7 +5696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1820499803
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5738,7 +5738,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 4838d9b148bac32469fd16357bc001b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc1e4188279b0b14b88289b33a0991e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5758,7 +5758,7 @@ Transform:
   m_GameObject: {fileID: 1820499802}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 2.03, z: 0}
+  m_LocalPosition: {x: -0.2, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6384,7 +6384,7 @@ SpriteRenderer:
   m_Size: {x: 2.1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2049193352
