@@ -174,8 +174,8 @@ public class TextEngine : MonoBehaviour
 
     public IEnumerator WriteText()
     {
-        diario.SetActive(true);
-        yield return new WaitUntil(() => diario.activeSelf == false);
+        //diario.SetActive(true);
+        //yield return new WaitUntil(() => diario.activeSelf == false);
         nodoActual = 0;
         textoNodo = myDialogueList.lectura[nodoActual].Texto;
 

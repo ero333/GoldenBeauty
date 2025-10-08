@@ -113,14 +113,15 @@ public class LevelSelectManager : MonoBehaviour
         // Optional: Debug output to verify it's working
         if (forwardAction.triggered)
         {
-            Debug.Log("ZZZZZZZZZZZZZZ");
+            //Destroy(playerInput.gameObject);
 
             if (IsButton1Selected && button1.interactable)
             {
+                
                 EventManager.Instance.LogLevelStart(1);
                 Debug.Log("Button 1 is selected.");
                 SessionData.level = 1;
-                sceneController.LoadScene("Nivel 1 Dialogo");
+                sceneController.LoadScene("Nivel 1 Diario");
             }
             else if (IsButton2Selected && button2.interactable)
             {
@@ -131,7 +132,7 @@ public class LevelSelectManager : MonoBehaviour
             else if (IsButton3Selected && button3.interactable)
             {
                 EventManager.Instance.LogLevelStart(3);
-                sceneController.LoadScene("Nivel 3 Dialogo");
+                sceneController.LoadScene("Nivel 3 Diario");
                 Debug.Log("Button 3 is selected.");
             }
             else if (IsButton4Selected && button4.interactable)

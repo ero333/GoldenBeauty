@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Timeline.Actions;
+//using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,6 +30,9 @@ public class MovimientosDiariles : MonoBehaviour
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
+
+        playerInput.SwitchCurrentActionMap("PlayerMap"); // <--- esto es clave
+
         LEFT = playerInput.actions.FindAction("PlayerMap/Izquierda");
         RIGHT = playerInput.actions.FindAction("PlayerMap/Derecha");
         UP = playerInput.actions.FindAction("PlayerMap/Arriba");
