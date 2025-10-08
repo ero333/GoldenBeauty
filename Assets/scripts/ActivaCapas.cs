@@ -26,6 +26,13 @@ public class ActivaCapas : MonoBehaviour
     public GameObject Rostro_0;
     public GameObject Ropa_0;
 
+    public GameObject Rostro_1_Lava;
+    public GameObject Rostro_2_Lava;
+    public GameObject Rostro_1_Grietas;
+    public GameObject Rostro_2_Grietas;
+    public GameObject Rostro_1_Pintura;
+    public GameObject Rostro_2_Pintura;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +63,30 @@ public class ActivaCapas : MonoBehaviour
                 accesorio_3.SetActive(false);
                 accesorio_0.SetActive(false);
 
+                if (Rostro_1.activeInHierarchy)
+                {
+
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(true);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+
+                }
+
+                if (Rostro_2.activeInHierarchy)
+                {
+
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Grietas.SetActive(true);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+
+                }
+
                 DragMultipleObjects.mouseSuelto = false;
             }
 
@@ -68,6 +99,30 @@ public class ActivaCapas : MonoBehaviour
                 accesorio_3.SetActive(false);
                 accesorio_0.SetActive(false);
 
+                if (Rostro_1.activeInHierarchy)
+                {
+
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(true);
+                    Rostro_1_Grietas.SetActive(false);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+
+                }
+
+                if (Rostro_2.activeInHierarchy)
+                {
+
+                    Rostro_2_Pintura.SetActive(true);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+
+                }
+
                 DragMultipleObjects.mouseSuelto = false;
             }
 
@@ -79,6 +134,30 @@ public class ActivaCapas : MonoBehaviour
                 accesorio_2.SetActive(false);
                 accesorio_3.SetActive(true);
                 accesorio_0.SetActive(false);
+
+                if (Rostro_1.activeInHierarchy)
+                {
+
+                    Rostro_1_Lava.SetActive(true);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+
+                }
+
+                if (Rostro_2.activeInHierarchy)
+                {
+
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Lava.SetActive(true);
+                    Rostro_2_Grietas.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+
+                }
 
                 DragMultipleObjects.mouseSuelto = false;
             }
@@ -136,6 +215,43 @@ public class ActivaCapas : MonoBehaviour
                 Rostro_3.SetActive(false);
                 Rostro_0.SetActive(false);
 
+                if (accesorio_3.activeInHierarchy)
+                {
+
+                    Rostro_1_Lava.SetActive(true);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+
+                }
+
+                if (accesorio_2.activeInHierarchy)
+                {
+
+                    Rostro_1_Pintura.SetActive(true);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+
+                }
+
+                if (accesorio_1.activeInHierarchy)
+                {
+
+                    Rostro_1_Grietas.SetActive(true);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+
+                }
+
+
                 DragMultipleObjects.mouseSuelto = false;
             }
 
@@ -148,6 +264,42 @@ public class ActivaCapas : MonoBehaviour
                 Rostro_3.SetActive(false);
                 Rostro_0.SetActive(false);
 
+                if (accesorio_3.activeInHierarchy)
+                {
+
+                    Rostro_2_Lava.SetActive(true);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+
+                }
+
+                if (accesorio_2.activeInHierarchy)
+                {
+
+                    Rostro_2_Pintura.SetActive(true);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+
+                }
+
+                if (accesorio_1.activeInHierarchy)
+                {
+
+                    Rostro_2_Grietas.SetActive(true);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+
+                }
+
                 DragMultipleObjects.mouseSuelto = false;
             }
 
@@ -159,6 +311,46 @@ public class ActivaCapas : MonoBehaviour
                 Rostro_2.SetActive(false);
                 Rostro_3.SetActive(true);
                 Rostro_0.SetActive(false);
+
+                /*accesorio_1.SetActive(false);
+                accesorio_2.SetActive(false);
+                accesorio_3.SetActive(false);*/
+
+                if (accesorio_3.activeInHierarchy)
+                {
+
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+
+                }
+
+                if (accesorio_2.activeInHierarchy)
+                {
+
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+
+                }
+
+                if (accesorio_1.activeInHierarchy)
+                {
+
+                    Rostro_2_Grietas.SetActive(false);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+
+                }
 
                 DragMultipleObjects.mouseSuelto = false;
             }
