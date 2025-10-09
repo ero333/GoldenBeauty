@@ -31,7 +31,7 @@ public class MovimientosDiariles : MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
 
-        playerInput.SwitchCurrentActionMap("PlayerMap"); // <--- esto es clave
+        //playerInput.SwitchCurrentActionMap("PlayerMap"); // <--- esto es clave
 
         LEFT = playerInput.actions.FindAction("PlayerMap/Izquierda");
         RIGHT = playerInput.actions.FindAction("PlayerMap/Derecha");
@@ -42,6 +42,8 @@ public class MovimientosDiariles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerInput.SwitchCurrentActionMap("PlayerMap");
+
         if (LEFT.triggered && isLeft == true) // 0 = Felcha Izquierda
         {
             HaciaIzq();
