@@ -13,12 +13,12 @@ public class EventManager : MonoBehaviour
     private bool _isInitialized = false;
     private bool _consentGiven = false;
 
-    private async void Awake()
+    private async void Awake() //al empezar nivel
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); //para que se mantenga entre escenas
             await InitializeUnityServices();
         }
         else
@@ -31,39 +31,39 @@ public class EventManager : MonoBehaviour
     {
         try
         {
-            await UnityServices.InitializeAsync();
-            Debug.Log("[Analytics] Unity Services initialized successfully.");
+            await UnityServices.InitializeAsync(); //esperar a q se conecte
+            Debug.Log("Unity Services iniciado");
             _isInitialized = true;
         }
-        catch (Exception e)
+        catch
         {
-            Debug.LogError($"[Analytics] Initialization failed: {e.Message}");
+ 
         }
     }
 
-    public void GiveConsent()
+    public void GiveConsent() //lo asigno a un boton
     {
         if (!_isInitialized)
         {
-            Debug.LogWarning("[Analytics] Unity Services not initialized yet. Try again later.");
+            Debug.LogWarning("Unity Services no iniciado");
             return;
         }
 
         _consentGiven = true;
-        Debug.Log("[Analytics] User consent manually granted. Events can now be sent.");
+        Debug.Log("Consentimiento dado");
     }
 
     private bool CanSendEvents()
     {
         if (!_isInitialized)
         {
-            Debug.LogWarning("[Analytics] Unity Services not initialized yet.");
+            Debug.LogWarning("Unity Services no inició");
             return false;
         }
 
         if (!_consentGiven)
         {
-            Debug.LogWarning("[Analytics] Consent not yet given by the user.");
+            Debug.LogWarning("No se dio consentimiento");
             return false;
         }
 
@@ -81,18 +81,18 @@ public class EventManager : MonoBehaviour
             foreach (var kv in parameters)
                 customEvent[kv.Key] = kv.Value;
 
-            Debug.Log($"[Analytics] Sending event: {eventName} with parameters: {string.Join(", ", parameters.Select(kv => $"{kv.Key}: {kv.Value}"))}");
+            Debug.Log($"Enviandoo: {eventName} with parameters: {string.Join(", ", parameters.Select(kv => $"{kv.Key}: {kv.Value}"))}");
         }
         else
         {
-            Debug.Log($"[Analytics] Sending event: {eventName} without parameters.");
+           
         }
 
         AnalyticsService.Instance.RecordEvent(customEvent);
         AnalyticsService.Instance.Flush();
     }
 
-    // ---------- Standard Game Events ----------
+    // nombres de los eventos
 
     public void LogLevelStart(int level)
     {
