@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 793584132}
         m_TargetAssemblyTypeName: TextEngine, Assembly-CSharp
         m_MethodName: OnButton10Click
         m_Mode: 1
