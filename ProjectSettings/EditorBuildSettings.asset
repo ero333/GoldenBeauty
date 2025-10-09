@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel 1 Dialogo.unity
     guid: 0290f27fd7e666344a540ca83324ad7a
   - enabled: 1
+    path: Assets/Scenes/Nivel 1 Estilizar.unity
+    guid: 0e49f7bf131ec69498fbaed7f3b65850
+  - enabled: 1
     path: Assets/Scenes/Nivel 2 Dialogo.unity
     guid: 924ea72f612f0f7458d3392cb537aaae
   - enabled: 0
@@ -81,7 +84,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel 5 Final Malo.unity
     guid: 959b4dc3ea3a4d045bb725fe1c3b6a02
   - enabled: 1
-    path: Assets/Scenes/Nivel 6  Diario.unity
+    path: Assets/Scenes/Nivel 6 Diario.unity
     guid: b62f9c8eeb4209f4ba09accd252f3d9c
   - enabled: 1
     path: Assets/Scenes/Nivel 6 Dialogo.unity
