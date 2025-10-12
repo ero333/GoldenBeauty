@@ -1624,7 +1624,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ebbeb7d840405794ca61a25873fdb7fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2329,6 +2329,12 @@ MonoBehaviour:
   Pelo_0: {fileID: 1553686835}
   Rostro_0: {fileID: 1025613462}
   Ropa_0: {fileID: 970679475}
+  Rostro_1_Lava: {fileID: 0}
+  Rostro_2_Lava: {fileID: 0}
+  Rostro_1_Grietas: {fileID: 0}
+  Rostro_2_Grietas: {fileID: 0}
+  Rostro_1_Pintura: {fileID: 0}
+  Rostro_2_Pintura: {fileID: 0}
 --- !u!61 &780923662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6113,7 +6119,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ae2e7e73b490e7744985201a94ed27eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
