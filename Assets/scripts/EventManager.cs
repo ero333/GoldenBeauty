@@ -13,13 +13,13 @@ public class EventManager : MonoBehaviour
     private bool _isInitialized = false;
     private bool _consentGiven = false;
 
-    private async void Awake() //al empezar nivel
+    private void Awake() //al empezar nivel
     {
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject); //para que se mantenga entre escenas
-            await InitializeUnityServices();
+            //await InitializeUnityServices();
         }
         else
         {
@@ -27,6 +27,7 @@ public class EventManager : MonoBehaviour
         }
     }
 
+    /*
     private async Task InitializeUnityServices()
     {
         try
@@ -40,7 +41,6 @@ public class EventManager : MonoBehaviour
  
         }
     }
-
     public void GiveConsent() //lo asigno a un boton
     {
         if (!_isInitialized)
@@ -69,10 +69,10 @@ public class EventManager : MonoBehaviour
 
         return true;
     }
+    */
 
     public void LogEvent(string eventName, Dictionary<string, object> parameters = null)
     {
-        if (!CanSendEvents()) return;
 
         var customEvent = new CustomEvent(eventName);
 
@@ -85,7 +85,7 @@ public class EventManager : MonoBehaviour
         }
         else
         {
-           
+
         }
 
         AnalyticsService.Instance.RecordEvent(customEvent);
@@ -94,10 +94,20 @@ public class EventManager : MonoBehaviour
 
     // nombres de los eventos
 
+
+
     public void LogLevelStart(int level)
     {
         var parameters = new Dictionary<string, object> { { "level", level } };
         LogEvent("LevelStart", parameters);
+
+        CustomEvent LevelStartEvent = new CustomEvent("LevelStart")
+        {
+        { "level", level }
+
+        };
+        AnalyticsService.Instance.RecordEvent(LevelStartEvent);
+        AnalyticsService.Instance.Flush();
     }
 
     public void LogLevelComplete(int level)

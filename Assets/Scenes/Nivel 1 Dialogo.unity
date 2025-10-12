@@ -1355,7 +1355,7 @@ MonoBehaviour:
   cajaOpcion1: {fileID: 675378014}
   cajaOpcion2: {fileID: 2113437930}
   cajaOpcion3: {fileID: 691852166}
-  textAssetData: {fileID: 0}
+  textAssetData: {fileID: 4900000, guid: e90698eeb4b55fe4b812a681de22032c, type: 3}
   nodoActual: 0
   textoNodo: 
   boton1: {fileID: 1835711643}
@@ -3200,7 +3200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1931190544}
   m_Layer: 5
-  m_Name: "Tito F\xE9mur"
+  m_Name: Maddy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
