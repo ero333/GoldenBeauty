@@ -5,12 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/scene 1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/TestBarra.unity
-    guid: 08448333a6b9b2b45bc86594969e33ad
   - enabled: 1
     path: Assets/Scenes/Menu inicio.unity
     guid: 5fdd2baf5841c544cb9ff2d805ed4fa0
@@ -18,17 +12,26 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: c54dc2a8f84e58e4ca6a4f126c0ab73a
   - enabled: 1
+    path: Assets/Scenes/Nivel 1 Diario.unity
+    guid: 7ebc336ddd1d0ab48b8aa55bc0cd56c1
+  - enabled: 1
     path: Assets/Scenes/Nivel 1 Dialogo.unity
     guid: 0290f27fd7e666344a540ca83324ad7a
   - enabled: 1
     path: Assets/Scenes/Nivel 1 Estilizar.unity
     guid: 0e49f7bf131ec69498fbaed7f3b65850
   - enabled: 1
+    path: Assets/Scenes/Nivel 1 Final Bueno.unity
+    guid: 84b3af2b8b807b043bdefb2c39c3f63a
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1 Final Malo.unity
+    guid: 8c3c14a9ac2dace45835bb1bbf2e7a3d
+  - enabled: 1
+    path: Assets/Scenes/Nivel 2 Diario.unity
+    guid: 9014c6a19b8cad148a5f1c675a887f45
+  - enabled: 1
     path: Assets/Scenes/Nivel 2 Dialogo.unity
     guid: 924ea72f612f0f7458d3392cb537aaae
-  - enabled: 0
-    path: Assets/Scenes/old.unity
-    guid: 8e879985f3233c549a402641e2410dda
   - enabled: 1
     path: Assets/Scenes/Nivel 2 Estilizar.unity
     guid: f3de2cd0d7496654b9a00f9dcf50676b
@@ -92,6 +95,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel 6 Estilizar.unity
     guid: ea0261687fcccbd4cbfe97e8cdc2c681
+  - enabled: 1
+    path: Assets/Scenes/Nivel 6 Final Bueno.unity
+    guid: 244f6dce2cc4e22409b26494e62bb056
+  - enabled: 1
+    path: Assets/Scenes/Nivel 6 Final Malo.unity
+    guid: 1081e57ef5fe97241ad901275c81814f
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: e1eb91a4c1ae7ab47bc6c1ae85dfcb10
