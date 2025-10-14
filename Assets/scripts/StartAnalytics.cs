@@ -8,14 +8,15 @@ public class StartAnalytics : MonoBehaviour
     async void Start()
     {
         await UnityServices.InitializeAsync();
-
+        AnalyticsService.Instance.StartDataCollection();
+        Debug.Log("Unity Services iniciado");
 
         //AskForConsent();
     }
 
-    public void ConsentGiven()
+    /*public void ConsentGiven()
     {
-        AnalyticsService.Instance.StartDataCollection();
-        Debug.Log("Unity Services iniciado");
+        
     }
+    */
 }

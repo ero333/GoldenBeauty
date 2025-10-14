@@ -10,6 +10,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static StaticVariables;
+using static EventManager;
 
 public class TextEngine : MonoBehaviour
 {
@@ -58,6 +59,11 @@ public class TextEngine : MonoBehaviour
     public GameObject alerta;
 
     public GameObject diario;
+
+
+    //analytics
+    public int currentLevel;
+    public int currentQuestion;
 
     [System.Serializable]
     public class Lectura
@@ -332,6 +338,7 @@ public class TextEngine : MonoBehaviour
         {
             optionNum = 0;
             esperandoOpcion = true;
+            currentQuestion++;
 
             // Esperar hasta que se elija una opción O se presione back (X)
             yield return new WaitUntil(() =>
@@ -353,11 +360,29 @@ public class TextEngine : MonoBehaviour
             {
                 int siguienteNodo = 0;
                 if (optionNum == 1)
+                {
+                    EventManager.Instance.LogEvent("Talk", new Dictionary<string, object> {
+                    { "question", currentQuestion }, {"answer", 1}
+                    });
                     siguienteNodo = int.Parse(myDialogueList.lectura[opcion1value - 1].nodo);
+                }
+                    
                 else if (optionNum == 2)
+                {
+                    EventManager.Instance.LogEvent("Talk", new Dictionary<string, object> {
+                    { "question", currentQuestion }, {"answer", 2}
+                    });
                     siguienteNodo = int.Parse(myDialogueList.lectura[opcion2value - 1].nodo);
+                }
+                   
                 else if (optionNum == 3)
+                {
+                    EventManager.Instance.LogEvent("Talk", new Dictionary<string, object> {
+                    { "question", currentQuestion }, {"answer", 3}
+                    });
                     siguienteNodo = int.Parse(myDialogueList.lectura[opcion3value - 1].nodo);
+                }
+                    
 
                 nodoActual = siguienteNodo - 1;
                 textoNodo = myDialogueList.lectura[nodoActual].Texto;
@@ -501,6 +526,34 @@ public class TextEngine : MonoBehaviour
     }
     void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+         
+        //dialogos
+        if (currentScene.name == "Nivel 1 Dialogo")
+        {
+            currentLevel = 1;
+        }
+        else if (currentScene.name == "Nivel 2 Dialogo")
+        {
+            currentLevel = 2;
+        }
+        else if (currentScene.name == "Nivel 3 Dialogo")
+        {
+            currentLevel = 3;
+        }
+        else if (currentScene.name == "Nivel 4 Dialogo")
+        {
+            currentLevel = 4;
+        }
+        else if (currentScene.name == "Nivel 5 Dialogo")
+        {
+            currentLevel = 5;
+        }
+        else if (currentScene.name == "Nivel 6 Dialogo")
+        {
+            currentLevel = 6;
+        }
+
         playerInput = GetComponent<PlayerInput>();
         forwardAction = playerInput.actions.FindAction("PlayerMap/Forward");
         backAction = playerInput.actions.FindAction("PlayerMap/Back");

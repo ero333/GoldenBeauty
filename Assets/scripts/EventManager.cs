@@ -10,8 +10,8 @@ public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }
 
-    private bool _isInitialized = false;
-    private bool _consentGiven = false;
+    //private bool _isInitialized = false;
+    //private bool _consentGiven = false;
 
     private void Awake() //al empezar nivel
     {
@@ -19,7 +19,6 @@ public class EventManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject); //para que se mantenga entre escenas
-            //await InitializeUnityServices();
         }
         else
         {
@@ -27,49 +26,6 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    /*
-    private async Task InitializeUnityServices()
-    {
-        try
-        {
-            await UnityServices.InitializeAsync(); //esperar a q se conecte
-            Debug.Log("Unity Services iniciado");
-            _isInitialized = true;
-        }
-        catch
-        {
- 
-        }
-    }
-    public void GiveConsent() //lo asigno a un boton
-    {
-        if (!_isInitialized)
-        {
-            Debug.LogWarning("Unity Services no iniciado");
-            return;
-        }
-
-        _consentGiven = true;
-        Debug.Log("Consentimiento dado");
-    }
-
-    private bool CanSendEvents()
-    {
-        if (!_isInitialized)
-        {
-            Debug.LogWarning("Unity Services no inició");
-            return false;
-        }
-
-        if (!_consentGiven)
-        {
-            Debug.LogWarning("No se dio consentimiento");
-            return false;
-        }
-
-        return true;
-    }
-    */
 
     public void LogEvent(string eventName, Dictionary<string, object> parameters = null)
     {
@@ -112,26 +68,128 @@ public class EventManager : MonoBehaviour
 
     public void LogLevelComplete(int level, int time, int hair, int face, int clothes, int acc)
     {
-        var parameters = new Dictionary<string, object> {
-        { "level", level },
-        {"time", time },
-        {"hair", hair },
-        {"face", face },
-        {"clothes", clothes },
-        {"accesories", acc }
-
-    };
+        var parameters = new Dictionary<string, object> { { "level", level }, { "time", time }, { "hair", hair }, { "face", face }, { "clothes", clothes }, { "accesories", acc } };
         LogEvent("LevelComplete", parameters);
+
+        CustomEvent LevelCompleteEvent = new CustomEvent("LevelComplete")
+        {
+        { "level", level },
+        { "time", time },
+        { "hair", hair },
+        { "face", face },
+        { "clothes", clothes },
+        { "accesories", acc }
+        };
+        AnalyticsService.Instance.RecordEvent(LevelCompleteEvent);
+        AnalyticsService.Instance.Flush();
     }
 
-    public void LogCalificar(int arte, int historia, int diversion)
+    public void LogRate(int arte, int historia, int diversion)
     {
-        var parameters = new Dictionary<string, object>
+        var parameters = new Dictionary<string, object> { { "art", arte }, { "lore", historia }, { "fun", diversion } };
+        LogEvent("Rate", parameters);
+
+        CustomEvent RateEvent = new CustomEvent("Rate")
         {
             { "art", arte },
             { "lore", historia },
             { "fun", diversion }
         };
-        LogEvent("Rate", parameters);
+        AnalyticsService.Instance.RecordEvent(RateEvent);
+        AnalyticsService.Instance.Flush();
+    }
+
+    public void LogTalk(int level, int question, int answer)
+    {
+        var parameters = new Dictionary<string, object> { { "level", level }, { "question", question }, { "fun", answer } };
+        LogEvent("Talk", parameters);
+
+        CustomEvent TalkEvent = new CustomEvent("Talk")
+        {
+            { "level", level },
+            { "question", question },
+            { "answer", answer }
+        };
+        AnalyticsService.Instance.RecordEvent(TalkEvent);
+        AnalyticsService.Instance.Flush();
+    }
+
+    public void LogExit(int level, int section)
+    {
+        var parameters = new Dictionary<string, object> { { "level", level }, { "section", section } };
+        LogEvent("Exit", parameters);
+
+        CustomEvent ExitEvent = new CustomEvent("Exit")
+        {
+        { "level", level },
+        { "section", section }
+
+        };
+        AnalyticsService.Instance.RecordEvent(ExitEvent);
+        AnalyticsService.Instance.Flush();
+    }
+
+    public void LogSkipChat(int level)
+    {
+        var parameters = new Dictionary<string, object> { { "level", level } };
+        LogEvent("SkipChat", parameters);
+
+        CustomEvent SkipChatEvent = new CustomEvent("SkipChat")
+        {
+        { "level", level }
+
+        };
+        AnalyticsService.Instance.RecordEvent(SkipChatEvent);
+        AnalyticsService.Instance.Flush();
+    }
+
+
+    public void LogNews(int level, int time)
+    {
+        var parameters = new Dictionary<string, object> { { "level", level }, { "time", time }};
+        LogEvent("News", parameters);
+
+        CustomEvent NewsEvent = new CustomEvent("News")
+        {
+        { "level", level },
+        { "time", time }
+        };
+        AnalyticsService.Instance.RecordEvent(NewsEvent);
+        AnalyticsService.Instance.Flush();
+    }
+
+
+    public void LogEnd(int level, int time)
+    {
+        var parameters = new Dictionary<string, object> { { "level", level }, { "time", time } };
+        LogEvent("End", parameters);
+
+        CustomEvent EndEvent = new CustomEvent("End")
+        {
+        { "level", level },
+        { "time", time }
+        };
+        AnalyticsService.Instance.RecordEvent(EndEvent);
+        AnalyticsService.Instance.Flush();
+    }
+
+    public void LogGameOver(int level, int time)
+    {
+        var parameters = new Dictionary<string, object> { { "level", level }, { "time", time } };
+        LogEvent("GameOver", parameters);
+
+        CustomEvent GameOverEvent = new CustomEvent("GameOver")
+        {
+        { "level", level },
+        { "time", time }
+        };
+        AnalyticsService.Instance.RecordEvent(GameOverEvent);
+        AnalyticsService.Instance.Flush();
     }
 }
+
+
+
+
+
+
