@@ -1,9 +1,56 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using static EventManager;
+using static StaticVariables;
+using System.Collections.Generic;
+
 
 public class SceneController : MonoBehaviour
 {
+    void Start()
+    {
+        // Get the currently active scene
+        Scene currentScene = SceneManager.GetActiveScene();
 
+        // Check if its name is "something"
+        if (currentScene.name == "Nivel 1 Final Bueno")
+        {
+            EventManager.Instance.LogEvent("LevelComplete", new Dictionary<string, object> {
+    { "level", 1 }
+    });
+        }
+        if (currentScene.name == "Nivel 2 Final Bueno")
+        {
+            EventManager.Instance.LogEvent("LevelComplete", new Dictionary<string, object> {
+    { "level", 2 }
+    });
+        }
+        if (currentScene.name == "Nivel 3 Final Bueno")
+        {
+            EventManager.Instance.LogEvent("LevelComplete", new Dictionary<string, object> {
+    { "level", 3 }
+    });
+        }
+        if (currentScene.name == "Nivel 4 Final Bueno")
+        {
+            EventManager.Instance.LogEvent("LevelComplete", new Dictionary<string, object> {
+    { "level", 4 }
+    });
+        }
+
+        if (currentScene.name == "Nivel 5 Final Bueno")
+        {
+            EventManager.Instance.LogEvent("LevelComplete", new Dictionary<string, object> {
+    { "level", 5 }
+    });
+        }
+        if (currentScene.name == "Nivel 6 Final Bueno")
+        {
+            EventManager.Instance.LogEvent("LevelComplete", new Dictionary<string, object> {
+    { "level", 6 }
+    });
+        }
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))

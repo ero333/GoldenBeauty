@@ -110,9 +110,17 @@ public class EventManager : MonoBehaviour
         AnalyticsService.Instance.Flush();
     }
 
-    public void LogLevelComplete(int level)
+    public void LogLevelComplete(int level, int time, int hair, int face, int clothes, int acc)
     {
-        var parameters = new Dictionary<string, object> { { "level", level } };
+        var parameters = new Dictionary<string, object> {
+        { "level", level },
+        {"time", time },
+        {"hair", hair },
+        {"face", face },
+        {"clothes", clothes },
+        {"accesories", acc }
+
+    };
         LogEvent("LevelComplete", parameters);
     }
 
