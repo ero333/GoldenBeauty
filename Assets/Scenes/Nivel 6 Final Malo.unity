@@ -372,12 +372,12 @@ GameObject:
   - component: {fileID: 430266827}
   - component: {fileID: 430266826}
   m_Layer: 0
-  m_Name: BrujaFinalMalo-Inverso-Anim
+  m_Name: ElfoFinalMalo-Arriba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &430266826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,7 +401,7 @@ Animator:
   m_GameObject: {fileID: 430266825}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 82632495b87a7f94ebd6c5665db52723, type: 2}
+  m_Controller: {fileID: 9100000, guid: 32b2959d8955e274aaa49b6d4c961d7a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -453,7 +453,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1897028264, guid: 94738b24de0d30f438b917b199589816, type: 3}
+  m_Sprite: {fileID: 21300000, guid: afc4e1208b8116049baa05a4b8f9c085, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -782,8 +782,12 @@ MonoBehaviour:
   menuDePausa: {fileID: 0}
   fondoDePausa: {fileID: 0}
   botonDePausa: {fileID: 0}
+  Alerta: {fileID: 0}
   AnimacionMenuDePausa: {fileID: 0}
   pausado: 0
+  currentLevel: 0
+  contador: 0
+  detener: 0
 --- !u!4 &715854820
 Transform:
   m_ObjectHideFlags: 0
@@ -812,12 +816,12 @@ GameObject:
   - component: {fileID: 865071896}
   - component: {fileID: 865071899}
   m_Layer: 0
-  m_Name: BrujaFinalMalo-Arriba
+  m_Name: ElfoFinalMalo-ArribaEstatico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &865071896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,7 +877,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 20150542, guid: 555c70166c593cf49a766c8ed5215cab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7e84ff400d8d3441a4c11ae777cc69c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -893,7 +897,7 @@ Transform:
   m_GameObject: {fileID: 865071895}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -435, y: 235.00002, z: -4050}
+  m_LocalPosition: {x: -435, y: 235, z: -4050}
   m_LocalScale: {x: 45, y: 45, z: 45}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1352,7 +1356,7 @@ GameObject:
   - component: {fileID: 1761625441}
   - component: {fileID: 1761625444}
   m_Layer: 0
-  m_Name: BrujaFinalMalo-Abajo
+  m_Name: ElfoFinalMalo-AbajoEstatico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1413,7 +1417,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2048435685, guid: 555c70166c593cf49a766c8ed5215cab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7e84ff400d8d3441a4c11ae777cc69c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1433,9 +1437,9 @@ Transform:
   m_GameObject: {fileID: 1761625440}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -435, y: 235.00002, z: -4050}
+  m_LocalPosition: {x: -435, y: 235, z: -4050}
   m_LocalScale: {x: 45, y: 45, z: 45}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1631558680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1498,6 +1502,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12229f9c4f1e7a4b820fa9d84158c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNews: 0
+  contador: 0
+  currentDiario: 0
 --- !u!4 &1774116182
 Transform:
   m_ObjectHideFlags: 0
@@ -1526,7 +1533,7 @@ GameObject:
   - component: {fileID: 1774459249}
   - component: {fileID: 1774459248}
   m_Layer: 0
-  m_Name: BrujaFinalMalo-Anim
+  m_Name: ElfoFinalMalo-Abajo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1555,7 +1562,7 @@ Animator:
   m_GameObject: {fileID: 1774459247}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0fcb8297d9d3b15469fc2252e0004c4b, type: 2}
+  m_Controller: {fileID: 9100000, guid: e8752d73f16e70947aae23072fbbbbdc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1607,7 +1614,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 20150542, guid: 555c70166c593cf49a766c8ed5215cab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: afc4e1208b8116049baa05a4b8f9c085, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1699,7 +1706,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1892937443
