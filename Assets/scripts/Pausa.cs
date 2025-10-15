@@ -24,11 +24,15 @@ public class Pausa : MonoBehaviour
 
     public bool pausado;
 
+    //analytics
     public int currentLevel;
     bool isEnd;
+    public int contador = 0;
+    public bool detener = false;
     // Start is called before the first frame update
     void Start()
     {
+        
         Scene currentScene = SceneManager.GetActiveScene();
         if ((currentScene.name == "Nivel 1 Final Bueno") || (currentScene.name == "Nivel 2 Final Bueno") || (currentScene.name == "Nivel 3 Final Bueno") || (currentScene.name == "Nivel 4 Final Bueno") || (currentScene.name == "Nivel 5 Final Bueno") || (currentScene.name == "Nivel 6 Final Bueno") ||
             (currentScene.name == "Nivel 1 Final Malo") || (currentScene.name == "Nivel 2 Final Malo") || (currentScene.name == "Nivel 3 Final Malo") || (currentScene.name == "Nivel 4 Final Malo") || (currentScene.name == "Nivel 5 Final Malo") || (currentScene.name == "Nivel 6 Final Malo"))
@@ -36,12 +40,22 @@ public class Pausa : MonoBehaviour
             currentLevel = 1;
             isEnd = true;
             Debug.Log("es un final");
+            StartCoroutine(FinalesTimer());
         }
         else
         {
             isEnd = false;
         }
             pausado = false;
+    }
+
+    IEnumerator FinalesTimer()
+    {
+        while (!detener)
+        {
+            contador++;
+            yield return new WaitForSeconds(1f);
+        }
     }
 
     // Update is called once per frame
@@ -76,6 +90,14 @@ public class Pausa : MonoBehaviour
 
     public void VolverAlInicio()
     {
+        detener = false;
+        if (isEnd)
+        {
+            EventManager.SafeLogEvent("End", new Dictionary<string, object> {
+                    { "time", contador }
+                    });
+        }
+        
         SceneManager.LoadScene("Menu inicio");
     }
     public void OnButtonClick ()

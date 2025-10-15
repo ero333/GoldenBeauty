@@ -58,14 +58,19 @@ public class Ganaryperder : MonoBehaviour
     public GameObject botonGanar;
     public GameObject botonPerder;
 
+    //analytics
     public int currentLevel;
     int currentRopa;
     int currentRostro;
     int currentAcc;
     int currentPelo;
+    public int contador = 0;
+    public bool detener = false;
     // Start is called before the first frame update
     void Start()
     {
+        
+        
         Scene currentScene = SceneManager.GetActiveScene();
         if (currentScene.name == "Nivel 1 Estilizar")
         {
@@ -91,8 +96,18 @@ public class Ganaryperder : MonoBehaviour
         {
             currentLevel = 6;
         }
+
+        StartCoroutine(EstilizarTimer());
     }
 
+    IEnumerator EstilizarTimer()
+    {
+        while (!detener)
+        {
+            contador++;
+            yield return new WaitForSeconds(1f);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -100,6 +115,7 @@ public class Ganaryperder : MonoBehaviour
         {
             sceneController.PasarNivel();
         }
+        
     }
 
     private IEnumerator aura()
@@ -180,9 +196,11 @@ public class Ganaryperder : MonoBehaviour
 
         if (Suma_Final > Valordeganar)
         {
+            detener = true;
             GanarNivel = true;
             EventManager.SafeLogEvent("LevelComplete", new Dictionary<string, object> {
         { "level", currentLevel },
+        {"time", contador },
         { "hair", currentPelo },
         { "clothes", currentRopa },
         {"face", currentRostro},
@@ -195,7 +213,8 @@ public class Ganaryperder : MonoBehaviour
         if (!GanarNivel)
         {
             EventManager.SafeLogEvent("GameOver", new Dictionary<string, object> {
-                    { "level", currentLevel }
+                    { "level", currentLevel },
+                {"time", contador }
                     });
             Debug.Log("perdiste");
             botonPerder.SetActive(true);

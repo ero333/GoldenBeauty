@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 using static EventManager;
 using static StaticVariables;
@@ -8,6 +9,11 @@ using static StaticVariables;
 
 public class SceneController : MonoBehaviour
 {
+
+    public bool isNews;
+    public int contador;
+    public int currentDiario = 0;
+    bool detener;
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
@@ -52,7 +58,60 @@ public class SceneController : MonoBehaviour
                     { "level", 6 }
                     });
         }
+
+
+        //lo mismo pero con el diario
+        if (currentScene.name == "Nivel 1 Diario")
+        {
+            currentDiario = 1;
+            isNews = true;
+        }
+
+
+        if (currentScene.name == "Nivel 2 Diario")
+        {
+            currentDiario = 2;
+            isNews = true;
+        }
+        if (currentScene.name == "Nivel 3 Diario")
+        {
+            currentDiario = 3;
+            isNews = true;
+        }
+        if (currentScene.name == "Nivel 4 Diario")
+        {
+            currentDiario = 4;
+            isNews = true;
+        }
+
+        if (currentScene.name == "Nivel 5 Diario")
+        {
+            currentDiario = 5;
+            isNews = true;
+        }
+        if (currentScene.name == "Nivel 6 Diario")
+        {
+            currentDiario = 6;
+            isNews = true;
+        }
+
+        if (isNews)
+        {
+            StartCoroutine(DiarioTimer());
+        }
     }
+
+    IEnumerator DiarioTimer()
+    {
+
+            while (!detener)
+            {
+                contador++;
+                yield return new WaitForSeconds(1f);
+            }
+    }   
+
+
     void Update()
     {
 
@@ -60,6 +119,15 @@ public class SceneController : MonoBehaviour
 
     public void PasarNivel()
     {
+        detener = true;
+        if (currentDiario > 0)
+        {
+            EventManager.SafeLogEvent("News", new Dictionary<string, object> {
+                {"level", currentDiario },
+                {"time", contador }
+                    });
+        }
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
