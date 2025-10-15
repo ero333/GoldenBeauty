@@ -1,6 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using static StaticVariables;
+using static EventManager;
 
 public class Ganaryperder : MonoBehaviour
 {
@@ -47,13 +57,40 @@ public class Ganaryperder : MonoBehaviour
 
     public GameObject botonGanar;
     public GameObject botonPerder;
-    
 
-
+    public int currentLevel;
+    int currentRopa;
+    int currentRostro;
+    int currentAcc;
+    int currentPelo;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "Nivel 1 Estilizar")
+        {
+            currentLevel = 1;
+        }
+        else if (currentScene.name == "Nivel 2 Estilizar")
+        {
+            currentLevel = 2;
+        }
+        else if (currentScene.name == "Nivel 3 Estilizar")
+        {
+            currentLevel = 3;
+        }
+        else if (currentScene.name == "Nivel 4 Estilizar")
+        {
+            currentLevel = 4;
+        }
+        else if (currentScene.name == "Nivel 5 Estilizar")
+        {
+            currentLevel = 5;
+        }
+        else if (currentScene.name == "Nivel 6 Estilizar")
+        {
+            currentLevel = 6;
+        }
     }
 
     // Update is called once per frame
@@ -72,72 +109,94 @@ public class Ganaryperder : MonoBehaviour
         if (accesorio_1.activeInHierarchy)
         {
             Suma_Final += ValorAccesorio_1;
+            currentAcc = 1;
         }
 
         if (accesorio_2.activeInHierarchy)
         {
             Suma_Final += ValorAccesorio_2;
+            currentAcc = 2;
         }
 
         if (accesorio_3.activeInHierarchy)
         {
             Suma_Final += ValorAccesorio_3;
+            currentAcc = 3;
         }
 
         if (Pelo_1.activeInHierarchy)
         {
             Suma_Final += ValorPelo_1;
+            currentPelo = 1;
         }
 
         if (Pelo_2.activeInHierarchy)
         {
             Suma_Final += ValorPelo_2;
+            currentPelo = 2;
         }
 
         if (Pelo_3.activeInHierarchy)
         {
             Suma_Final += ValorPelo_3;
+            currentPelo = 3;
         }
 
         if (Rostro_1.activeInHierarchy)
         {
             Suma_Final += ValorRostro_1;
+            currentRostro = 1;
         }
 
         if (Rostro_2.activeInHierarchy)
         {
             Suma_Final += ValorRostro_2;
+            currentRostro = 2;
         }
 
         if (Rostro_3.activeInHierarchy)
         {
             Suma_Final += ValorRostro_3;
+            currentRostro = 3;
         }
 
         if (Ropa_1.activeInHierarchy)
         {
             Suma_Final += ValorRopa_1;
+            currentRopa = 1;
         }
 
         if (Ropa_2.activeInHierarchy)
         {
             Suma_Final += ValorRopa_2;
+            currentRopa = 2;
         }
 
         if (Ropa_3.activeInHierarchy)
         {
             Suma_Final += ValorRopa_3;
+            currentRopa = 3;
         }
 
         if (Suma_Final > Valordeganar)
         {
             GanarNivel = true;
+            EventManager.SafeLogEvent("LevelComplete", new Dictionary<string, object> {
+        { "level", currentLevel },
+        { "hair", currentPelo },
+        { "clothes", currentRopa },
+        {"face", currentRostro},
+        {"accesories",  currentAcc}
+        });
             Debug.Log("GANASTEEEEE");
             botonGanar.SetActive(true);
         }
 
         if (!GanarNivel)
         {
+            EventManager.SafeLogEvent("GameOver", new Dictionary<string, object> {
+                    { "level", currentLevel }
+                    });
             Debug.Log("perdiste");
             botonPerder.SetActive(true);
 

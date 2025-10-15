@@ -361,28 +361,37 @@ public class TextEngine : MonoBehaviour
                 int siguienteNodo = 0;
                 if (optionNum == 1)
                 {
-                    EventManager.Instance.LogEvent("Talk", new Dictionary<string, object> {
-                    { "question", currentQuestion }, {"answer", 1}
-                    });
+                    EventManager.SafeLogEvent("Talk", new Dictionary<string, object> {
+    { "level", currentLevel },
+    { "question", currentQuestion },
+    { "answer", 1 }
+    });
+                    //EventManager.Instance.LogTalk(1,1,1);
                     siguienteNodo = int.Parse(myDialogueList.lectura[opcion1value - 1].nodo);
                 }
-                    
+
                 else if (optionNum == 2)
                 {
-                    EventManager.Instance.LogEvent("Talk", new Dictionary<string, object> {
-                    { "question", currentQuestion }, {"answer", 2}
-                    });
+                    EventManager.SafeLogEvent("Talk", new Dictionary<string, object> {
+    { "level", currentLevel },
+    { "question", currentQuestion },
+    { "answer", 2 }
+    });
+                    //EventManager.Instance.LogTalk(0, currentQuestion, 2);
                     siguienteNodo = int.Parse(myDialogueList.lectura[opcion2value - 1].nodo);
                 }
-                   
+
                 else if (optionNum == 3)
                 {
-                    EventManager.Instance.LogEvent("Talk", new Dictionary<string, object> {
-                    { "question", currentQuestion }, {"answer", 3}
-                    });
+                    EventManager.SafeLogEvent("Talk", new Dictionary<string, object> {
+    { "level", currentLevel },
+    { "question", currentQuestion },
+    { "answer", 3 }
+    });
+                    //EventManager.Instance.LogTalk(0, currentQuestion, 3);
                     siguienteNodo = int.Parse(myDialogueList.lectura[opcion3value - 1].nodo);
                 }
-                    
+
 
                 nodoActual = siguienteNodo - 1;
                 textoNodo = myDialogueList.lectura[nodoActual].Texto;
@@ -491,6 +500,9 @@ public class TextEngine : MonoBehaviour
 
     public void OnButton6Click() //confirmación
     {
+        EventManager.SafeLogEvent("Exit", new Dictionary<string, object> {
+                    { "level", currentLevel }
+                    });
         sceneController.LoadScene("levelSelect");
     }
     public void OnButton7Click() //rechazar
@@ -522,6 +534,9 @@ public class TextEngine : MonoBehaviour
     }
     public void OnButton10Click() //skip
     {
+        EventManager.SafeLogEvent("SkipChat", new Dictionary<string, object> {
+                    { "level", currentLevel }
+                    });
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     void Start()

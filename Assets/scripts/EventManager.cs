@@ -50,7 +50,17 @@ public class EventManager : MonoBehaviour
 
     // nombres de los eventos
 
-
+    public static void SafeLogEvent(string eventName, Dictionary<string, object> parameters)
+    {
+        if (Instance != null)
+        {
+            Instance.LogEvent(eventName, parameters);
+        }
+        else
+        {
+            Debug.LogWarning($"⚠️ No se pudo registrar el evento {eventName}: EventManager.Instance es null");
+        }
+    }
 
     public void LogLevelStart(int level)
     {
