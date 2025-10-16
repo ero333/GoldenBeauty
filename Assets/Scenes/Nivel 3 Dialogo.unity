@@ -338,6 +338,9 @@ MonoBehaviour:
   Alerta: {fileID: 305504611}
   AnimacionMenuDePausa: {fileID: 60794826}
   pausado: 0
+  currentLevel: 0
+  contador: 0
+  detener: 0
 --- !u!95 &60794828
 Animator:
   serializedVersion: 5
@@ -1014,6 +1017,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12229f9c4f1e7a4b820fa9d84158c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNews: 0
+  contador: 0
+  currentDiario: 0
 --- !u!1 &480124896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1912,6 +1918,8 @@ MonoBehaviour:
   pauseCanvas: {fileID: 0}
   alerta: {fileID: 0}
   diario: {fileID: 22806292}
+  currentLevel: 0
+  currentQuestion: 0
   myDialogueList:
     lectura: []
 --- !u!114 &793584133
@@ -2447,6 +2455,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12229f9c4f1e7a4b820fa9d84158c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNews: 0
+  contador: 0
+  currentDiario: 0
 --- !u!4 &1120110969
 Transform:
   m_ObjectHideFlags: 0
@@ -2774,8 +2785,8 @@ Transform:
   m_GameObject: {fileID: 1172597207}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -36.01, z: -5060.2046}
-  m_LocalScale: {x: 56.224495, y: 56.224495, z: 56.224495}
+  m_LocalPosition: {x: 0, y: -72, z: -5060.2046}
+  m_LocalScale: {x: 65, y: 65, z: 65}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 793584131}
@@ -5592,6 +5603,9 @@ MonoBehaviour:
   Alerta: {fileID: 305504611}
   AnimacionMenuDePausa: {fileID: 60794826}
   pausado: 0
+  currentLevel: 0
+  contador: 0
+  detener: 0
 --- !u!1 &1931190543
 GameObject:
   m_ObjectHideFlags: 0
