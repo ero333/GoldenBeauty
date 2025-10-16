@@ -461,6 +461,9 @@ MonoBehaviour:
   Alerta: {fileID: 0}
   AnimacionMenuDePausa: {fileID: 100772327}
   pausado: 0
+  currentLevel: 0
+  contador: 0
+  detener: 0
 --- !u!1 &106717507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,10 +2128,13 @@ MonoBehaviour:
   ValorRopa_1: 1
   ValorRopa_2: 1
   ValorRopa_3: 0
-  Valordeganar: 2
+  Valordeganar: 3
   GanarNivel: 0
   botonGanar: {fileID: 241899677}
   botonPerder: {fileID: 1383626503}
+  currentLevel: 0
+  contador: 0
+  detener: 0
 --- !u!4 &473546822
 Transform:
   m_ObjectHideFlags: 0
@@ -3877,6 +3883,9 @@ MonoBehaviour:
   Alerta: {fileID: 1494734708}
   AnimacionMenuDePausa: {fileID: 100772327}
   pausado: 0
+  currentLevel: 0
+  contador: 0
+  detener: 0
 --- !u!4 &943195293
 Transform:
   m_ObjectHideFlags: 0
@@ -6609,6 +6618,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12229f9c4f1e7a4b820fa9d84158c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNews: 0
+  contador: 0
+  currentDiario: 0
 --- !u!4 &1960406182
 Transform:
   m_ObjectHideFlags: 0
