@@ -6,6 +6,7 @@ using static StaticVariables;
 using System.Collections.Generic;
 using static EventManager;
 using static StaticVariables;
+using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
@@ -19,13 +20,39 @@ public class SceneController : MonoBehaviour
     public AudioSource audio;
     public GameObject menuPausa;
     public GameObject animPausa;
+    public Slider volumeSlider;
+    private const string volumeKey = "Volume";
+
+    public void SetVolume(float volume)
+    {
+        if (audio != null)
+            audio.volume = volume;
+
+        // Guardar el valor en PlayerPrefs
+        PlayerPrefs.SetFloat("GlobalVolume", volume);
+        PlayerPrefs.Save();
+    }
+
 
     void Start()
     {
+
+        //audio
         audio.Play();
-        Scene currentScene = SceneManager.GetActiveScene();
+        float savedVolume = PlayerPrefs.GetFloat("GlobalVolume", 1f); // por defecto, 1
+
+        if (audio != null)
+            audio.volume = savedVolume;
+
+        if (volumeSlider != null)
+        {
+            volumeSlider.value = savedVolume;
+            volumeSlider.onValueChanged.AddListener(SetVolume);
+        }
 
         // finales
+        Scene currentScene = SceneManager.GetActiveScene();
+
         if (currentScene.name == "Nivel 1 Final Bueno")
         {
             EventManager.SafeLogEvent("End", new Dictionary<string, object> {
