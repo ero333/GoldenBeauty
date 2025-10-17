@@ -111,7 +111,7 @@ public class EventManager : MonoBehaviour
 
     public void LogTalk(int level, int question, int answer)
     {
-        var parameters = new Dictionary<string, object> { { "level", level }, { "question", question }, { "fun", answer } };
+        var parameters = new Dictionary<string, object> { { "level", level }, { "question", question }, { "answer", answer } };
         LogEvent("Talk", parameters);
 
         CustomEvent TalkEvent = new CustomEvent("Talk")

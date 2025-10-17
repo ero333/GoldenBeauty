@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneController: {fileID: 1774116181}
-  buttonStart: {fileID: 0}
+  buttonStart: {fileID: 1543629530}
   buttonCredits: {fileID: 446203255}
   buttonMenu: {fileID: 1543629530}
   buttonRate: {fileID: 0}
@@ -1367,6 +1367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12229f9c4f1e7a4b820fa9d84158c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNews: 0
+  contador: 0
+  currentDiario: 0
 --- !u!4 &1774116182
 Transform:
   m_ObjectHideFlags: 0
@@ -1738,7 +1741,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1892937443
@@ -1880,8 +1883,12 @@ MonoBehaviour:
   menuDePausa: {fileID: 0}
   fondoDePausa: {fileID: 0}
   botonDePausa: {fileID: 0}
+  Alerta: {fileID: 0}
   AnimacionMenuDePausa: {fileID: 0}
   pausado: 0
+  currentLevel: 0
+  contador: 0
+  detener: 0
 --- !u!4 &2126425878
 Transform:
   m_ObjectHideFlags: 0
