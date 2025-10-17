@@ -1876,7 +1876,7 @@ MonoBehaviour:
   ValorRopa_1: 0
   ValorRopa_2: 0
   ValorRopa_3: 1
-  Valordeganar: 4
+  Valordeganar: 3
   GanarNivel: 0
   botonGanar: {fileID: 241899677}
   botonPerder: {fileID: 1383626503}
