@@ -919,6 +919,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12229f9c4f1e7a4b820fa9d84158c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNews: 0
+  contador: 0
+  currentDiario: 0
+  audio: {fileID: 0}
 --- !u!4 &564252158
 Transform:
   m_ObjectHideFlags: 0
@@ -1497,6 +1501,9 @@ MonoBehaviour:
   Alerta: {fileID: 0}
   AnimacionMenuDePausa: {fileID: 0}
   pausado: 0
+  currentLevel: 0
+  contador: 0
+  detener: 0
 --- !u!4 &1063402289
 Transform:
   m_ObjectHideFlags: 0
@@ -1737,7 +1744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneController: {fileID: 564252157}
-  buttonStart: {fileID: 0}
+  buttonStart: {fileID: 486346192}
   buttonCredits: {fileID: 2029719597}
   buttonMenu: {fileID: 486346192}
   buttonRate: {fileID: 137556333}

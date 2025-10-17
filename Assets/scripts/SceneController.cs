@@ -14,6 +14,10 @@ public class SceneController : MonoBehaviour
     public int contador;
     public int currentDiario = 0;
     bool detener;
+
+    //audio
+    public AudioSource audio;
+
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
@@ -141,4 +145,15 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void OnButtonMute ()
+    {
+        if (audio.isPlaying)
+        {
+            audio.Stop();
+        }
+        else
+        {
+            audio.Play();
+        }
+    }
 }
