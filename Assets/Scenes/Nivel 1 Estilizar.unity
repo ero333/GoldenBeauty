@@ -971,6 +971,8 @@ MonoBehaviour:
   contador: 0
   currentDiario: 0
   audio: {fileID: 197869558}
+  menuPausa: {fileID: 0}
+  animPausa: {fileID: 0}
 --- !u!4 &197869560
 Transform:
   m_ObjectHideFlags: 0

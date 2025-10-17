@@ -17,9 +17,12 @@ public class SceneController : MonoBehaviour
 
     //audio
     public AudioSource audio;
+    public GameObject menuPausa;
+    public GameObject animPausa;
 
     void Start()
     {
+        audio.Play();
         Scene currentScene = SceneManager.GetActiveScene();
 
         // finales
@@ -149,11 +152,28 @@ public class SceneController : MonoBehaviour
     {
         if (audio.isPlaying)
         {
-            audio.Stop();
+            audio.Pause();
         }
-        else
-        {
-            audio.Play();
+        else if (!audio.isPlaying) {
+        
+            audio.UnPause();
         }
+    }
+
+    public void MenuSound ()
+    {
+        StartCoroutine(animMenu());
+    }
+
+    public IEnumerator animMenu ()
+    {
+        animPausa.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        animPausa.SetActive(false);
+        menuPausa.SetActive(true);
+    }
+    public void closeSound ()
+    {
+        menuPausa.SetActive(false);
     }
 }
