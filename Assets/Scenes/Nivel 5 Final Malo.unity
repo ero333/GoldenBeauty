@@ -473,7 +473,7 @@ Transform:
   m_GameObject: {fileID: 430266825}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -435, y: 235.00002, z: -4050}
+  m_LocalPosition: {x: -462, y: 235, z: -4050}
   m_LocalScale: {x: 45, y: 45, z: 45}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -897,7 +897,7 @@ Transform:
   m_GameObject: {fileID: 865071895}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -435, y: 235.00002, z: -4050}
+  m_LocalPosition: {x: -462, y: 235, z: -4050}
   m_LocalScale: {x: 45, y: 45, z: 45}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1437,7 +1437,7 @@ Transform:
   m_GameObject: {fileID: 1761625440}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -435, y: 235.00002, z: -4050}
+  m_LocalPosition: {x: -462, y: 235, z: -4050}
   m_LocalScale: {x: 45, y: 45, z: 45}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1506,6 +1506,9 @@ MonoBehaviour:
   contador: 0
   currentDiario: 0
   audio: {fileID: 0}
+  menuPausa: {fileID: 0}
+  animPausa: {fileID: 0}
+  volumeSlider: {fileID: 0}
 --- !u!4 &1774116182
 Transform:
   m_ObjectHideFlags: 0
@@ -1635,7 +1638,7 @@ Transform:
   m_GameObject: {fileID: 1774459247}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -435, y: 235, z: -4050}
+  m_LocalPosition: {x: -462, y: 235, z: -4050}
   m_LocalScale: {x: 45, y: 45, z: 45}
   m_ConstrainProportionsScale: 0
   m_Children: []
