@@ -66,11 +66,10 @@ public class TextEngine : MonoBehaviour
     public int currentQuestion;
 
     //sonido
-    public AudioSource audio;
+    public AudioSource sonido;
     public AudioClip audio1;
     public AudioClip audio2;
-    public AudioClip audio3;
-    public AudioClip audio4;
+
 
     [System.Serializable]
     public class Lectura
@@ -420,9 +419,7 @@ public class TextEngine : MonoBehaviour
             }
             else if (forwardAction.triggered)
             {
-                /*
-             
-                */
+                sonido.PlayOneShot(audio1);
                 if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].next))
                 {
                     nodoActual = int.Parse(myDialogueList.lectura[nodoActual].next) - 1;
