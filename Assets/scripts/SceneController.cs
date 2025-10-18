@@ -18,10 +18,6 @@ public class SceneController : MonoBehaviour
 
     //audio
     public AudioSource audio;
-    public AudioClip audio1;
-    public AudioClip audio2;
-    public AudioClip audio3;
-    public AudioClip audio4;
 
     public GameObject menuPausa;
     public GameObject animPausa;
@@ -248,4 +244,5 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("Creditos");
     }
+
 }

@@ -65,6 +65,13 @@ public class TextEngine : MonoBehaviour
     public int currentLevel;
     public int currentQuestion;
 
+    //sonido
+    public AudioSource audio;
+    public AudioClip audio1;
+    public AudioClip audio2;
+    public AudioClip audio3;
+    public AudioClip audio4;
+
     [System.Serializable]
     public class Lectura
     {
