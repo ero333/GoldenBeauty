@@ -47,7 +47,6 @@ public class SceneController : MonoBehaviour
 
     public void SetSounds(float volume)
     {
-        if (sonido != null)
             sonido.volume = volume;
 
         // Guardar el valor en PlayerPrefs
@@ -75,15 +74,13 @@ public class SceneController : MonoBehaviour
             volumeSlider.onValueChanged.AddListener(SetVolume);
         }
 
-        if (sonido != null)
-        {
+
             sonido.volume = savedSound;
-        }
-        if (volumeSlider2 != null)
-        {
+
+
             volumeSlider2.value = savedSound;
             volumeSlider2.onValueChanged.AddListener(SetSounds);
-        }
+
         // finales
         Scene currentScene = SceneManager.GetActiveScene();
 
@@ -264,7 +261,7 @@ public class SceneController : MonoBehaviour
             PlayerPrefs.Save();
 
             // If using a UI slider, reflect the change
-            if (volumeSlider2 != null)
+
                 volumeSlider2.value = 0;
         }
         else
@@ -278,7 +275,6 @@ public class SceneController : MonoBehaviour
             SetVolume(previousVolume); // This sets both audio.volume and PlayerPrefs
 
             // If using a UI slider, reflect the change
-            if (volumeSlider2 != null)
                 volumeSlider2.value = previousVolume2;
         }
     }

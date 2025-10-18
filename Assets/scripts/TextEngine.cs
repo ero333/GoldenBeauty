@@ -15,6 +15,7 @@ using static EventManager;
 public class TextEngine : MonoBehaviour
 {
     public SceneController sceneController;
+    public GameObject pauseMenu;
     private PlayerInput playerInput;
     private InputAction forwardAction;
     private InputAction backAction;
@@ -57,7 +58,7 @@ public class TextEngine : MonoBehaviour
     public GameObject pauseSquare;
     public GameObject pauseCanvas;
     public GameObject alerta;
-
+    public bool canWrite;
     public GameObject diario;
 
 
@@ -204,11 +205,13 @@ public class TextEngine : MonoBehaviour
 
             cajaDialogo.text = "";
 
-            foreach (char x in textoNodo)
-            {
-                cajaDialogo.text += x;
-                yield return new WaitForSeconds(0.001f);
-            }
+                foreach (char x in textoNodo)
+                {
+                    cajaDialogo.text += x;
+                    yield return new WaitForSeconds(0.001f);
+                }
+
+            
 
             cajaOpcion1.text = "";
             cajaOpcion2.text = "";
@@ -244,7 +247,10 @@ public class TextEngine : MonoBehaviour
 
             // ⬇️ Aquí usamos la versión modificada
             //yield return StartCoroutine(WaitForInput(KeyCode.Z));
-            yield return StartCoroutine(WaitForInput());
+
+                yield return StartCoroutine(WaitForInput());
+
+           
 
         }
     }
@@ -305,7 +311,7 @@ public class TextEngine : MonoBehaviour
             }
             else if (Input.GetKeyDown(key))
             {
-                if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].next))
+                if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].next) && canWrite)
                 {
                     nodoActual = int.Parse(myDialogueList.lectura[nodoActual].next) - 1;
                     textoNodo = myDialogueList.lectura[nodoActual].Texto;
@@ -405,9 +411,9 @@ public class TextEngine : MonoBehaviour
         }
         else
         {
-            yield return new WaitUntil(() =>
+                yield return new WaitUntil(() =>
                 forwardAction.triggered || backAction.triggered);
-
+           
             if (backAction.triggered)
             {
                 if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].back) &&
@@ -417,7 +423,7 @@ public class TextEngine : MonoBehaviour
                     textoNodo = myDialogueList.lectura[nodoActual].Texto;
                 }
             }
-            else if (forwardAction.triggered)
+            else if (forwardAction.triggered && canWrite)
             {
                 sonido.PlayOneShot(audio1);
                 if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].next))
@@ -436,6 +442,7 @@ public class TextEngine : MonoBehaviour
                     textoNodo = null;
                 }
             }
+    
         }
 
         // Deshabilitar acciones
@@ -607,6 +614,15 @@ public class TextEngine : MonoBehaviour
                 EnableButton();
             }
 
+        }
+
+        if (pauseMenu.activeSelf)
+        {
+            canWrite = false;
+        }
+        else
+        {
+            canWrite= true;
         }
     }
 
