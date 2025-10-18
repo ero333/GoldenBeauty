@@ -18,11 +18,18 @@ public class SceneController : MonoBehaviour
 
     //audio
     public AudioSource audio;
+    public AudioClip audio1;
+    public AudioClip audio2;
+    public AudioClip audio3;
+    public AudioClip audio4;
+
     public GameObject menuPausa;
     public GameObject animPausa;
     public Slider volumeSlider;
     private const string volumeKey = "Volume";
     private float previousVolume = 1f; // default to full volume
+    public GameObject muteActivo;
+    public GameObject muteInactivo;
 
 
 
@@ -184,9 +191,12 @@ public class SceneController : MonoBehaviour
         {
             // Save the current volume before muting
             previousVolume = audio.volume;
+            
 
             // Mute the audio
             audio.Pause();
+            muteActivo.SetActive(false);
+            muteInactivo.SetActive(true);
 
             // Set the saved volume in PlayerPrefs to 0 (optional, but consistent with UI)
             PlayerPrefs.SetFloat("GlobalVolume", 0);
@@ -200,6 +210,8 @@ public class SceneController : MonoBehaviour
         {
             // Unmute the audio
             audio.UnPause();
+            muteActivo.SetActive(true);
+            muteInactivo.SetActive(false);
 
             // Restore the previous volume
             SetVolume(previousVolume); // This sets both audio.volume and PlayerPrefs
