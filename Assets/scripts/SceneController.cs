@@ -227,4 +227,13 @@ public class SceneController : MonoBehaviour
     {
         menuPausa.SetActive(false);
     }
+
+    public void FinJuego ()
+    {
+        SceneManager.LoadScene("Z- Final del juego");
+    }
+    public void creditines ()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
 }

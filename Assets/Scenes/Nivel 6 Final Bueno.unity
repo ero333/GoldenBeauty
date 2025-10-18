@@ -681,9 +681,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 387976434}
-        m_TargetAssemblyTypeName: Pausa, Assembly-CSharp
-        m_MethodName: VolverAlInicio
+      - m_Target: {fileID: 349629418}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: FinJuego
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
