@@ -2846,7 +2846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486d374f38c6a7640b9cc4e9641be552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneController: {fileID: 0}
+  sceneController: {fileID: 1084557458}
   button1: {fileID: 559250730}
   button2: {fileID: 954524384}
   button3: {fileID: 441378297}

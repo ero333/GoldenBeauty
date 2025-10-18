@@ -66,6 +66,15 @@ public class Ganaryperder : MonoBehaviour
     int currentPelo;
     public int contador = 0;
     public bool detener = false;
+
+
+    //audio
+    public AudioSource sonido;
+    public AudioClip sonidoRostro;
+    public AudioClip sonidoPelo;
+    public AudioClip sonidoRopa;
+    public AudioClip sonidoAcc;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -126,72 +135,84 @@ public class Ganaryperder : MonoBehaviour
         {
             Suma_Final += ValorAccesorio_1;
             currentAcc = 1;
+            sonido.PlayOneShot(sonidoAcc);
         }
 
         if (accesorio_2.activeInHierarchy)
         {
             Suma_Final += ValorAccesorio_2;
             currentAcc = 2;
+            sonido.PlayOneShot(sonidoAcc);
         }
 
         if (accesorio_3.activeInHierarchy)
         {
             Suma_Final += ValorAccesorio_3;
             currentAcc = 3;
+            sonido.PlayOneShot(sonidoAcc);
         }
 
         if (Pelo_1.activeInHierarchy)
         {
             Suma_Final += ValorPelo_1;
             currentPelo = 1;
+            sonido.PlayOneShot(sonidoPelo);
         }
 
         if (Pelo_2.activeInHierarchy)
         {
             Suma_Final += ValorPelo_2;
             currentPelo = 2;
+            sonido.PlayOneShot(sonidoPelo);
         }
 
         if (Pelo_3.activeInHierarchy)
         {
             Suma_Final += ValorPelo_3;
             currentPelo = 3;
+            sonido.PlayOneShot(sonidoPelo);
         }
 
         if (Rostro_1.activeInHierarchy)
         {
             Suma_Final += ValorRostro_1;
             currentRostro = 1;
+            sonido.PlayOneShot(sonidoRostro);
         }
 
         if (Rostro_2.activeInHierarchy)
         {
             Suma_Final += ValorRostro_2;
             currentRostro = 2;
+            sonido.PlayOneShot(sonidoRostro);
         }
 
         if (Rostro_3.activeInHierarchy)
         {
             Suma_Final += ValorRostro_3;
             currentRostro = 3;
+            sonido.PlayOneShot(sonidoRostro);
         }
 
         if (Ropa_1.activeInHierarchy)
         {
             Suma_Final += ValorRopa_1;
             currentRopa = 1;
+            sonido.PlayOneShot(sonidoRopa);
         }
 
         if (Ropa_2.activeInHierarchy)
         {
             Suma_Final += ValorRopa_2;
             currentRopa = 2;
+            sonido.PlayOneShot(sonidoRopa);
         }
 
         if (Ropa_3.activeInHierarchy)
         {
             Suma_Final += ValorRopa_3;
             currentRopa = 3;
+            sonido.PlayOneShot(sonidoRopa);
         }
 
         if (Suma_Final > Valordeganar)
