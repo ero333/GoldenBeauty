@@ -2430,7 +2430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 771, y: 453}
+  m_AnchoredPosition: {x: 771, y: -465}
   m_SizeDelta: {x: 97.53, y: 27.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1907943049
@@ -2590,6 +2590,12 @@ MonoBehaviour:
   isNews: 0
   contador: 0
   currentDiario: 0
+  audio: {fileID: 0}
+  menuPausa: {fileID: 0}
+  animPausa: {fileID: 0}
+  volumeSlider: {fileID: 0}
+  muteActivo: {fileID: 0}
+  muteInactivo: {fileID: 0}
 --- !u!4 &2006059159
 Transform:
   m_ObjectHideFlags: 0
