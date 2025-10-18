@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1987ca91806cbf041948731201841601
+guid: 0ba84904ad87fe249a186a43547617c7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Abrir Local - Pressed
+      name: Boton-Siguiente Alta res_0
       rect:
         serializedVersion: 2
-        x: 590
-        y: 730
-        width: 740
-        height: 150
+        x: 0
+        y: 294
+        width: 336
+        height: 105
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23bc49c1d001ae54293fda44d1d304fe
-      internalID: 996868264
+      spriteID: 357c72e85966a1241bb6b5ec93827213
+      internalID: 7739190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Abrir Local - Default
+      name: Boton-Siguiente Alta res_1
       rect:
         serializedVersion: 2
-        x: 590
-        y: 500
-        width: 740
-        height: 150
+        x: 0
+        y: 154
+        width: 336
+        height: 105
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a448030fe4ea5a648bf0ff6d220fa61d
-      internalID: -1118927754
+      spriteID: 64ee59ddc48d5884a92d79dce5209749
+      internalID: 699325726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Abrir Local - Hover
+      name: Boton-Siguiente Alta res_2
       rect:
         serializedVersion: 2
-        x: 590
-        y: 290
-        width: 740
-        height: 150
+        x: 0
+        y: 0
+        width: 336
+        height: 105
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c0ab281d49d5594790e09fd512b522f
-      internalID: -1809818050
+      spriteID: a76f0597e0e44e04a9da1c755c9a02c8
+      internalID: -128399781
       vertices: []
       indices: 
       edges: []
@@ -183,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Abrir Local - Default: -1118927754
-      Abrir Local - Hover: -1809818050
-      Abrir Local - Pressed: 996868264
+      Boton-Siguiente Alta res_0: 7739190
+      Boton-Siguiente Alta res_1: 699325726
+      Boton-Siguiente Alta res_2: -128399781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
