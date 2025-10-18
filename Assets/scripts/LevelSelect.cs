@@ -121,12 +121,12 @@ public class LevelSelectManager : MonoBehaviour
                 EventManager.Instance.LogLevelStart(1);
                 Debug.Log("Button 1 is selected.");
                 SessionData.level = 1;
-                sceneController.LoadScene("Nivel 1 Dialogo");
+                sceneController.LoadScene("Nivel 1 Diario");
             }
             else if (IsButton2Selected && button2.interactable)
             {
                 EventManager.Instance.LogLevelStart(2);
-                sceneController.LoadScene("Nivel 2 Dialogo");
+                sceneController.LoadScene("Nivel 2 Diario");
                 Debug.Log("Button 2 is selected.");
             }
             else if (IsButton3Selected && button3.interactable)

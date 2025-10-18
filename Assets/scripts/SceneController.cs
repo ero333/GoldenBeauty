@@ -22,6 +22,9 @@ public class SceneController : MonoBehaviour
     public GameObject animPausa;
     public Slider volumeSlider;
     private const string volumeKey = "Volume";
+    private float previousVolume = 1f; // default to full volume
+
+
 
     public void SetVolume(float volume)
     {
@@ -175,17 +178,38 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void OnButtonMute ()
+    public void OnButtonMute()
     {
         if (audio.isPlaying)
         {
+            // Save the current volume before muting
+            previousVolume = audio.volume;
+
+            // Mute the audio
             audio.Pause();
+
+            // Set the saved volume in PlayerPrefs to 0 (optional, but consistent with UI)
+            PlayerPrefs.SetFloat("GlobalVolume", 0);
+            PlayerPrefs.Save();
+
+            // If using a UI slider, reflect the change
+            if (volumeSlider != null)
+                volumeSlider.value = 0;
         }
-        else if (!audio.isPlaying) {
-        
+        else
+        {
+            // Unmute the audio
             audio.UnPause();
+
+            // Restore the previous volume
+            SetVolume(previousVolume); // This sets both audio.volume and PlayerPrefs
+
+            // If using a UI slider, reflect the change
+            if (volumeSlider != null)
+                volumeSlider.value = previousVolume;
         }
     }
+
 
     public void MenuSound ()
     {
