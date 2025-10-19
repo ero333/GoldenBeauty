@@ -18,14 +18,20 @@ public class SceneController : MonoBehaviour
 
     //audio
     public AudioSource audio;
+    public AudioSource sonido;
 
     public GameObject menuPausa;
     public GameObject animPausa;
     public Slider volumeSlider;
+    public Slider volumeSlider2;
     private const string volumeKey = "Volume";
+    private const string volumeKey2 = "Volume2";
     private float previousVolume = 1f; // default to full volume
+    private float previousVolume2 = 1f;
     public GameObject muteActivo;
     public GameObject muteInactivo;
+    public GameObject muteActivo2;
+    public GameObject muteInactivo2;
 
 
 
@@ -39,13 +45,25 @@ public class SceneController : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    public void SetSounds(float volume)
+    {
+            sonido.volume = volume;
+
+        // Guardar el valor en PlayerPrefs
+        PlayerPrefs.SetFloat("GlobalSound", volume);
+        PlayerPrefs.Save();
+    }
+
 
     void Start()
     {
 
         //audio
         audio.Play();
+        sonido.Play();
+
         float savedVolume = PlayerPrefs.GetFloat("GlobalVolume", 1f); // por defecto, 1
+        float savedSound = PlayerPrefs.GetFloat("GlobalSound", 1f);
 
         if (audio != null)
             audio.volume = savedVolume;
@@ -55,6 +73,13 @@ public class SceneController : MonoBehaviour
             volumeSlider.value = savedVolume;
             volumeSlider.onValueChanged.AddListener(SetVolume);
         }
+
+
+            sonido.volume = savedSound;
+
+
+            volumeSlider2.value = savedSound;
+            volumeSlider2.onValueChanged.AddListener(SetSounds);
 
         // finales
         Scene currentScene = SceneManager.GetActiveScene();
@@ -187,7 +212,7 @@ public class SceneController : MonoBehaviour
         {
             // Save the current volume before muting
             previousVolume = audio.volume;
-            
+
 
             // Mute the audio
             audio.Pause();
@@ -215,6 +240,42 @@ public class SceneController : MonoBehaviour
             // If using a UI slider, reflect the change
             if (volumeSlider != null)
                 volumeSlider.value = previousVolume;
+        }
+
+    }
+    public void OnButtonMute2()
+        {
+            if (sonido.isPlaying)
+            {
+            // Save the current volume before muting
+            previousVolume2 = sonido.volume;
+
+
+            // Mute the audio
+            sonido.Pause();
+            muteActivo2.SetActive(false);
+            muteInactivo2.SetActive(true);
+
+            // Set the saved volume in PlayerPrefs to 0 (optional, but consistent with UI)
+            PlayerPrefs.SetFloat("GlobalSound", 0);
+            PlayerPrefs.Save();
+
+            // If using a UI slider, reflect the change
+
+                volumeSlider2.value = 0;
+        }
+        else
+        {
+            // Unmute the audio
+            sonido.UnPause();
+            muteActivo2.SetActive(true);
+            muteInactivo2.SetActive(false);
+
+            // Restore the previous volume
+            SetVolume(previousVolume); // This sets both audio.volume and PlayerPrefs
+
+            // If using a UI slider, reflect the change
+                volumeSlider2.value = previousVolume2;
         }
     }
 
