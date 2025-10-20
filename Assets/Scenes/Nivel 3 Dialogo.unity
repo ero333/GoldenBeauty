@@ -2522,8 +2522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf55d9453c97e443af33ce0d2d1ee43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneController: {fileID: 0}
-  pauseMenu: {fileID: 0}
+  sceneController: {fileID: 1584874181}
+  pauseMenu: {fileID: 1019391623}
   cajaDialogo: {fileID: 1531171716}
   cajaOpcion1: {fileID: 675378014}
   cajaOpcion2: {fileID: 2113437930}
@@ -2550,8 +2550,8 @@ MonoBehaviour:
   diario: {fileID: 22806292}
   currentLevel: 0
   currentQuestion: 0
-  sonido: {fileID: 0}
-  audio1: {fileID: 0}
+  sonido: {fileID: 1584874182}
+  audio1: {fileID: 8300000, guid: 60adfe509ea144d4a9d42afe4e4fe6b7, type: 3}
   audio2: {fileID: 0}
   myDialogueList:
     lectura: []

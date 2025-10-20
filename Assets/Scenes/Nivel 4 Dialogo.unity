@@ -291,6 +291,9 @@ MonoBehaviour:
   Alerta: {fileID: 305504611}
   AnimacionMenuDePausa: {fileID: 60794826}
   pausado: 0
+  currentLevel: 0
+  contador: 0
+  detener: 0
 --- !u!95 &60794828
 Animator:
   serializedVersion: 5
@@ -1559,6 +1562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneController: {fileID: 1120110968}
+  pauseMenu: {fileID: 1232080179}
   cajaDialogo: {fileID: 1531171716}
   cajaOpcion1: {fileID: 675378014}
   cajaOpcion2: {fileID: 2113437930}
@@ -1581,7 +1585,13 @@ MonoBehaviour:
   pauseSquare: {fileID: 106196380}
   pauseCanvas: {fileID: 0}
   alerta: {fileID: 0}
+  canWrite: 0
   diario: {fileID: 886141107}
+  currentLevel: 0
+  currentQuestion: 0
+  sonido: {fileID: 0}
+  audio1: {fileID: 0}
+  audio2: {fileID: 0}
   myDialogueList:
     lectura: []
 --- !u!114 &793584133
@@ -1981,6 +1991,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12229f9c4f1e7a4b820fa9d84158c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNews: 0
+  contador: 0
+  currentDiario: 0
+  audio: {fileID: 0}
+  sonido: {fileID: 0}
+  menuPausa: {fileID: 0}
+  animPausa: {fileID: 0}
+  volumeSlider: {fileID: 0}
+  volumeSlider2: {fileID: 0}
+  muteActivo: {fileID: 0}
+  muteInactivo: {fileID: 0}
+  muteActivo2: {fileID: 0}
+  muteInactivo2: {fileID: 0}
 --- !u!4 &1120110969
 Transform:
   m_ObjectHideFlags: 0
@@ -3489,6 +3512,9 @@ MonoBehaviour:
   Alerta: {fileID: 305504611}
   AnimacionMenuDePausa: {fileID: 60794826}
   pausado: 0
+  currentLevel: 0
+  contador: 0
+  detener: 0
 --- !u!1 &1931190543
 GameObject:
   m_ObjectHideFlags: 0
