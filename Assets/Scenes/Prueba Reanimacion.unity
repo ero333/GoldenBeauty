@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 50136551}
   - component: {fileID: 50136550}
   m_Layer: 0
-  m_Name: GolemFinalMalo_Down
+  m_Name: Prueba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,10 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  isUp: 0
-  isDown: 1
-  goesUp: 0
-  goesDown: 0
+  isUp: 1
 --- !u!1 &119530752
 GameObject:
   m_ObjectHideFlags: 0
