@@ -5405,7 +5405,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2092994966}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
         m_MethodName: PasarNivel
         m_Mode: 1
