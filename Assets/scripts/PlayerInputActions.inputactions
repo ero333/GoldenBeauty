@@ -68,6 +68,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SpaceBoy",
+                    "type": "Button",
+                    "id": "03cb2558-74f0-4c90-b6bd-d494dff50836",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -211,6 +220,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Abajo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f507a15e-ac07-4f75-9f63-54fc6dd0e5b9",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpaceBoy",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
