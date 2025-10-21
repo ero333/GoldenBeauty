@@ -4742,7 +4742,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2cd121c5d16e8bb4db5d0b5e96403da7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5726,6 +5726,7 @@ MonoBehaviour:
   currentDiario: 0
   audio: {fileID: 1339944432}
   sonido: {fileID: 1339944431}
+  sonido1: {fileID: 0}
   menuPausa: {fileID: 1593376566}
   animPausa: {fileID: 2080025897}
   volumeSlider: {fileID: 1972202387}
@@ -6376,6 +6377,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!4 &1447410014
 Transform:
   m_ObjectHideFlags: 0
@@ -7484,7 +7488,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6666666, y: 1.75}
+    oldSize: {x: 1.6666666, y: 1.7504274}
     newSize: {x: 2.1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8991,6 +8995,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!95 &2080025899
 Animator:
   serializedVersion: 5
