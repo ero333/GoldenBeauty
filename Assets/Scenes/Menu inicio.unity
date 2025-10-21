@@ -656,8 +656,8 @@ MonoBehaviour:
   isNews: 0
   contador: 0
   currentDiario: 0
-  audio: {fileID: 446899671}
-  sonido: {fileID: 446899672}
+  audio: {fileID: 446899672}
+  sonido: {fileID: 446899671}
   menuPausa: {fileID: 2052461800}
   animPausa: {fileID: 232395563}
   volumeSlider: {fileID: 1217875239}
@@ -788,7 +788,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e1e175fd0a9811c4e82291dd02fc5942, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
@@ -1095,13 +1095,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2030239505}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2030239511}
+        m_TargetAssemblyTypeName: Menuinicio, Assembly-CSharp
+        m_MethodName: OnButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3336,6 +3336,9 @@ MonoBehaviour:
   buttonCredits: {fileID: 1466022412}
   buttonMenu: {fileID: 908178741}
   buttonRate: {fileID: 940161705}
+  sonido: {fileID: 446899671}
+  sonido1: {fileID: 8300000, guid: 35a1ec5c46a198c41ab7d3c6d7d90d2b, type: 3}
+  sonido2: {fileID: 8300000, guid: 4af13b1a46c190e428f6cd6095b42858, type: 3}
 --- !u!114 &2030239512
 MonoBehaviour:
   m_ObjectHideFlags: 0

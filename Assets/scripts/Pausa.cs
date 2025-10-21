@@ -29,6 +29,11 @@ public class Pausa : MonoBehaviour
     bool isEnd;
     public int contador = 0;
     public bool detener = false;
+
+    //sonido
+    public AudioSource sonido;
+    public AudioClip sonido1;
+    public AudioClip sonido2;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,12 +82,14 @@ public class Pausa : MonoBehaviour
 
     public void AbrirMenu2()
     {
+        sonido.PlayOneShot(sonido1);
         AnimacionMenuDePausa.SetActive(true);
         botonDePausa.SetActive(false);
     }
 
     public void DesPausar()
     {
+        sonido.PlayOneShot(sonido1);
         menuDePausa.SetActive(false);
         botonDePausa.SetActive(true);
         fondoDePausa.SetActive(false);
@@ -91,6 +98,7 @@ public class Pausa : MonoBehaviour
     public void VolverAlInicio()
     {
         detener = false;
+        sonido.PlayOneShot(sonido1);
         if (isEnd)
         {
             EventManager.SafeLogEvent("End", new Dictionary<string, object> {
@@ -103,10 +111,12 @@ public class Pausa : MonoBehaviour
     public void OnButtonClick ()
     {
         Alerta.SetActive(true);
+        sonido.PlayOneShot(sonido1);
     }
     public void OnButton2Click ()
     {
         Alerta.SetActive(false);
+        sonido.PlayOneShot(sonido2);
     }
 
 }

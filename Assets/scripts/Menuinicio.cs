@@ -28,9 +28,14 @@ public class Menuinicio : MonoBehaviour
     public bool IsButtonMenu { get; private set; }
     public bool IsButtonRate { get; private set; }
 
+    //audio
+    public AudioSource sonido;
+    public AudioClip sonido1;
+    public AudioClip sonido2;
     // Start is called before the first frame update
     void Start()
     {
+        
         playerInput = GetComponent<PlayerInput>();
         forwardAction = playerInput.actions.FindAction("PlayerMap/Forward");
         backAction = playerInput.actions.FindAction("PlayerMap/Back");
@@ -49,26 +54,26 @@ public class Menuinicio : MonoBehaviour
 
         if (forwardAction.triggered)
         {
+            
             if (IsButtonStart)
             {
-                sceneController.LoadScene("LevelSelect");
-                Debug.Log("Start is selected.");
+                StartCoroutine(OnButtonSound());
+                
+               
             }
 
             else if (IsButtonCredits)
             {
-                sceneController.LoadScene("Creditos");
-                Debug.Log("creditos is selected.");
+                StartCoroutine(OnButton2Sound());
+
             }
 
             else if (IsButtonMenu)
             {
-                sceneController.LoadScene("Menu inicio");
-                Debug.Log("creditos is selected.");
+                StartCoroutine(OnButton4Sound());
             }
             else if (IsButtonRate) {
-                sceneController.LoadScene("Calificar");
-                Debug.Log("creditos is selected.");
+                StartCoroutine(OnButton3Sound());
             }
         }
 
@@ -82,5 +87,34 @@ public class Menuinicio : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         sceneController.LoadScene("Calificar");
+    }
+
+    public IEnumerator OnButtonSound ()
+    {
+        sonido.PlayOneShot(sonido1);
+        yield return new WaitForSeconds(0.3f);
+        sceneController.LoadScene("LevelSelect");
+        Debug.Log("Start is selected.");
+    }
+    public IEnumerator OnButton2Sound()
+    {
+        sonido.PlayOneShot(sonido1);
+        yield return new WaitForSeconds(0.3f);
+        sceneController.LoadScene("Creditos");
+        Debug.Log("Start is selected.");
+    }
+    public IEnumerator OnButton3Sound()
+    {
+        sonido.PlayOneShot(sonido1);
+        yield return new WaitForSeconds(0.3f);
+        sceneController.LoadScene("Calificar");
+        Debug.Log("Start is selected.");
+    }
+    public IEnumerator OnButton4Sound()
+    {
+        sonido.PlayOneShot(sonido1);
+        yield return new WaitForSeconds(0.3f);
+        sceneController.LoadScene("Menu inicio");
+        Debug.Log("Start is selected.");
     }
 }

@@ -1,42 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1102 &-9018160362249980075
+--- !u!1102 &-9187508771503982877
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Abajo
+  m_Name: AbajoIzq-Abajo-Arriba
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3644d126cbc95e94798354b6ffea5df7, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &-8093949240568142993
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Arriba
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: 7005509386436972959}
+  - {fileID: 2450610196602769643}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -52,17 +28,111 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-5809872611841442398
+--- !u!1101 &-9032061441064868928
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4934331964552944536}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-7217259529561931192
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -357379295239839026}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1102 &-6767423402300044252
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Izquierda
+  m_Name: Arriba-Der-Izq
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: -4350191130892400103}
+  - {fileID: 5585799846622894448}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -78,7 +148,53 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-4435209691879621404
+--- !u!1101 &-6645059566313264358
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -357379295239839026}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1102 &-4934331964552944536
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -88,7 +204,9 @@ AnimatorState:
   m_Name: Abajo-Izq-Der
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: -6645059566313264358}
+  - {fileID: 2661535018538392075}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -104,160 +222,111 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-2302191800334160300
+--- !u!1101 &-4543504532335963160
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -4934331964552944536}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-4350191130892400103
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -1601469578918724350}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1102 &-2012823052894688118
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AbajoDer-Arr-Abj
+  m_Name: ArribaIzq-Arriba-Abajo
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4da8eddc914a8b74ea4f87785526b877, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &-260449281679363886
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Derecha
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1b18f9afbb2d19241a701190e01cd63b, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!91 &9100000
-AnimatorController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: EsqueletoDiario_Dia2
-  serializedVersion: 5
-  m_AnimatorParameters: []
-  m_AnimatorLayers:
-  - serializedVersion: 5
-    m_Name: Base Layer
-    m_StateMachine: {fileID: 443085088756241497}
-    m_Mask: {fileID: 0}
-    m_Motions: []
-    m_Behaviours: []
-    m_BlendingMode: 0
-    m_SyncedLayerIndex: -1
-    m_DefaultWeight: 0
-    m_IKPass: 0
-    m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 9100000}
---- !u!1107 &443085088756241497
-AnimatorStateMachine:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Base Layer
-  m_ChildStates:
-  - serializedVersion: 1
-    m_State: {fileID: -9018160362249980075}
-    m_Position: {x: 200, y: 0, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -8093949240568142993}
-    m_Position: {x: 235, y: 65, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -5809872611841442398}
-    m_Position: {x: 270, y: 130, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -260449281679363886}
-    m_Position: {x: 305, y: 195, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -2302191800334160300}
-    m_Position: {x: 340, y: 260, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 6865776882324632143}
-    m_Position: {x: 375, y: 325, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -4435209691879621404}
-    m_Position: {x: 410, y: 390, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 3983811469735061003}
-    m_Position: {x: 445, y: 455, z: 0}
-  m_ChildStateMachines: []
-  m_AnyStateTransitions: []
-  m_EntryTransitions: []
-  m_StateMachineTransitions: {}
-  m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
-  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -9018160362249980075}
---- !u!1102 &3983811469735061003
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Abajo-Der-Izq
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 093480faa62f8144abb51a9f4d7df862, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &6865776882324632143
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: ArribaIzq-Abj-Arr
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: -1277243644314435970}
+  - {fileID: -9032061441064868928}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -273,3 +342,734 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &-1601469578918724350
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Arriba-Izq-Der
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 9068594052621268946}
+  - {fileID: 5207318456941711186}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 1b18f9afbb2d19241a701190e01cd63b, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1101 &-1277243644314435970
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -9187508771503982877}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-1206388932816037931
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -9187508771503982877}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1102 &-357379295239839026
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AbajoDer-Abajo-Arriba
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 8139116033780768554}
+  - {fileID: 5801198406106227865}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 4da8eddc914a8b74ea4f87785526b877, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!91 &9100000
+AnimatorController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EsqueletoDiario_Dia2
+  serializedVersion: 5
+  m_AnimatorParameters:
+  - m_Name: Abajo-Der-izq
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Abajo-Izq-Der
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: AbajoDer-Abajo-Arriba
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: AbajoIzq-Abajo-Arriba
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Arriba-Der-IZq
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Arriba-Izq-Der
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: ArribaDer-Arriba-Abajo
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: ArribaIzq-Arriba-Abajo
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  m_AnimatorLayers:
+  - serializedVersion: 5
+    m_Name: Base Layer
+    m_StateMachine: {fileID: 443085088756241497}
+    m_Mask: {fileID: 0}
+    m_Motions: []
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: -1
+    m_DefaultWeight: 0
+    m_IKPass: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
+--- !u!1102 &434160667657169214
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ArribaDer-Arriba-Abajo
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: -7217259529561931192}
+  - {fileID: 5743520695425053874}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 3644d126cbc95e94798354b6ffea5df7, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1107 &443085088756241497
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Base Layer
+  m_ChildStates:
+  - serializedVersion: 1
+    m_State: {fileID: 1248702662630888573}
+    m_Position: {x: 910, y: 230, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -4934331964552944536}
+    m_Position: {x: 910, y: 330, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -357379295239839026}
+    m_Position: {x: 1160, y: 330, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -9187508771503982877}
+    m_Position: {x: 620, y: 120, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -6767423402300044252}
+    m_Position: {x: 910, y: -10, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -1601469578918724350}
+    m_Position: {x: 910, y: 120, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 434160667657169214}
+    m_Position: {x: 1160, y: 390, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -2012823052894688118}
+    m_Position: {x: 620, y: 330, z: 0}
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 130, z: 0}
+  m_ExitPosition: {x: 50, y: 170, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: -9187508771503982877}
+--- !u!1102 &1248702662630888573
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Abajo-Der-Izq
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: -4543504532335963160}
+  - {fileID: -1206388932816037931}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 093480faa62f8144abb51a9f4d7df862, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1101 &2450610196602769643
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -2012823052894688118}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &2661535018538392075
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1248702662630888573}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &5207318456941711186
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 434160667657169214}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &5585799846622894448
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -2012823052894688118}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &5743520695425053874
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1248702662630888573}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &5801198406106227865
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -6767423402300044252}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &7005509386436972959
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -1601469578918724350}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &8139116033780768554
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 434160667657169214}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &9068594052621268946
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Der-izq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Abajo-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoDer-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AbajoIzq-Abajo-Arriba
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: Arriba-Der-IZq
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Arriba-Izq-Der
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaDer-Arriba-Abajo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ArribaIzq-Arriba-Abajo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -6767423402300044252}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
