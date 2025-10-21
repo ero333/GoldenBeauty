@@ -19,6 +19,7 @@ public class SceneController : MonoBehaviour
     //audio
     public AudioSource audio;
     public AudioSource sonido;
+    public AudioClip sonido1;
 
     public GameObject menuPausa;
     public GameObject animPausa;
@@ -282,11 +283,13 @@ public class SceneController : MonoBehaviour
 
     public void MenuSound ()
     {
+    
         StartCoroutine(animMenu());
     }
 
     public IEnumerator animMenu ()
     {
+        sonido.PlayOneShot(sonido1);
         animPausa.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         animPausa.SetActive(false);
@@ -294,6 +297,7 @@ public class SceneController : MonoBehaviour
     }
     public void closeSound ()
     {
+        sonido.PlayOneShot(sonido1);
         menuPausa.SetActive(false);
     }
 
