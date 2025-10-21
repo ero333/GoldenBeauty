@@ -15,6 +15,21 @@ public class Diario_2_LaPelicula : MonoBehaviour
     public Animator animator;
     public bool isUp;
 
+    public bool ArrIzq;
+    public bool ArrDer;
+    public bool AbajIzq;
+    public bool AbajDer;
+
+    public enum Esquina
+    {
+        ArribaIzquierda,
+        ArribaDerecha,
+        AbajoIzquierda,
+        AbajoDerecha
+    }
+
+    public Esquina posicionActual = Esquina.ArribaIzquierda;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,28 +44,97 @@ public class Diario_2_LaPelicula : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (UpAction.triggered) // 0 = clic izquierdo
+        /*
+                animator.SetBool("Abajo-Der-izq", false);
+                animator.SetBool("Abajo-Izq-Der", false);
+                animator.SetBool("AbajoDer-Abajo-Arriba", false);
+                animator.SetBool("AbajoIzq-Abajo-Arriba", false);
+                animator.SetBool("Arriba-Der-IZq", false);
+                animator.SetBool("Arriba-Izq-Der", false);
+                animator.SetBool("ArribaDer-Arriba-Abajo", false);
+                animator.SetBool("ArribaIzq-Arriba-Abajo", false);
+        */
+
+
+        if (posicionActual == Esquina.ArribaIzquierda)
         {
-            Debug.Log("hola");
-            animator.SetBool("isUp", false);
+            if (RightAction.triggered) // 0 = clic izquierdo
+            {
+                posicionActual = Esquina.ArribaDerecha;
+                ResetBools();
+                animator.SetBool("Arriba-Izq-Der", true);
+            }
+            if (DownAction.triggered) // 0 = clic izquierdo
+            {
+                posicionActual = Esquina.AbajoIzquierda;
+                ResetBools();
+                animator.SetBool("ArribaIzq-Arriba-Abajo", true);
+            }
         }
 
-        if (DownAction.triggered) // 0 = clic izquierdo
+        if (posicionActual == Esquina.AbajoIzquierda)
         {
-            Debug.Log("holas");
-            animator.SetBool("isUp", true);
+            if (UpAction.triggered) // 0 = clic izquierdo
+            {
+                posicionActual = Esquina.ArribaIzquierda;
+                ResetBools();
+                animator.SetBool("AbajoIzq-Abajo-Arriba", true);
+            }
+            if (RightAction.triggered) // 0 = clic izquierdo
+            {
+                posicionActual = Esquina.AbajoDerecha;
+                ResetBools();
+                animator.SetBool("Abajo-Izq-Der", true);
+
+            }
         }
 
-        if (UpAction.triggered) // 0 = clic izquierdo
+        if (posicionActual == Esquina.AbajoDerecha)
         {
-            Debug.Log("hola");
-            animator.SetBool("IsRight", false);
+            if (UpAction.triggered) // 0 = clic izquierdo
+            {
+                posicionActual = Esquina.ArribaDerecha;
+                ResetBools();
+                animator.SetBool("AbajoDer-Abajo-Arriba", true);
+            }
+            if (LeftAction.triggered) // 0 = clic izquierdo
+            {
+                posicionActual = Esquina.AbajoIzquierda;
+                ResetBools();
+                animator.SetBool("Abajo-Der-izq", true);
+
+            }
         }
 
-        if (DownAction.triggered) // 0 = clic izquierdo
+        if (posicionActual == Esquina.ArribaDerecha)
         {
-            Debug.Log("holas");
-            animator.SetBool("IsRight", true);
+            if (DownAction.triggered) // 0 = clic izquierdo
+            {
+                posicionActual = Esquina.AbajoDerecha;
+                ResetBools();
+                animator.SetBool("ArribaDer-Arriba-Abajo", true);
+            }
+            if (LeftAction.triggered) // 0 = clic izquierdo
+            {
+                posicionActual = Esquina.ArribaIzquierda;
+                ResetBools();
+                animator.SetBool("Arriba-Der-IZq", true);
+
+            }
         }
+
     }
+
+    private void ResetBools()
+    {
+        animator.SetBool("Abajo-Der-izq", false);
+        animator.SetBool("Abajo-Izq-Der", false);
+        animator.SetBool("AbajoDer-Abajo-Arriba", false);
+        animator.SetBool("AbajoIzq-Abajo-Arriba", false);
+        animator.SetBool("Arriba-Der-IZq", false);
+        animator.SetBool("Arriba-Izq-Der", false);
+        animator.SetBool("ArribaDer-Arriba-Abajo", false);
+        animator.SetBool("ArribaIzq-Arriba-Abajo", false);
+    }
+
 }
