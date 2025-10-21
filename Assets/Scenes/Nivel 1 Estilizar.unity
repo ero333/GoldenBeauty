@@ -2362,10 +2362,10 @@ MonoBehaviour:
   contador: 0
   detener: 0
   sonido: {fileID: 2092994965}
-  sonidoRostro: {fileID: 0}
-  sonidoPelo: {fileID: 0}
-  sonidoRopa: {fileID: 0}
-  sonidoAcc: {fileID: 0}
+  sonidoRostro: {fileID: 8300000, guid: 4bcb9f12ea47e484584d0cc33686dbcd, type: 3}
+  sonidoPelo: {fileID: 8300000, guid: 19235a9feafc00944ade0554818d556b, type: 3}
+  sonidoRopa: {fileID: 8300000, guid: 79e81e4ca7002534baf5644c439fab4d, type: 3}
+  sonidoAcc: {fileID: 8300000, guid: 60adfe509ea144d4a9d42afe4e4fe6b7, type: 3}
 --- !u!4 &473546822
 Transform:
   m_ObjectHideFlags: 0
@@ -3287,7 +3287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuDePausa: {fileID: 679292916}
   fondoDePausa: {fileID: 1051347818}
-  botonDePausa: {fileID: 0}
+  botonDePausa: {fileID: 1041978584}
   Alerta: {fileID: 421400168}
   AnimacionMenuDePausa: {fileID: 1345076381}
   pausado: 0
@@ -6668,9 +6668,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2092994966}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: closeSound
+      - m_Target: {fileID: 772252975}
+        m_TargetAssemblyTypeName: Pausa, Assembly-CSharp
+        m_MethodName: DesPausar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

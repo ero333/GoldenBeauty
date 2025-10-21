@@ -12,6 +12,7 @@ using UnityEngine.UI;
 using static StaticVariables;
 using static EventManager;
 
+
 public class Ganaryperder : MonoBehaviour
 {
     public SceneController sceneController;
@@ -74,6 +75,18 @@ public class Ganaryperder : MonoBehaviour
     public AudioClip sonidoPelo;
     public AudioClip sonidoRopa;
     public AudioClip sonidoAcc;
+    bool wasPelo1Active = false;
+    bool wasPelo2Active = false;
+    bool wasPelo3Active = false;
+    bool wasRopa1Active = false;
+    bool wasRopa2Active = false;
+    bool wasRopa3Active = false;
+    bool wasRostro1Active = false;
+    bool wasRostro2Active = false;
+    bool wasRostro3Active = false;
+    bool wasAcc1Active = false;
+    bool wasAcc2Active = false;
+    bool wasAcc3Active = false;
 
     // Start is called before the first frame update
     void Start()
@@ -124,7 +137,81 @@ public class Ganaryperder : MonoBehaviour
         {
             sceneController.PasarNivel();
         }
-        
+
+        if (accesorio_1.activeInHierarchy && !wasAcc1Active)
+        {
+            sonido.PlayOneShot(sonidoAcc);
+        }
+        wasAcc1Active = accesorio_1.activeInHierarchy;
+
+        if (accesorio_2.activeInHierarchy && !wasAcc2Active)
+        {
+            sonido.PlayOneShot(sonidoAcc);
+        }
+        wasAcc2Active = accesorio_2.activeInHierarchy;
+
+        if (accesorio_3.activeInHierarchy && !wasAcc3Active)
+        {
+            sonido.PlayOneShot(sonidoAcc);
+        }
+        wasAcc3Active = accesorio_3.activeInHierarchy;
+
+        if (Pelo_1.activeInHierarchy && !wasPelo1Active)
+        {
+            sonido.PlayOneShot(sonidoPelo);
+        }
+        wasPelo1Active = Pelo_1.activeInHierarchy;
+
+        if (Pelo_2.activeInHierarchy && !wasPelo2Active)
+        {
+            sonido.PlayOneShot(sonidoPelo);
+        }
+        wasPelo2Active = Pelo_2.activeInHierarchy;
+
+        if (Pelo_3.activeInHierarchy && !wasPelo3Active)
+        {
+            sonido.PlayOneShot(sonidoPelo);
+        }
+        wasPelo3Active = Pelo_3.activeInHierarchy;
+
+        if (Rostro_1.activeInHierarchy && !wasRostro1Active)
+        {
+            sonido.PlayOneShot(sonidoRostro);
+        }
+        wasRostro1Active = Rostro_1.activeInHierarchy;
+
+        if (Rostro_2.activeInHierarchy && !wasRostro2Active)
+        {
+            sonido.PlayOneShot(sonidoRostro);
+        }
+        wasRostro2Active = Rostro_2.activeInHierarchy;
+
+        if (Rostro_3.activeInHierarchy && !wasRostro3Active)
+        {
+            sonido.PlayOneShot(sonidoRostro);
+        }
+        wasRostro3Active = Rostro_3.activeInHierarchy;
+
+        if (Ropa_1.activeInHierarchy && !wasRopa1Active)
+        {
+            sonido.PlayOneShot(sonidoRopa);
+        }
+        wasRopa1Active = Ropa_1.activeInHierarchy;
+
+
+        if (Ropa_2.activeInHierarchy && !wasRopa2Active)
+        {
+            sonido.PlayOneShot(sonidoRopa);
+        }
+        wasRopa2Active = Ropa_2.activeInHierarchy;
+
+
+        if (Ropa_3.activeInHierarchy && !wasRopa3Active)
+        {
+            sonido.PlayOneShot(sonidoRopa);
+        }
+        wasRopa3Active = Ropa_3.activeInHierarchy;
+
     }
 
     private IEnumerator aura()
@@ -250,4 +337,5 @@ public class Ganaryperder : MonoBehaviour
         StartCoroutine(aura());
         
     }
+
 }
