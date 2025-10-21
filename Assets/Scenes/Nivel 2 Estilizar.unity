@@ -264,6 +264,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!95 &34743496
 Animator:
   serializedVersion: 5
@@ -1226,6 +1229,7 @@ MonoBehaviour:
   currentDiario: 0
   audio: {fileID: 298943619}
   sonido: {fileID: 298943618}
+  sonido1: {fileID: 0}
   menuPausa: {fileID: 713075019}
   animPausa: {fileID: 34743494}
   volumeSlider: {fileID: 299801895}
@@ -2040,7 +2044,7 @@ MonoBehaviour:
   Pelo_2: {fileID: 64769707}
   Pelo_3: {fileID: 185629931}
   ValorPelo_1: 1
-  ValorPelo_2: 0
+  ValorPelo_2: 1
   ValorPelo_3: 1
   Rostro_1: {fileID: 1820499802}
   Rostro_2: {fileID: 668306315}
@@ -3791,6 +3795,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!4 &865741605
 Transform:
   m_ObjectHideFlags: 0
