@@ -13,6 +13,9 @@ EditorBuildSettings:
     guid: c54dc2a8f84e58e4ca6a4f126c0ab73a
   - enabled: 1
     path: Assets/Scenes/Nivel 1 Diario.unity
+    guid: d8988a1049b58e745b3ba0c553bf0932
+  - enabled: 0
+    path: Assets/Scenes/Nivel 1 Diario 2.unity
     guid: 7ebc336ddd1d0ab48b8aa55bc0cd56c1
   - enabled: 1
     path: Assets/Scenes/Nivel 1 Dialogo.unity
@@ -28,6 +31,9 @@ EditorBuildSettings:
     guid: 8c3c14a9ac2dace45835bb1bbf2e7a3d
   - enabled: 1
     path: Assets/Scenes/Nivel 2 Diario.unity
+    guid: 46ce7ef15b926374bbf6626e82fd146f
+  - enabled: 0
+    path: Assets/Scenes/Nivel 2 Diario 2.unity
     guid: 9014c6a19b8cad148a5f1c675a887f45
   - enabled: 1
     path: Assets/Scenes/Nivel 2 Dialogo.unity
@@ -43,6 +49,9 @@ EditorBuildSettings:
     guid: 785f8a7a3640c2141a7d16dc15b8eb43
   - enabled: 1
     path: Assets/Scenes/Nivel 3 Diario.unity
+    guid: 6ec939a877e6b7c4b9922cc807e3a173
+  - enabled: 0
+    path: Assets/Scenes/Nivel 3 Diario 2.unity
     guid: eb08d26bd1f184047a9fadf92a127cc9
   - enabled: 1
     path: Assets/Scenes/Nivel 3 Dialogo.unity
@@ -58,6 +67,9 @@ EditorBuildSettings:
     guid: 88966ff4a5b9c40478857d7306f5849b
   - enabled: 1
     path: Assets/Scenes/Nivel 4 Diario.unity
+    guid: 57e4609df3c9c37408c362c5fb312ccb
+  - enabled: 0
+    path: Assets/Scenes/Nivel 4 Diario 2.unity
     guid: 904447a6166f4b8479ee0a0af1b1ebac
   - enabled: 1
     path: Assets/Scenes/Nivel 4 Dialogo.unity
@@ -73,6 +85,9 @@ EditorBuildSettings:
     guid: 54a39757b016bc942b46a9a51ce8b0e8
   - enabled: 1
     path: Assets/Scenes/Nivel 5 Diario.unity
+    guid: 4bbd852169f25fb48a0eaadf63c95a69
+  - enabled: 0
+    path: Assets/Scenes/Nivel 5 Diario 2.unity
     guid: 70c1a8ba8b683a842a052e1e0b1c3e5c
   - enabled: 1
     path: Assets/Scenes/Nivel 5 Dialogo.unity
@@ -88,6 +103,9 @@ EditorBuildSettings:
     guid: 959b4dc3ea3a4d045bb725fe1c3b6a02
   - enabled: 1
     path: Assets/Scenes/Nivel 6 Diario.unity
+    guid: 58a5e225ff3b2314cbd86003d3ec597f
+  - enabled: 0
+    path: Assets/Scenes/Nivel 6 Diario 2.unity
     guid: b62f9c8eeb4209f4ba09accd252f3d9c
   - enabled: 1
     path: Assets/Scenes/Nivel 6 Dialogo.unity

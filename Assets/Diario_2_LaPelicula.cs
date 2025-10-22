@@ -44,16 +44,8 @@ public class Diario_2_LaPelicula : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-                animator.SetBool("Abajo-Der-izq", false);
-                animator.SetBool("Abajo-Izq-Der", false);
-                animator.SetBool("AbajoDer-Abajo-Arriba", false);
-                animator.SetBool("AbajoIzq-Abajo-Arriba", false);
-                animator.SetBool("Arriba-Der-IZq", false);
-                animator.SetBool("Arriba-Izq-Der", false);
-                animator.SetBool("ArribaDer-Arriba-Abajo", false);
-                animator.SetBool("ArribaIzq-Arriba-Abajo", false);
-        */
+
+        playerInput.SwitchCurrentActionMap("PlayerMap");
 
 
         if (posicionActual == Esquina.ArribaIzquierda)
