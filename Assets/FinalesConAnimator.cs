@@ -26,7 +26,7 @@ public class FinalesConAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        playerInput.SwitchCurrentActionMap("PlayerMap");
 
         if (UpAction.triggered) // 0 = clic izquierdo
         {

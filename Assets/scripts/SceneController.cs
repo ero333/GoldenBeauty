@@ -208,7 +208,7 @@ public class SceneController : MonoBehaviour
     }
     public void calificar()
     {
-        SceneManager.LoadScene("Menu inicio");
+        SceneManager.LoadScene("Calificar");
     }
 
     public void LoadScene(string sceneName)
