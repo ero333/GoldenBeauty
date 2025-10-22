@@ -5957,7 +5957,7 @@ MonoBehaviour:
   - {fileID: 991594041}
   - {fileID: 295458598}
   vivo: 0
-  menuDePausa: {fileID: 801172188}
+  menuDePausa: {fileID: 1682976878}
 --- !u!1 &1436585852
 GameObject:
   m_ObjectHideFlags: 0

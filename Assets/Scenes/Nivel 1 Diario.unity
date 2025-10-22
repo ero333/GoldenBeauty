@@ -1409,9 +1409,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 653c4a8275633e745a41dd8a8adb6bda, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9710759cd204c4a4b8fca4b4775d6970, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.18
+  m_Volume: 0.115
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2001,8 +2001,8 @@ MonoBehaviour:
   buttonMenu: {fileID: 486346192}
   buttonRate: {fileID: 81620620}
   sonido: {fileID: 0}
-  sonido1: {fileID: 8300000, guid: b817ab2140d568f4b8fec9371a3368a6, type: 3}
-  sonido2: {fileID: 8300000, guid: b817ab2140d568f4b8fec9371a3368a6, type: 3}
+  sonido1: {fileID: 8300000, guid: 0a0894edf41e1044d939e01a9554f888, type: 3}
+  sonido2: {fileID: 8300000, guid: 0a0894edf41e1044d939e01a9554f888, type: 3}
 --- !u!114 &1513663710
 MonoBehaviour:
   m_ObjectHideFlags: 0
