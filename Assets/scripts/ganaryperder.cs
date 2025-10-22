@@ -130,14 +130,14 @@ public class ganaryperder : MonoBehaviour
             Suma_Final += ValorRopa_3;
         }
 
-        if (Suma_Final > Valordeganar)
+        if (Suma_Final >= Valordeganar)
         {
             GanarNivel = true;
             Debug.Log("GANASTEEEEE");
             botonGanar.SetActive(true);
         }
 
-        if (!GanarNivel) 
+        if (Suma_Final < Valordeganar) 
         {
             Debug.Log("perdiste");
             botonPerder.SetActive(true);
