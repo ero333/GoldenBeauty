@@ -1708,7 +1708,7 @@ MonoBehaviour:
   accesorio_3: {fileID: 1893610118}
   ValorAccesorio_1: 1
   ValorAccesorio_2: 0
-  ValorAccesorio_3: 0
+  ValorAccesorio_3: 1
   Pelo_1: {fileID: 148771976}
   Pelo_2: {fileID: 64769707}
   Pelo_3: {fileID: 185629931}
