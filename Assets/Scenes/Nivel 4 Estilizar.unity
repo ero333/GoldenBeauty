@@ -2090,7 +2090,7 @@ MonoBehaviour:
   sonidoRostro: {fileID: 8300000, guid: 1d00b0dda4a983843a9a7f3fc33d0c7d, type: 3}
   sonidoPelo: {fileID: 8300000, guid: 19235a9feafc00944ade0554818d556b, type: 3}
   sonidoRopa: {fileID: 8300000, guid: 79e81e4ca7002534baf5644c439fab4d, type: 3}
-  sonidoAcc: {fileID: 8300000, guid: 60adfe509ea144d4a9d42afe4e4fe6b7, type: 3}
+  sonidoAcc: {fileID: 8300000, guid: b3293a147d45ce3478b324e001ae951f, type: 3}
 --- !u!4 &473546822
 Transform:
   m_ObjectHideFlags: 0
@@ -7218,7 +7218,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6666666, y: 1.7504274}
+    oldSize: {x: 1.6666666, y: 1.75}
     newSize: {x: 2.1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
