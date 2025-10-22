@@ -326,6 +326,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!1 &168340036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2663,6 +2666,7 @@ MonoBehaviour:
   currentDiario: 0
   audio: {fileID: 1084557457}
   sonido: {fileID: 1084557456}
+  sonido1: {fileID: 8300000, guid: 60adfe509ea144d4a9d42afe4e4fe6b7, type: 3}
   menuPausa: {fileID: 1479646915}
   animPausa: {fileID: 1448615795}
   volumeSlider: {fileID: 1989095263}
@@ -2853,6 +2857,9 @@ MonoBehaviour:
   button4: {fileID: 1657538022}
   button5: {fileID: 565333776}
   button6: {fileID: 2112617598}
+  sonido: {fileID: 1084557457}
+  sonido1: {fileID: 8300000, guid: 4af13b1a46c190e428f6cd6095b42858, type: 3}
+  sonido2: {fileID: 8300000, guid: 79e81e4ca7002534baf5644c439fab4d, type: 3}
 --- !u!114 &1146880675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3013,6 +3020,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!95 &1448615798
 Animator:
   serializedVersion: 5

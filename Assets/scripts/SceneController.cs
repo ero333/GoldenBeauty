@@ -202,6 +202,15 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
+    public void regresar()
+    {
+        SceneManager.LoadScene("Menu inicio");
+    }
+    public void calificar()
+    {
+        SceneManager.LoadScene("Menu inicio");
+    }
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

@@ -2658,7 +2658,7 @@ MonoBehaviour:
   currentLevel: 0
   currentQuestion: 0
   sonido: {fileID: 872942970}
-  audio1: {fileID: 8300000, guid: 60adfe509ea144d4a9d42afe4e4fe6b7, type: 3}
+  audio1: {fileID: 8300000, guid: 19235a9feafc00944ade0554818d556b, type: 3}
   audio2: {fileID: 0}
   myDialogueList:
     lectura: []
@@ -3184,6 +3184,7 @@ MonoBehaviour:
   currentDiario: 0
   audio: {fileID: 872942969}
   sonido: {fileID: 872942970}
+  sonido1: {fileID: 8300000, guid: 35a1ec5c46a198c41ab7d3c6d7d90d2b, type: 3}
   menuPausa: {fileID: 35331828}
   animPausa: {fileID: 1305914041}
   volumeSlider: {fileID: 2031077605}
@@ -3364,6 +3365,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!1 &1014477081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4085,6 +4089,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!95 &1305914044
 Animator:
   serializedVersion: 5

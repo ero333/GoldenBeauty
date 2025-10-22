@@ -1327,6 +1327,7 @@ MonoBehaviour:
   currentDiario: 0
   audio: {fileID: 0}
   sonido: {fileID: 0}
+  sonido1: {fileID: 0}
   menuPausa: {fileID: 0}
   animPausa: {fileID: 0}
   volumeSlider: {fileID: 0}
@@ -1741,6 +1742,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!95 &619554127
 Animator:
   serializedVersion: 5
@@ -2551,7 +2555,7 @@ MonoBehaviour:
   currentLevel: 0
   currentQuestion: 0
   sonido: {fileID: 1584874182}
-  audio1: {fileID: 8300000, guid: 60adfe509ea144d4a9d42afe4e4fe6b7, type: 3}
+  audio1: {fileID: 8300000, guid: 19235a9feafc00944ade0554818d556b, type: 3}
   audio2: {fileID: 0}
   myDialogueList:
     lectura: []
@@ -5749,6 +5753,7 @@ MonoBehaviour:
   currentDiario: 0
   audio: {fileID: 1584874183}
   sonido: {fileID: 1584874182}
+  sonido1: {fileID: 0}
   menuPausa: {fileID: 1019391623}
   animPausa: {fileID: 619554125}
   volumeSlider: {fileID: 1910241303}
@@ -7907,6 +7912,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!4 &2003335453
 Transform:
   m_ObjectHideFlags: 0

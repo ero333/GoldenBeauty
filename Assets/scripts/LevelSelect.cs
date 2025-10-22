@@ -1,11 +1,16 @@
-//using System.Diagnostics;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static EventManager;
 using static StaticVariables;
+using static EventManager;
 
 public class LevelSelectManager : MonoBehaviour
 {
@@ -31,6 +36,11 @@ public class LevelSelectManager : MonoBehaviour
     public bool IsButton4Selected { get; private set; }
     public bool IsButton5Selected { get; private set; }
     public bool IsButton6Selected { get; private set; }
+
+    //audio
+    public AudioSource sonido;
+    public AudioClip sonido1;
+    public AudioClip sonido2;
 
     void Start()
     {
@@ -93,6 +103,11 @@ public class LevelSelectManager : MonoBehaviour
             button.image.color = Color.white;
         }
     }
+    public IEnumerator levelJingle()
+    {
+        sonido.PlayOneShot(sonido1);
+        yield return new WaitForSeconds(0.3f);
+    }
 
     void Update()
     {
@@ -117,7 +132,7 @@ public class LevelSelectManager : MonoBehaviour
 
             if (IsButton1Selected && button1.interactable)
             {
-                
+                StartCoroutine(levelJingle());
                 EventManager.Instance.LogLevelStart(1);
                 Debug.Log("Button 1 is selected.");
                 SessionData.level = 1;
@@ -125,30 +140,35 @@ public class LevelSelectManager : MonoBehaviour
             }
             else if (IsButton2Selected && button2.interactable)
             {
+                StartCoroutine(levelJingle());
                 EventManager.Instance.LogLevelStart(2);
                 sceneController.LoadScene("Nivel 2 Diario");
                 Debug.Log("Button 2 is selected.");
             }
             else if (IsButton3Selected && button3.interactable)
             {
+                StartCoroutine(levelJingle());
                 EventManager.Instance.LogLevelStart(3);
                 sceneController.LoadScene("Nivel 3 Diario");
                 Debug.Log("Button 3 is selected.");
             }
             else if (IsButton4Selected && button4.interactable)
             {
+                StartCoroutine(levelJingle());
                 EventManager.Instance.LogLevelStart(4);
                 sceneController.LoadScene("Nivel 4 Diario");
                 Debug.Log("Button 4 is selected.");
             }
             else if (IsButton5Selected && button5.interactable)
             {
+                StartCoroutine(levelJingle());
                 EventManager.Instance.LogLevelStart(5);
                 sceneController.LoadScene("Nivel 5 Diario");
                 Debug.Log("Button 5 is selected.");
             }
             else if (IsButton6Selected && button6.interactable)
             {
+                StartCoroutine(levelJingle());
                 EventManager.Instance.LogLevelStart(6);
                 sceneController.LoadScene("Nivel 6 Diario");
                 Debug.Log("Button 6 is selected.");
@@ -169,4 +189,6 @@ public class LevelSelectManager : MonoBehaviour
     {
         sceneController.LoadScene("Menu inicio");
     }
+
+    
 }
