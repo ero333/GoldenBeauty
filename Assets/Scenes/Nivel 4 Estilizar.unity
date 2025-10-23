@@ -5457,7 +5457,7 @@ MonoBehaviour:
   currentDiario: 0
   audio: {fileID: 1339944432}
   sonido: {fileID: 1339944431}
-  sonido1: {fileID: 0}
+  sonido1: {fileID: 8300000, guid: 35a1ec5c46a198c41ab7d3c6d7d90d2b, type: 3}
   menuPausa: {fileID: 1593376566}
   animPausa: {fileID: 2080025897}
   volumeSlider: {fileID: 1972202387}
@@ -6107,9 +6107,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
-  sonido: {fileID: 0}
-  sonido1: {fileID: 0}
-  sonido2: {fileID: 0}
+  sonido: {fileID: 1339944431}
+  sonido1: {fileID: 8300000, guid: 35a1ec5c46a198c41ab7d3c6d7d90d2b, type: 3}
+  sonido2: {fileID: 8300000, guid: 4af13b1a46c190e428f6cd6095b42858, type: 3}
 --- !u!4 &1447410014
 Transform:
   m_ObjectHideFlags: 0

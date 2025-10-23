@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 177319027}
   - component: {fileID: 177319026}
   m_Layer: 0
-  m_Name: SceneController (1)
+  m_Name: SceneController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -337,7 +337,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 115a590f41a8a0a46b7d4f4578442fa9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -440,6 +440,7 @@ MonoBehaviour:
   currentDiario: 0
   audio: {fileID: 177319026}
   sonido: {fileID: 177319027}
+  sonido1: {fileID: 0}
   menuPausa: {fileID: 544635229}
   animPausa: {fileID: 544635229}
   volumeSlider: {fileID: 158485272}
@@ -568,63 +569,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 928711643}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &349629417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 349629419}
-  - component: {fileID: 349629418}
-  m_Layer: 0
-  m_Name: SceneController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &349629418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349629417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b12229f9c4f1e7a4b820fa9d84158c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isNews: 0
-  contador: 0
-  currentDiario: 0
-  audio: {fileID: 0}
-  sonido: {fileID: 0}
-  menuPausa: {fileID: 0}
-  animPausa: {fileID: 0}
-  volumeSlider: {fileID: 0}
-  volumeSlider2: {fileID: 0}
-  muteActivo: {fileID: 0}
-  muteInactivo: {fileID: 0}
-  muteActivo2: {fileID: 0}
-  muteInactivo2: {fileID: 0}
---- !u!4 &349629419
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349629417}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8373427, y: -0.40771258, z: 12.209228}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &370137469
 GameObject:
@@ -787,9 +731,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 349629418}
+      - m_Target: {fileID: 177319028}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: FinJuego
+        m_MethodName: finalizado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -875,6 +819,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!4 &387976435
 Transform:
   m_ObjectHideFlags: 0
@@ -1627,11 +1574,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7cda277c307b9f47b5dc32e0b0f8a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneController: {fileID: 349629418}
+  sceneController: {fileID: 0}
   buttonStart: {fileID: 389239006}
   buttonCredits: {fileID: 585591418}
   buttonMenu: {fileID: 389239006}
   buttonRate: {fileID: 377658176}
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!114 &928711646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2789,7 +2739,6 @@ SceneRoots:
   - {fileID: 387976435}
   - {fileID: 2139944526}
   - {fileID: 1713497180}
-  - {fileID: 349629419}
   - {fileID: 495079712}
   - {fileID: 544635230}
   - {fileID: 1877018375}

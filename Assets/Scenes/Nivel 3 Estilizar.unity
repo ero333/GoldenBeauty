@@ -2124,9 +2124,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
-  sonido: {fileID: 0}
-  sonido1: {fileID: 0}
-  sonido2: {fileID: 0}
+  sonido: {fileID: 2004658141}
+  sonido1: {fileID: 8300000, guid: 35a1ec5c46a198c41ab7d3c6d7d90d2b, type: 3}
+  sonido2: {fileID: 8300000, guid: 4af13b1a46c190e428f6cd6095b42858, type: 3}
 --- !u!4 &535049165
 Transform:
   m_ObjectHideFlags: 0

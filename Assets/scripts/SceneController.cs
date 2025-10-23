@@ -210,6 +210,10 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("Calificar");
     }
+    public void finalizado()
+    {
+        SceneManager.LoadScene("Z- Final del juego");
+    }
 
     public void LoadScene(string sceneName)
     {
