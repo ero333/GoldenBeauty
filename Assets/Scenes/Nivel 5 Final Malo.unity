@@ -867,7 +867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76db0cececb57d443b4358f8906dd8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuDePausa: {fileID: 0}
+  menuDePausa: {fileID: 715854818}
   fondoDePausa: {fileID: 0}
   botonDePausa: {fileID: 0}
   Alerta: {fileID: 0}
@@ -876,6 +876,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!4 &715854820
 Transform:
   m_ObjectHideFlags: 0
@@ -1446,6 +1449,7 @@ MonoBehaviour:
   currentDiario: 0
   audio: {fileID: 1385457564}
   sonido: {fileID: 1385457565}
+  sonido1: {fileID: 0}
   menuPausa: {fileID: 229860613}
   animPausa: {fileID: 229860613}
   volumeSlider: {fileID: 1568319696}
@@ -1748,6 +1752,9 @@ MonoBehaviour:
   buttonCredits: {fileID: 446203255}
   buttonMenu: {fileID: 1543629530}
   buttonRate: {fileID: 1543629530}
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!114 &1631558677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,7 +2019,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c1a3b4414c9494047bfd2bca5726e18d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9dea5f0996f61a46ba902580027102d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2057,6 +2064,7 @@ MonoBehaviour:
   currentDiario: 0
   audio: {fileID: 0}
   sonido: {fileID: 0}
+  sonido1: {fileID: 0}
   menuPausa: {fileID: 0}
   animPausa: {fileID: 0}
   volumeSlider: {fileID: 0}

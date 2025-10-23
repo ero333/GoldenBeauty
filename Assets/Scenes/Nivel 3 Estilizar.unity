@@ -1724,10 +1724,10 @@ MonoBehaviour:
   Ropa_1: {fileID: 623397818}
   Ropa_2: {fileID: 582824999}
   Ropa_3: {fileID: 324656628}
-  ValorRopa_1: 0
+  ValorRopa_1: 1
   ValorRopa_2: 1
   ValorRopa_3: 0
-  Valordeganar: 3
+  Valordeganar: 1
   GanarNivel: 0
   botonGanar: {fileID: 241899677}
   botonPerder: {fileID: 1383626503}

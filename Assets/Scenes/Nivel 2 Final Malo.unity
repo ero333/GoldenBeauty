@@ -1177,6 +1177,7 @@ MonoBehaviour:
   currentDiario: 0
   audio: {fileID: 983541560}
   sonido: {fileID: 983541561}
+  sonido1: {fileID: 0}
   menuPausa: {fileID: 1276707706}
   animPausa: {fileID: 1276707706}
   volumeSlider: {fileID: 1906475628}
@@ -1456,6 +1457,9 @@ MonoBehaviour:
   buttonCredits: {fileID: 446203255}
   buttonMenu: {fileID: 1543629530}
   buttonRate: {fileID: 0}
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!114 &1631558677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2282,7 +2286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76db0cececb57d443b4358f8906dd8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuDePausa: {fileID: 0}
+  menuDePausa: {fileID: 2126425876}
   fondoDePausa: {fileID: 0}
   botonDePausa: {fileID: 0}
   Alerta: {fileID: 0}
@@ -2291,6 +2295,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
+  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
 --- !u!4 &2126425878
 Transform:
   m_ObjectHideFlags: 0
