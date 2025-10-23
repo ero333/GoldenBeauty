@@ -58,30 +58,26 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
+        // Seguridad para evitar NullReferenceException
+        if (audio != null) audio.Play();
+        if (sonido != null) sonido.Play();
 
-        //audio
-        audio.Play();
-        sonido.Play();
-
-        float savedVolume = PlayerPrefs.GetFloat("GlobalVolume", 1f); // por defecto, 1
+        float savedVolume = PlayerPrefs.GetFloat("GlobalVolume", 1f);
         float savedSound = PlayerPrefs.GetFloat("GlobalSound", 1f);
 
-        if (audio != null)
-            audio.volume = savedVolume;
-
+        if (audio != null) audio.volume = savedVolume;
         if (volumeSlider != null)
         {
             volumeSlider.value = savedVolume;
             volumeSlider.onValueChanged.AddListener(SetVolume);
         }
 
-
-            sonido.volume = savedSound;
-
-
+        if (sonido != null) sonido.volume = savedSound;
+        if (volumeSlider2 != null)
+        {
             volumeSlider2.value = savedSound;
             volumeSlider2.onValueChanged.AddListener(SetSounds);
-
+        }
         // finales
         Scene currentScene = SceneManager.GetActiveScene();
 
