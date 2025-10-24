@@ -55,7 +55,7 @@ public class TextEngine : MonoBehaviour
     public GameObject tutorialText;
 
     //pausa
-    public GameObject pauseSquare;
+    //public GameObject pauseSquare;
     public GameObject pauseCanvas;
     public GameObject alerta;
     public bool canWrite;
@@ -494,7 +494,7 @@ public class TextEngine : MonoBehaviour
         }
     }
 
-    public void OnButton4Click() // reanudar
+    /*public void OnButton4Click() // reanudar
     {
         playerInput.enabled = true;
         Time.timeScale = 1f;
@@ -502,6 +502,7 @@ public class TextEngine : MonoBehaviour
         pauseCanvas.SetActive(!pauseCanvas.activeSelf);
         EnableButton();
     }
+    */
 
     public void OnButton5Click() //volver a inicio
     {
@@ -525,7 +526,8 @@ public class TextEngine : MonoBehaviour
     {
         diario.SetActive(false);
     }
-    public void OnButton9Click() //pausa
+    /*
+     * public void OnButton9Click() //pausa
     {
         pauseSquare.SetActive(!pauseSquare.activeSelf);
         pauseCanvas.SetActive(!pauseCanvas.activeSelf);
@@ -543,6 +545,7 @@ public class TextEngine : MonoBehaviour
             EnableButton();
         }
     }
+    */
     public void OnButton10Click() //skip
     {
         EventManager.SafeLogEvent("SkipChat", new Dictionary<string, object> {
@@ -596,34 +599,19 @@ public class TextEngine : MonoBehaviour
             sceneController.PasarNivel();
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            pauseSquare.SetActive(!pauseSquare.activeSelf);
-            pauseCanvas.SetActive(!pauseCanvas.activeSelf);
-
-            if (playerInput.enabled)
-            {
-                playerInput.enabled = false;
-                Time.timeScale = 0f;
-                DisableButton();
-            }
-            else
-            {
-                playerInput.enabled = true;
-                Time.timeScale = 1f;
-                EnableButton();
-            }
-
-        }
-
+        
         if (pauseMenu.activeSelf)
         {
             canWrite = false;
+            forwardAction.Disable();
         }
         else
         {
             canWrite= true;
+            forwardAction.Enable();
         }
+
+
     }
 
     public IEnumerator TutoText()

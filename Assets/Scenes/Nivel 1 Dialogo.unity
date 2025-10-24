@@ -2733,7 +2733,6 @@ MonoBehaviour:
   nombrePersonaje: {fileID: 1582424998}
   nombreSlot: {fileID: 1931190543}
   tutorialText: {fileID: 2062675746}
-  pauseSquare: {fileID: 106196380}
   pauseCanvas: {fileID: 2077062868}
   alerta: {fileID: 494083652}
   canWrite: 0

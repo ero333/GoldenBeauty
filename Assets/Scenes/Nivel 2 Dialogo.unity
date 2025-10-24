@@ -1915,7 +1915,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 200
   m_TargetDisplay: 0
 --- !u!224 &588972306
 RectTransform:
@@ -3365,7 +3365,7 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
-  sonido: {fileID: 0}
+  sonido: {fileID: 872942970}
   sonido1: {fileID: 8300000, guid: 13b526f51b986eb40be42a852c19b333, type: 3}
   sonido2: {fileID: 0}
 --- !u!1 &1014477081

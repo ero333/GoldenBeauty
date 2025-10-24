@@ -7,9 +7,13 @@ using System.Collections.Generic;
 using static EventManager;
 using static StaticVariables;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class SceneController : MonoBehaviour
 {
+    private PlayerInput playerInput;
+    private InputAction forwardAction;
+    private InputAction backAction;
 
     public bool isNews;
     public int contador;
@@ -58,6 +62,10 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
+        playerInput = GetComponent<PlayerInput>();
+        forwardAction = playerInput.actions.FindAction("PlayerMap/Forward");
+        backAction = playerInput.actions.FindAction("PlayerMap/Back");
+
         // Seguridad para evitar NullReferenceException
         if (audio != null) audio.Play();
         if (sonido != null) sonido.Play();
