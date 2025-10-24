@@ -326,9 +326,9 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
-  sonido: {fileID: 0}
-  sonido1: {fileID: 0}
-  sonido2: {fileID: 0}
+  sonido: {fileID: 1084557457}
+  sonido1: {fileID: 8300000, guid: 35a1ec5c46a198c41ab7d3c6d7d90d2b, type: 3}
+  sonido2: {fileID: 8300000, guid: 28fb5126d04a1104280cd2572c3386ef, type: 3}
 --- !u!1 &168340036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2467,7 +2467,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e1e175fd0a9811c4e82291dd02fc5942, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2563,7 +2563,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e1e175fd0a9811c4e82291dd02fc5942, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 115a590f41a8a0a46b7d4f4578442fa9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 1
@@ -2664,8 +2664,8 @@ MonoBehaviour:
   isNews: 0
   contador: 0
   currentDiario: 0
-  audio: {fileID: 1084557457}
-  sonido: {fileID: 1084557456}
+  audio: {fileID: 1084557456}
+  sonido: {fileID: 1084557457}
   sonido1: {fileID: 8300000, guid: 60adfe509ea144d4a9d42afe4e4fe6b7, type: 3}
   menuPausa: {fileID: 1479646915}
   animPausa: {fileID: 1448615795}
