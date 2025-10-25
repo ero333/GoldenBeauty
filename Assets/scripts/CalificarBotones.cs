@@ -6,6 +6,9 @@ using static StaticVariables;
 
 public class CalificarBotones : MonoBehaviour
 {
+    public int califArt = 0;
+    public int califLore = 0;
+    public int califFun = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,99 +23,89 @@ public class CalificarBotones : MonoBehaviour
 
     public void Button1Arte ()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "art", 1 }
-    });
-
-        Debug.Log("wow");
+   
+        califArt = 1;
     }
     public void Button2Arte()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "art", 2 }
-});
 
+        califArt = 2;
     }
     public void Button3Arte()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "art", 3 }
-});
-
+   
+        califArt = 3;
     }
     public void Button4Arte()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "art", 4 }
-});
-
+  
+        califArt = 4;
     }
     public void Button5Arte()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "art", 5 }
-});
 
+        califArt = 5;
     }
 
     public void Button1Story()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "lore", 1 }
-    });
+  
+        califLore = 1;
     }
     public void Button2Story()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "lore", 2 }
-    });
+
+        califLore = 2;
     }
     public void Button3Story()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "lore", 3 }
-    });
+ 
+        califLore = 3;
     }
     public void Button4Story()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "lore", 4 }
-    });
+
+        califLore = 4;
     }
     public void Button5Story()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "lore", 5 }
-    });
+
+    califLore = 5;
     }
     public void Button1Fun()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "fun", 1 }
-    });
+
+    califFun = 1;
     }
     public void Button2Fun()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "fun", 2 }
-    });
+
+    califFun = 2;
     }
     public void Button3Fun()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "fun", 3 }
-    });
+
+    califFun = 3;
     }
     public void Button4Fun()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
-    { "fun", 4 }
-    });
+
+    califFun = 4;
     }
     public void Button5Fun()
     {
-        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
+        /*EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
     { "fun", 5 }
+    });*/
+        califFun = 5;
+    }
+
+    public void SendRate()
+    {
+        EventManager.Instance.LogEvent("Rate", new Dictionary<string, object> {
+    { "art", califArt },
+     { "lore",  califLore },
+    { "fun", califFun}
     });
     }
 }

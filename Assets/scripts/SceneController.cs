@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 using static EventManager;
 using static StaticVariables;
 using System.Collections.Generic;
-using static EventManager;
-using static StaticVariables;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
@@ -62,9 +60,7 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
-        playerInput = GetComponent<PlayerInput>();
-        forwardAction = playerInput.actions.FindAction("PlayerMap/Forward");
-        backAction = playerInput.actions.FindAction("PlayerMap/Back");
+       
 
         // Seguridad para evitar NullReferenceException
         if (audio != null) audio.Play();
