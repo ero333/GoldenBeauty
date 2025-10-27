@@ -29,7 +29,7 @@ public class Pausa : MonoBehaviour
     bool isEnd;
     public int contador = 0;
     public bool detener = false;
-
+    private int seccion = 0;
     //sonido
     public AudioSource sonido;
     public AudioClip sonido1;
@@ -39,6 +39,31 @@ public class Pausa : MonoBehaviour
     {
         
         Scene currentScene = SceneManager.GetActiveScene();
+        if ((currentScene.name == "Nivel 1 Dialogo") || (currentScene.name == "Nivel 1 Estilizar"))
+        {
+            currentLevel = 1;
+        }
+        else if ((currentScene.name == "Nivel 2 Dialogo") || (currentScene.name == "Nivel 2 Estilizar"))
+        {
+            currentLevel = 2;
+        }
+        else if ((currentScene.name == "Nivel 3 Dialogo") || (currentScene.name == "Nivel 3 Estilizar"))
+        {
+            currentLevel = 3;
+        }
+        else if ((currentScene.name == "Nivel 4 Dialogo") || (currentScene.name == "Nivel 4 Estilizar"))
+        {
+            currentLevel = 4;
+        }
+        else if ((currentScene.name == "Nivel 5 Dialogo") || (currentScene.name == "Nivel 5 Estilizar"))
+        {
+            currentLevel = 5;
+        }
+        else if ((currentScene.name == "Nivel 6 Dialogo") || (currentScene.name == "Nivel 6 Estilizar"))
+        {
+            currentLevel = 6;
+        }
+
         if ((currentScene.name == "Nivel 1 Final Bueno") || (currentScene.name == "Nivel 2 Final Bueno") || (currentScene.name == "Nivel 3 Final Bueno") || (currentScene.name == "Nivel 4 Final Bueno") || (currentScene.name == "Nivel 5 Final Bueno") || (currentScene.name == "Nivel 6 Final Bueno") ||
             (currentScene.name == "Nivel 1 Final Malo") || (currentScene.name == "Nivel 2 Final Malo") || (currentScene.name == "Nivel 3 Final Malo") || (currentScene.name == "Nivel 4 Final Malo") || (currentScene.name == "Nivel 5 Final Malo") || (currentScene.name == "Nivel 6 Final Malo"))
         {
@@ -52,6 +77,15 @@ public class Pausa : MonoBehaviour
             isEnd = false;
         }
             pausado = false;
+
+        if ((currentScene.name == "Nivel 1 Estilizar") || (currentScene.name == "Nivel 2 Estilizar") || (currentScene.name == "Nivel 3 Estilizar") || (currentScene.name == "Nivel 4 Estilizar") || (currentScene.name == "Nivel 5 Estilizar") || (currentScene.name == "Nivel 6 Estilizar"))
+        {
+            seccion = 1;
+        }
+        else
+        {
+            seccion = 0;
+        }
     }
 
     IEnumerator FinalesTimer()
@@ -106,6 +140,19 @@ public class Pausa : MonoBehaviour
                     });
         }
         
+        SceneManager.LoadScene("Menu inicio");
+    }
+
+    public void Salir()
+    {
+        detener = false;
+        sonido.PlayOneShot(sonido1);
+
+            EventManager.SafeLogEvent("Exit", new Dictionary<string, object> {
+                    { "level", currentLevel },
+                {"section", seccion }
+                    });
+
         SceneManager.LoadScene("Menu inicio");
     }
     public void OnButtonClick ()
