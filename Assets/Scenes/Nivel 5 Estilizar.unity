@@ -3113,11 +3113,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e76c2ded058c7244caac3551dcfd7c00, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4e8e7a7c247a45d46b033d07b007b3e3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

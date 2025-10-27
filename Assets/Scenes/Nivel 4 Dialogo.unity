@@ -983,7 +983,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2232,7 +2232,6 @@ MonoBehaviour:
   nombrePersonaje: {fileID: 1582424998}
   nombreSlot: {fileID: 1931190543}
   tutorialText: {fileID: 2062675746}
-  pauseSquare: {fileID: 106196380}
   pauseCanvas: {fileID: 0}
   alerta: {fileID: 2075368015}
   canWrite: 0
