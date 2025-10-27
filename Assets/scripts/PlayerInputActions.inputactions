@@ -159,17 +159,6 @@
                 },
                 {
                     "name": "",
-                    "id": "4d704074-5f6e-4262-833d-83c66ecce276",
-                    "path": "<Touchscreen>/touch*/Press",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Back",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "bf1c394b-f49d-43b9-851a-8b8e3e83eee4",
                     "path": "<Mouse>/press",
                     "interactions": "",
