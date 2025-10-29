@@ -35,7 +35,7 @@ public class SceneController : MonoBehaviour
     public GameObject muteInactivo;
     public GameObject muteActivo2;
     public GameObject muteInactivo2;
-
+    //public GameObject checker;
 
 
     public void SetVolume(float volume)
@@ -296,12 +296,14 @@ public class SceneController : MonoBehaviour
 
     public void MenuSound ()
     {
-    
+
+        //checker.SetActive(true);
         StartCoroutine(animMenu());
     }
 
     public IEnumerator animMenu ()
     {
+        
         sonido.PlayOneShot(sonido1);
         animPausa.SetActive(true);
         yield return new WaitForSeconds(1.5f);
@@ -310,6 +312,7 @@ public class SceneController : MonoBehaviour
     }
     public void closeSound ()
     {
+        //checker.SetActive(false);
         sonido.PlayOneShot(sonido1);
         menuPausa.SetActive(false);
     }

@@ -107,5 +107,6 @@ public class CalificarBotones : MonoBehaviour
      { "lore",  califLore },
     { "fun", califFun}
     });
+    
     }
 }

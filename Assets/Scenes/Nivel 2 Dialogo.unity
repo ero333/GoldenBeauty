@@ -243,7 +243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 358.75003, y: 182.50006}
+  m_AnchoredPosition: {x: 366, y: 182.50006}
   m_SizeDelta: {x: 77.05, y: 77.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &51545080
@@ -3192,6 +3192,7 @@ MonoBehaviour:
   muteInactivo: {fileID: 800285428}
   muteActivo2: {fileID: 687665112}
   muteInactivo2: {fileID: 550725876}
+  checker: {fileID: 0}
 --- !u!4 &872942972
 Transform:
   m_ObjectHideFlags: 0

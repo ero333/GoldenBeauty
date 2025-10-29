@@ -60,7 +60,28 @@ public class TextEngine : MonoBehaviour
     public GameObject alerta;
     public bool canWrite;
     public GameObject diario;
+    //public GameObject checker;
 
+
+    public void movimiento()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = -Camera.main.transform.position.z; // distancia hasta el plano Z = 0
+
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+        worldPos.z = 0;
+        //Debug.Log("Mouse Y en mundo: " + worldPos.x);
+        if (worldPos.y > 2.3 && worldPos.x > 3.1)
+        {
+            forwardAction.Disable();
+            //Debug.Log("disabled");
+        }
+        else
+        {
+            forwardAction.Enable();
+            //Debug.Log("enabled");
+        }
+    }
 
     //analytics
     public int currentLevel;
@@ -204,9 +225,10 @@ public class TextEngine : MonoBehaviour
             }
 
             cajaDialogo.text = "";
-
-                foreach (char x in textoNodo)
+         
+            foreach (char x in textoNodo)
                 {
+                    
                     cajaDialogo.text += x;
                     yield return new WaitForSeconds(0.001f);
                 }
@@ -332,7 +354,7 @@ public class TextEngine : MonoBehaviour
     public IEnumerator WaitForInput()
     {
         // Habilitar acciones necesarias
-        forwardAction.Enable();
+        //forwardAction.Enable();
         backAction.Enable();
         GameObject selectedObject = EventSystem.current.currentSelectedGameObject;
 
@@ -425,6 +447,7 @@ public class TextEngine : MonoBehaviour
             }
             else if (forwardAction.triggered && canWrite)
             {
+                
                 sonido.PlayOneShot(audio1);
                 if (!string.IsNullOrWhiteSpace(myDialogueList.lectura[nodoActual].next))
                 {
@@ -594,6 +617,8 @@ public class TextEngine : MonoBehaviour
 
     void Update()
     {
+        movimiento();
+
         if (Input.GetKeyDown("2"))
         {
             sceneController.PasarNivel();
@@ -608,9 +633,18 @@ public class TextEngine : MonoBehaviour
         else
         {
             canWrite= true;
-            forwardAction.Enable();
+            //forwardAction.Enable();
         }
 
+        /*if (checker.activeSelf)
+        {
+            forwardAction.Disable();
+        }
+        else
+        {
+            forwardAction.Enable();
+        }
+        */
 
     }
 
@@ -662,5 +696,11 @@ public class TextEngine : MonoBehaviour
         {
             buttonComponent3.interactable = true;
         }
+    }
+
+    public IEnumerator delay()
+    {
+        yield return new WaitForSeconds(3f);
+        Debug.Log("waiting...");
     }
 }
