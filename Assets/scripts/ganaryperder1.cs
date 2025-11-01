@@ -58,7 +58,7 @@ public class Ganaryperder : MonoBehaviour
 
     public GameObject botonGanar;
     public GameObject botonPerder;
-
+    public GameObject botonSiguiente;
     //analytics
     public int currentLevel;
     int currentRopa;
@@ -216,6 +216,7 @@ public class Ganaryperder : MonoBehaviour
 
     private IEnumerator aura()
     {
+        botonSiguiente.SetActive(false);
         yield return new WaitForSeconds(0.5f);
 
         if (accesorio_1.activeInHierarchy)
@@ -320,6 +321,7 @@ public class Ganaryperder : MonoBehaviour
 
         if (!GanarNivel)
         {
+            
             EventManager.SafeLogEvent("GameOver", new Dictionary<string, object> {
                     { "level", currentLevel },
                 {"time", contador }

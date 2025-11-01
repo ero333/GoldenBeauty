@@ -1731,6 +1731,7 @@ MonoBehaviour:
   GanarNivel: 0
   botonGanar: {fileID: 241899677}
   botonPerder: {fileID: 1383626503}
+  botonSiguiente: {fileID: 1381373461}
   currentLevel: 0
   contador: 0
   detener: 0
