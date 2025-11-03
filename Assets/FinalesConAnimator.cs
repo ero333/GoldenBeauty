@@ -1,46 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class FinalesConAnimator : MonoBehaviour
 {
-
     private PlayerInput playerInput;
-    private InputAction UpAction;
-    private InputAction DownAction;
+    private InputAction clickAction;
 
     public Animator animator;
     public bool isUp;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        UpAction = playerInput.actions.FindAction("PlayerMap/Arriba");
-        DownAction = playerInput.actions.FindAction("PlayerMap/Abajo");
         animator = GetComponent<Animator>();
+
+        // Buscamos la acción de click (asegurate de tenerla en el mapa)
+        clickAction = playerInput.actions.FindAction("Click");
     }
 
-    // Update is called once per frame
     void Update()
     {
         playerInput.SwitchCurrentActionMap("PlayerMap");
 
-        if (UpAction.triggered) // 0 = clic izquierdo
+        if (clickAction != null && clickAction.triggered)
         {
-            Debug.Log("hola");
-                animator.SetBool("isUp",false);
-        }
+            isUp = !isUp; // Alterna entre true/false
+            animator.SetBool("isUp", isUp);
 
-        if (DownAction.triggered) // 0 = clic izquierdo
-        {
-            Debug.Log("holas");
-                animator.SetBool("isUp", true);
+            Debug.Log(isUp ? "Sube" : "Baja");
         }
-
     }
-
-
 }
