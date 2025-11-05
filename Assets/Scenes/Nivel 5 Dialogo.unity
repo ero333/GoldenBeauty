@@ -254,6 +254,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10448454}
   m_CullTransparentMesh: 1
+--- !u!1 &25465608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 25465609}
+  - component: {fileID: 25465610}
+  m_Layer: 0
+  m_Name: disabler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &25465609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25465608}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 179507556}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &25465610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25465608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b8fdd6588ddec4ebde76b9e0568438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  siguiente: {fileID: 646507346}
+  botonPausa: {fileID: 1511927538}
+  menuPausa: {fileID: 1078655470}
 --- !u!1 &42075787
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +553,7 @@ Transform:
   - {fileID: 2058185633}
   - {fileID: 714373845}
   - {fileID: 1078655471}
+  - {fileID: 25465609}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &409135939
@@ -1171,7 +1219,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.0024037
+  orthographic size: 3.9991565
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2117,7 +2165,7 @@ MonoBehaviour:
   cajaOpcion1: {fileID: 675378014}
   cajaOpcion2: {fileID: 2113437930}
   cajaOpcion3: {fileID: 691852166}
-  textAssetData: {fileID: 4900000, guid: 1c015813ff664b94b9931a712f7084b9, type: 3}
+  textAssetData: {fileID: 4900000, guid: 16328b774387d3640ad8caf64e03babe, type: 3}
   nodoActual: 0
   textoNodo: 
   boton1: {fileID: 1835711643}

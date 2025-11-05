@@ -20,6 +20,7 @@ public class TextEngine : MonoBehaviour
     private InputAction forwardAction;
     private InputAction backAction;
 
+    float velocidad = 0.0002f;
     public Text cajaDialogo;
     public Text cajaOpcion1;
     public Text cajaOpcion2;
@@ -228,12 +229,12 @@ public class TextEngine : MonoBehaviour
          
             foreach (char x in textoNodo)
                 {
+                cajaDialogo.text += x;
+                yield return new WaitForSeconds(velocidad);
                     
-                    cajaDialogo.text += x;
-                    yield return new WaitForSeconds(0.001f);
                 }
 
-            
+
 
             cajaOpcion1.text = "";
             cajaOpcion2.text = "";
