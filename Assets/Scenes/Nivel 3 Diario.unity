@@ -417,8 +417,8 @@ GameObject:
   - component: {fileID: 118834109}
   - component: {fileID: 118834113}
   - component: {fileID: 118834112}
-  - component: {fileID: 118834111}
   - component: {fileID: 118834110}
+  - component: {fileID: 118834114}
   m_Layer: 0
   m_Name: EsqueletoDiario_Dia2
   m_TagString: Untagged
@@ -462,25 +462,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &118834111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118834108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 522e158a1262c4248b62eb07af924a58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  isUp: 0
-  ArrIzq: 1
-  ArrDer: 0
-  AbajIzq: 0
-  AbajDer: 0
-  posicionActual: 0
 --- !u!114 &118834112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +544,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &118834114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118834108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6739292e5f3fef48b71bab2f827ca98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 118834110}
+  posicionActual: 0
 --- !u!1 &119530752
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,7 +2237,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.9990568
+  orthographic size: 3.9999998
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
