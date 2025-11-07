@@ -579,7 +579,7 @@ public class TextEngine : MonoBehaviour
     }
     void Start()
     {
-        
+        //PlayerPrefs.DeleteAll();
         Scene currentScene = SceneManager.GetActiveScene();
          
         //dialogos
@@ -589,10 +589,12 @@ public class TextEngine : MonoBehaviour
             if (PlayerPrefs.GetInt("HaEntrado_Nivel1Dialogo", 0) == 1)
             {
                 skipButton.SetActive(true);
+                Debug.Log("cheesers");
             }
             else
             {
                 skipButton.SetActive(false);
+                Debug.Log("crackers");
                 PlayerPrefs.SetInt("HaEntrado_Nivel1Dialogo", 1);
                 PlayerPrefs.Save();
             }
