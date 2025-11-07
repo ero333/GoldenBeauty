@@ -91,7 +91,7 @@ public class Ganaryperder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         
         Scene currentScene = SceneManager.GetActiveScene();
         if (currentScene.name == "Nivel 1 Estilizar")
@@ -216,6 +216,7 @@ public class Ganaryperder : MonoBehaviour
 
     private IEnumerator aura()
     {
+        //botonSiguiente.SetActive(false);
         botonSiguiente.SetActive(false);
         yield return new WaitForSeconds(0.5f);
 

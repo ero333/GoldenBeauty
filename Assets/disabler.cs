@@ -9,6 +9,7 @@ public class disabler : MonoBehaviour
     public GameObject botonPausa;
     public GameObject menuPausa;
     public GameObject maus;
+    public GameObject wl;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,13 @@ public class disabler : MonoBehaviour
             siguiente.SetActive(false);
             maus.SetActive(false);
             botonPausa.SetActive(false);
+            wl.SetActive(false);
+        }
+        else
+        {
+            siguiente.SetActive(true);
+            botonPausa.SetActive(true);
+            wl.SetActive(true);
         }
     }
 }

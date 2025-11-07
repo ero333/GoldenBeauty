@@ -183,15 +183,19 @@ public class EventManager : MonoBehaviour
         AnalyticsService.Instance.Flush();
     }
 
-    public void LogGameOver(int level, int time)
+    public void LogGameOver(int level, int time, int hair, int face, int clothes, int acc)
     {
-        var parameters = new Dictionary<string, object> { { "level", level }, { "time", time } };
+        var parameters = new Dictionary<string, object> { { "level", level }, { "time", time }, { "hair", hair }, { "face", face }, { "clothes", clothes }, { "accesories", acc } };
         LogEvent("GameOver", parameters);
 
         CustomEvent GameOverEvent = new CustomEvent("GameOver")
         {
         { "level", level },
-        { "time", time }
+        { "time", time },
+        { "hair", hair },
+        { "face", face },
+        { "clothes", clothes },
+        { "accesories", acc }
         };
         AnalyticsService.Instance.RecordEvent(GameOverEvent);
         AnalyticsService.Instance.Flush();
