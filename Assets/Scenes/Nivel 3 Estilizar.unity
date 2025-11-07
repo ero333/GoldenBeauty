@@ -1022,7 +1022,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_Sprite: {fileID: -1979191261, guid: d6368c78483a2804e9991d089e5dc786, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1695,7 +1695,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: f7888b454cbb9f443b5a0981461c7b89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3057,12 +3057,12 @@ MonoBehaviour:
   Pelo_0: {fileID: 1553686835}
   Rostro_0: {fileID: 1025613462}
   Ropa_0: {fileID: 970679475}
-  Rostro_1_Lava: {fileID: 0}
-  Rostro_2_Lava: {fileID: 0}
-  Rostro_1_Grietas: {fileID: 0}
-  Rostro_2_Grietas: {fileID: 0}
-  Rostro_1_Pintura: {fileID: 0}
-  Rostro_2_Pintura: {fileID: 0}
+  Rostro_1_Lava: {fileID: 2139153907}
+  Rostro_2_Lava: {fileID: 2139153907}
+  Rostro_1_Grietas: {fileID: 2139153907}
+  Rostro_2_Grietas: {fileID: 2139153907}
+  Rostro_1_Pintura: {fileID: 2139153907}
+  Rostro_2_Pintura: {fileID: 2139153907}
 --- !u!61 &780923662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3607,7 +3607,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 9
   m_TargetDisplay: 0
 --- !u!224 &921617871
 RectTransform:
@@ -4889,7 +4889,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 772c24d4507640a4589666aa75bc5dc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5192,7 +5192,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_Sprite: {fileID: -1684025966, guid: 804a7573bd8f9f64b8c23170d65e7aa1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6290,7 +6290,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.9999998
+  orthographic size: 3.9991565
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7173,7 +7173,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 10
   m_Sprite: {fileID: 2020679438, guid: a0101f5bd1da683449b23d5841715ade, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
