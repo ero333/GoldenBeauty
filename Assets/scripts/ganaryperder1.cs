@@ -324,9 +324,13 @@ public class Ganaryperder : MonoBehaviour
         {
             
             EventManager.SafeLogEvent("GameOver", new Dictionary<string, object> {
-                    { "level", currentLevel },
-                {"time", contador }
-                    });
+        { "level", currentLevel },
+        {"time", contador },
+        { "hair", currentPelo },
+        { "clothes", currentRopa },
+        {"face", currentRostro},
+        {"accesories",  currentAcc}
+        });
             Debug.Log("perdiste");
             botonPerder.SetActive(true);
 
