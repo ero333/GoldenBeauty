@@ -23,6 +23,7 @@ public class Diario_2_LaPelicula_DLC : MonoBehaviour
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
+        animator = GetComponent<Animator>();
         UpAction = playerInput.actions.FindAction("PlayerMap/TouchPress");
     }
 

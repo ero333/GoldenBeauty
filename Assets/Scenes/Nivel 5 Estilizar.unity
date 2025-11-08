@@ -258,7 +258,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1, y: 2}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!212 &38725279
 SpriteRenderer:
@@ -351,16 +351,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41276787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.027369998, y: 0.027369998, z: 0.027369998}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.540277, y: 1.540277, z: 1.540277}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1381373462}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 921617871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.0822997, y: -3.1986504}
+  m_AnchoredPosition: {x: 286.01205, y: -180.0076}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &74682145
@@ -1490,7 +1490,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &295458600
 SpriteRenderer:
@@ -1735,7 +1735,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9, y: 1.8}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!212 &409119611
 SpriteRenderer:
@@ -3801,7 +3801,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &847438862
 SpriteRenderer:
@@ -4182,6 +4182,7 @@ RectTransform:
   - {fileID: 1810193136}
   - {fileID: 1055160897}
   - {fileID: 424667476}
+  - {fileID: 41276788}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4718,7 +4719,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &991594043
 SpriteRenderer:
@@ -5326,7 +5327,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1, y: 2}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!212 &1127298697
 SpriteRenderer:
@@ -7817,7 +7818,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.9991565
+  orthographic size: 3.999072
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9795,7 +9796,6 @@ SceneRoots:
   - {fileID: 1426792282}
   - {fileID: 473546822}
   - {fileID: 921617871}
-  - {fileID: 41276788}
   - {fileID: 483020137}
   - {fileID: 928226968}
   - {fileID: 883545332}

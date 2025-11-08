@@ -45,5 +45,10 @@ public class disabler : MonoBehaviour
             botonPausa.SetActive(true);
             wl.SetActive(true);
         }
+
+        if (!siguiente.activeInHierarchy)
+        {
+            botonPausa.SetActive(false);
+        }
     }
 }
