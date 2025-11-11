@@ -2427,7 +2427,7 @@ MonoBehaviour:
   currentLevel: 0
   contador: 0
   detener: 0
-  sonido: {fileID: 0}
+  sonido: {fileID: 794305128}
   sonido1: {fileID: 8300000, guid: 35a1ec5c46a198c41ab7d3c6d7d90d2b, type: 3}
   sonido2: {fileID: 8300000, guid: 4af13b1a46c190e428f6cd6095b42858, type: 3}
 --- !u!4 &961509896
@@ -4558,7 +4558,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.999072
+  orthographic size: 3.9991565
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
