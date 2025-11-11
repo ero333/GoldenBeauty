@@ -7,6 +7,7 @@ public class disablerText : MonoBehaviour
     public GameObject siguiente;
     public GameObject botonPausa;
     public GameObject menuPausa;
+    public GameObject cajaDialogo1;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +21,13 @@ public class disablerText : MonoBehaviour
         {
             siguiente.SetActive(false);
             botonPausa.SetActive(false);
+            cajaDialogo1 .SetActive(false);
         }
         else
         {
             siguiente.SetActive(true);
             botonPausa.SetActive(true);
+            cajaDialogo1 .SetActive(true);
         }
     }
 }
