@@ -219,6 +219,10 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    public void Final ()
+    {
+        SceneManager.LoadScene("Final");
+    }
 
     public void OnButtonMute()
     {

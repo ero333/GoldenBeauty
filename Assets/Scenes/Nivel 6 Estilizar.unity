@@ -2236,7 +2236,7 @@ MonoBehaviour:
   Rostro_3: {fileID: 2050903877}
   ValorRostro_1: 1
   ValorRostro_2: 0
-  ValorRostro_3: 0
+  ValorRostro_3: 1
   Ropa_1: {fileID: 623397818}
   Ropa_2: {fileID: 582824999}
   Ropa_3: {fileID: 324656628}
@@ -6881,7 +6881,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.9981093
+  orthographic size: 3.9991565
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

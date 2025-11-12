@@ -1578,7 +1578,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.999072
+  orthographic size: 3.9991565
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2611,7 +2611,7 @@ MonoBehaviour:
   currentQuestion: 0
   sonido: {fileID: 872942970}
   audio1: {fileID: 8300000, guid: 13b526f51b986eb40be42a852c19b333, type: 3}
-  audio2: {fileID: 0}
+  audio2: {fileID: 8300000, guid: 510957c87e9a57040b319180da82520c, type: 3}
   myDialogueList:
     lectura: []
 --- !u!1 &800285428
@@ -3420,7 +3420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b8fdd6588ddec4ebde76b9e0568438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguiente: {fileID: 0}
+  siguiente: {fileID: 70868940}
   botonPausa: {fileID: 51545078}
   menuPausa: {fileID: 35331828}
   cajaDialogo1: {fileID: 410100933}
