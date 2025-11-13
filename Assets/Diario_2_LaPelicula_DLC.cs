@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class Diario_2_LaPelicula_DLC : MonoBehaviour
 {
     public Animator animator;
-
-    private PlayerInput playerInput;
-    private InputAction UpAction;
 
     public enum Esquina
     {
@@ -20,23 +15,13 @@ public class Diario_2_LaPelicula_DLC : MonoBehaviour
 
     public Esquina posicionActual = Esquina.ArribaIzquierda;
 
-    void Start()
-    {
-        playerInput = GetComponent<PlayerInput>();
-        animator = GetComponent<Animator>();
-        UpAction = playerInput.actions.FindAction("PlayerMap/TouchPress");
-    }
-
     void Update()
     {
-        playerInput.SwitchCurrentActionMap("PlayerMap");
+        // Evita que bloquee botones u otros elementos UI
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            return;
 
-        DetectarClickZona();
-    }
-
-    void DetectarClickZona()
-    {
-        if (UpAction.triggered)
+        if (Input.GetMouseButtonDown(0)) // Click o toque
         {
             Vector2 clickPos = Input.mousePosition;
 

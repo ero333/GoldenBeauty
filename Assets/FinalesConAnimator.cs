@@ -1,33 +1,23 @@
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class FinalesConAnimator : MonoBehaviour
 {
-    private PlayerInput playerInput;
-    private InputAction clickAction;
-
     public Animator animator;
     public bool isUp;
 
-    void Start()
-    {
-        playerInput = GetComponent<PlayerInput>();
-        animator = GetComponent<Animator>();
-
-        // Buscamos la acci�n de click (asegurate de tenerla en el mapa)
-        clickAction = playerInput.actions.FindAction("Click");
-    }
-
     void Update()
     {
-        playerInput.SwitchCurrentActionMap("PlayerMap");
+        // Si el click/touch se hace sobre UI, no ejecutar nada
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            return;
 
-        if (clickAction != null && clickAction.triggered)
+        // Detecta clic o toque (funciona en WebGL, móvil y PC)
+        if (Input.GetMouseButtonDown(0))
         {
-            isUp = !isUp; // Alterna entre true/false
+            isUp = !isUp;
             animator.SetBool("isUp", isUp);
-
-            Debug.Log(isUp ? "Sube" : "Baja");
+            Debug.Log(isUp ? "⬆️ Sube" : "⬇️ Baja");
         }
     }
 }
