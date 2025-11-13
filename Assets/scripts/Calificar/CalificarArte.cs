@@ -27,7 +27,8 @@ public class CalificarArte : MonoBehaviour
     {
         UpdateHoveredIndex();
 
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasPressedThisFrame
+        || Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
         {
             if (hoveredIndex >= 0)
             {
