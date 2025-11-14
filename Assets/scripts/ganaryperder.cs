@@ -60,10 +60,11 @@ public class ganaryperder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("2"))
+        /*if (Input.GetKeyDown("2"))
         {
             sceneController.PasarNivel();
         }
+        */
     }
 
     private IEnumerator aura()

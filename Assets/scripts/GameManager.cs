@@ -89,10 +89,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         // Detectar tecla R para resetear progreso
-        if (Input.GetKeyDown(KeyCode.R))
+       /* if (Input.GetKeyDown(KeyCode.R))
         {
             ResetProgress();
         }
+       */
     }
 
 

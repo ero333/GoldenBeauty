@@ -713,11 +713,11 @@ public class Final : MonoBehaviour
     {
         movimiento();
 
-        if (Input.GetKeyDown("2"))
+        /*if (Input.GetKeyDown("2"))
         {
             sceneController.PasarNivel();
         }
-
+        */
 
         if (pauseMenu.activeSelf)
         {

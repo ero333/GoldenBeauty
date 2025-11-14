@@ -133,10 +133,11 @@ public class Ganaryperder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("2"))
+        /*if (Input.GetKeyDown("2"))
         {
             sceneController.PasarNivel();
         }
+        */
 
         if (accesorio_1.activeInHierarchy && !wasAcc1Active)
         {
