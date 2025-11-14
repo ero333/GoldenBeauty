@@ -107,7 +107,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final.unity
     guid: e2d854a7c2f1b68498b7548f7c55c88f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Z- Final del juego.unity
     guid: 90c62e91155ca03479c091669420097d
   - enabled: 1
