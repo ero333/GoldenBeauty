@@ -629,7 +629,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 882166586}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
         m_MethodName: Final
         m_Mode: 1
@@ -1794,7 +1794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: {fileID: 1405458727}
-  siguiente: {fileID: 0}
+  siguiente: {fileID: 544635229}
   botonPausa: {fileID: 714794148}
   menuPausa: {fileID: 1105313330}
   maus: {fileID: 1405458727}
