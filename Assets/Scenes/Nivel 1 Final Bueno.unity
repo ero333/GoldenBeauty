@@ -2860,7 +2860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: {fileID: 681867543}
-  siguiente: {fileID: 601003878}
+  siguiente: {fileID: 137556331}
   botonPausa: {fileID: 1324819268}
   menuPausa: {fileID: 1347981734}
   maus: {fileID: 681867543}
@@ -3822,7 +3822,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.000804
+  orthographic size: 3.9991565
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
