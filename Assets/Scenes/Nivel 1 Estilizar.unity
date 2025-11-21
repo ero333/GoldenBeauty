@@ -2597,7 +2597,7 @@ MonoBehaviour:
   GanarNivel: 0
   botonGanar: {fileID: 241899677}
   botonPerder: {fileID: 1383626503}
-  botonSiguiente: {fileID: 881655598}
+  botonSiguiente: {fileID: 1381373461}
   currentLevel: 0
   contador: 0
   detener: 0
@@ -3595,6 +3595,7 @@ Transform:
   m_Children:
   - {fileID: 1345076382}
   - {fileID: 679292917}
+  - {fileID: 1166422633}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &772252975
@@ -4711,7 +4712,7 @@ GameObject:
   - component: {fileID: 921617869}
   - component: {fileID: 921617868}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasLosing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5858,6 +5859,55 @@ Transform:
   - {fileID: 781441075}
   m_Father: {fileID: 921617871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1166422632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1166422633}
+  - component: {fileID: 1166422634}
+  m_Layer: 0
+  m_Name: disabler (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1166422633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166422632}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 772252974}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1166422634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166422632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378cd8b18350ff640a4ebd5bb1f0674a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  siguiente: {fileID: 921617867}
+  botonPausa: {fileID: 1041978584}
+  menuPausa: {fileID: 679292916}
+  maus: {fileID: 1426792280}
+  wl: {fileID: 473546820}
 --- !u!1 &1211616109
 GameObject:
   m_ObjectHideFlags: 0
@@ -7580,7 +7630,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.9991565
+  orthographic size: 4.0007596
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9391,15 +9441,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2083834335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378cd8b18350ff640a4ebd5bb1f0674a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4aafede823a11524790bd85b6c2a1730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: {fileID: 1760247495}
-  siguiente: {fileID: 1381373461}
+  siguiente: {fileID: 881655598}
   botonPausa: {fileID: 1041978584}
   menuPausa: {fileID: 679292916}
   maus: {fileID: 1426792280}
-  wl: {fileID: 921617867}
+  wl: {fileID: 473546820}
 --- !u!1 &2092994963
 GameObject:
   m_ObjectHideFlags: 0
