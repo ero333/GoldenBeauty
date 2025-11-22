@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public SceneController sceneController;
+    public GameObject aviso;
     // Variables de progreso
     public int currentZone;
     public int nvlSuperado;
@@ -29,6 +30,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Start ()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "LevelSelect")
+        {
+         if (nvlSuperado == 1)
+            {
+                aviso.SetActive(true);
+            }   
+        }
+    }
     // Cargar datos guardados
     public void LoadGameData() // Cambiado a público
     {

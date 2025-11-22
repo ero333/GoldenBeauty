@@ -2401,6 +2401,7 @@ MonoBehaviour:
   sonidoPelo: {fileID: 8300000, guid: 19235a9feafc00944ade0554818d556b, type: 3}
   sonidoRopa: {fileID: 8300000, guid: c4f240ef87a60ce4eaa8a3ed5f5fd2e1, type: 3}
   sonidoAcc: {fileID: 8300000, guid: b3293a147d45ce3478b324e001ae951f, type: 3}
+  aviso: {fileID: 702562355}
 --- !u!4 &473546822
 Transform:
   m_ObjectHideFlags: 0
@@ -7818,7 +7819,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.999072
+  orthographic size: 3.9991565
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8628,7 +8629,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378cd8b18350ff640a4ebd5bb1f0674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 1035082331}
   siguiente: {fileID: 1381373461}
   botonPausa: {fileID: 424667472}
   menuPausa: {fileID: 975094744}
