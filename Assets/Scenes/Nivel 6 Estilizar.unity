@@ -2256,6 +2256,7 @@ MonoBehaviour:
   sonidoPelo: {fileID: 8300000, guid: 19235a9feafc00944ade0554818d556b, type: 3}
   sonidoRopa: {fileID: 8300000, guid: 79e81e4ca7002534baf5644c439fab4d, type: 3}
   sonidoAcc: {fileID: 8300000, guid: b3293a147d45ce3478b324e001ae951f, type: 3}
+  aviso: {fileID: 1461371272}
 --- !u!4 &473546822
 Transform:
   m_ObjectHideFlags: 0
@@ -8884,7 +8885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378cd8b18350ff640a4ebd5bb1f0674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 1233216995}
   siguiente: {fileID: 1381373461}
   botonPausa: {fileID: 801172188}
   menuPausa: {fileID: 1682976878}

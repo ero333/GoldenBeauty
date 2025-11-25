@@ -2398,6 +2398,7 @@ MonoBehaviour:
   sonidoPelo: {fileID: 8300000, guid: 19235a9feafc00944ade0554818d556b, type: 3}
   sonidoRopa: {fileID: 8300000, guid: c4f240ef87a60ce4eaa8a3ed5f5fd2e1, type: 3}
   sonidoAcc: {fileID: 8300000, guid: b3293a147d45ce3478b324e001ae951f, type: 3}
+  aviso: {fileID: 2033618829}
 --- !u!4 &473546822
 Transform:
   m_ObjectHideFlags: 0

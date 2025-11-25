@@ -2163,7 +2163,7 @@ MonoBehaviour:
   cajaOpcion1: {fileID: 675378014}
   cajaOpcion2: {fileID: 2113437930}
   cajaOpcion3: {fileID: 691852166}
-  textAssetData: {fileID: 4900000, guid: 16328b774387d3640ad8caf64e03babe, type: 3}
+  textAssetData: {fileID: 4900000, guid: 1c749688c57574c4bb0ae8dd1b214d2f, type: 3}
   nodoActual: 0
   textoNodo: 
   boton1: {fileID: 1835711643}
