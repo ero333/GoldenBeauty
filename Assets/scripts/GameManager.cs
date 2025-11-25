@@ -100,4 +100,21 @@ public class GameManager : MonoBehaviour
 
     //eventos de recoleccion de data acá
 
+
+    //CODIGO NUEVO
+
+    public void GuardarPuntajeMaximo(int nivel, int puntaje)
+    {
+        string key = "Nivel_" + nivel + "_BestScore";
+
+        int bestScore = PlayerPrefs.GetInt(key, 0);
+
+        if (puntaje > bestScore)
+        {
+            PlayerPrefs.SetInt(key, puntaje);
+            PlayerPrefs.Save();
+        }
+    }
+
+
 }
