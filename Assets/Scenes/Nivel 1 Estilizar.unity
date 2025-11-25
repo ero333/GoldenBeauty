@@ -1348,9 +1348,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1Hora de decorar!\n\nluego de tu conversaci\xF3n con Maddy, deber\xE1s
-    cambiar su peinado, rostro, accesorios y ropa para obtener el resultado deseado.
-    Recuerda, \xA1Lo que los clientes quieren no es siempre lo que realmente necesitan...!"
+  m_text: "\xA1HORA DE DECORAR!\n\nExplora las opciones para ESTILIZAR a Maddy. \nPrimero,
+    elige UN objeto por COLUMNA.\nCuando termines el conjunto, presiona SIGUIENTE."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c6218aae7410254abeca87725b5430e, type: 2}
   m_sharedMaterial: {fileID: -4775349093583655821, guid: 7c6218aae7410254abeca87725b5430e, type: 2}
@@ -1377,14 +1376,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.02
-  m_fontSizeBase: 26.02
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -7174,7 +7173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -308.18643, y: 146.29378}
+  m_AnchoredPosition: {x: -280, y: 140}
   m_SizeDelta: {x: 140, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1535317731
@@ -7630,7 +7629,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.0007596
+  orthographic size: 4.380055
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
