@@ -12,7 +12,7 @@ public class DragMultipleObjects : MonoBehaviour
 
     public bool vivo;
     public GameObject menuDePausa;
-
+    public GameObject explosion;
 
     public static bool mouseSuelto = false; //bool para saber si apretamos o no el mouse
 
@@ -175,9 +175,13 @@ public class DragMultipleObjects : MonoBehaviour
 
     private IEnumerator Amongas()
     {
+        explosion.SetActive(true);
         selectedObject = null;
         yield return new WaitForSeconds(0.1f);
+
         ResetAllObjects();
+        yield return new WaitForSeconds(0.35f);
+        explosion.SetActive(false);
     }
 }
 
