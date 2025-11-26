@@ -1,4 +1,5 @@
 //using System.Diagnostics;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     private const string CURRENT_ZONE_KEY = "CurrentZone";
     private const string NIVL_SUPERADO_KEY = "NvlSuperado";
 
+    public int puntaje2;
     void Awake()
     {
         // Implementación del Singleton
@@ -100,12 +102,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // Detectar tecla R para resetear progreso
-       /* if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetProgress();
-        }
-       */
+
     }
 
 
@@ -115,7 +112,7 @@ public class GameManager : MonoBehaviour
 
     //CODIGO NUEVO
 
-    public void GuardarPuntajeMaximo(int nivel, int puntaje)
+    /*public void GuardarPuntajeMaximo(int nivel, int puntaje)
     {
         string key = "Nivel_" + nivel + "_BestScore";
 
@@ -126,7 +123,8 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt(key, puntaje);
             PlayerPrefs.Save();
         }
-    }
+    }*/
+
 
 
 }

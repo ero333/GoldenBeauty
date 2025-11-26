@@ -88,10 +88,15 @@ public class NotaxNivel : MonoBehaviour
     public GameObject recuadroRopa2;
     public GameObject recuadroRopa3;
 
+    [Header("ElementoGanador")]
+
+    public GameObject ObjetoGanador;
 
     private void Start()
     {
         CargarCorrectos();
+
+
     }
 
     void Update()
@@ -149,6 +154,14 @@ public class NotaxNivel : MonoBehaviour
 
         Debug.Log("Puntaje final: " + puntaje + " | Nota: " + nota);
 
+        // Guardar puntaje perfecto (8)
+        if (puntaje == 8)
+        {
+            PlayerPrefs.SetInt("Nivel" + nivelActual + "_Perfect", 1);
+            PlayerPrefs.Save();
+            Debug.Log("Perfect guardado para nivel " + nivelActual);
+        }
+
         switch (nota)
         {
             case Nota.A:
@@ -171,6 +184,8 @@ public class NotaxNivel : MonoBehaviour
         //GameManager.Instance.GuardarPuntajeMaximo(nivelActual, puntaje);
 
         StartCoroutine(BienSeleccionados());
+
+
 
         //BestScoreManager.GuardarMejorPuntaje(nivelActual, puntaje);
     }
@@ -264,7 +279,13 @@ public class NotaxNivel : MonoBehaviour
             Debug.Log("ROPA3 correcto");
         }
 
-        GuardarCorrectos();
+        yield return new WaitForSeconds(0.5f);
+
+        if(ObjetoGanador.activeInHierarchy)
+        {
+            GuardarCorrectos();
+        }
+        
     }
 
     public void GuardarCorrectos()
