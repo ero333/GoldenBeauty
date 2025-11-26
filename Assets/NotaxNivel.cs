@@ -91,6 +91,12 @@ public class NotaxNivel : MonoBehaviour
     [Header("ElementoGanador")]
 
     public GameObject ObjetoGanador;
+    public GameObject ObjetoPerdedor;
+
+    public GameObject NotaA;
+    public GameObject NotaB;
+    public GameObject NotaC;
+    public GameObject NotaD;
 
     private void Start()
     {
@@ -166,18 +172,26 @@ public class NotaxNivel : MonoBehaviour
         {
             case Nota.A:
                 Debug.Log("Animación A");
+                StartCoroutine(NotillaA());
+                    //NotaA.SetActive(true);
                 break;
 
             case Nota.B:
                 Debug.Log("Animación B");
+                StartCoroutine(NotillaB());
+                //NotaB.SetActive(true);
                 break;
 
             case Nota.C:
                 Debug.Log("Animación C");
+                StartCoroutine(NotillaC());
+                //NotaC.SetActive(true);
                 break;
 
             case Nota.D:
                 Debug.Log("Animación D");
+                StartCoroutine(NotillaD());
+                //NotaD.SetActive(true);
                 break;
         }
 
@@ -190,6 +204,65 @@ public class NotaxNivel : MonoBehaviour
         //BestScoreManager.GuardarMejorPuntaje(nivelActual, puntaje);
     }
 
+    private IEnumerator NotillaA()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (ObjetoGanador.activeInHierarchy)
+        {
+            NotaA.SetActive(true);
+        }
+
+        if (ObjetoPerdedor.activeInHierarchy) 
+        {
+            NotaA.SetActive(true);
+        }
+    }
+
+    private IEnumerator NotillaB()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (ObjetoGanador.activeInHierarchy)
+        {
+            NotaB.SetActive(true);
+        }
+
+        if (ObjetoPerdedor.activeInHierarchy)
+        {
+            NotaB.SetActive(true);
+        }
+    }
+
+    private IEnumerator NotillaC()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (ObjetoGanador.activeInHierarchy)
+        {
+            NotaC.SetActive(true);
+        }
+
+        if (ObjetoPerdedor.activeInHierarchy)
+        {
+            NotaC.SetActive(true);
+        }
+    }
+
+    private IEnumerator NotillaD()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (ObjetoGanador.activeInHierarchy)
+        {
+            NotaD.SetActive(true);
+        }
+
+        if (ObjetoPerdedor.activeInHierarchy)
+        {
+            NotaD.SetActive(true);
+        }
+    }
 
     private IEnumerator BienSeleccionados()
     {
