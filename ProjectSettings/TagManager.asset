@@ -21,6 +21,10 @@ TagManager:
   - Rostro-1
   - Rostro-2
   - Rostro-3
+  - Ropa-0
+  - Rostro-0
+  - Pelo-0
+  - Accesorios-0
   layers:
   - Default
   - TransparentFX

@@ -54,6 +54,42 @@ public class ActivaCapas : MonoBehaviour
 
         if (DragMultipleObjects.mouseSuelto)
         {
+            //HERRAMIENTA 0
+
+            if (collision.gameObject.CompareTag("Accesorios-0"))
+            {
+                accesorio_1.SetActive(false);
+                accesorio_2.SetActive(false);
+                accesorio_3.SetActive(false);
+                accesorio_0.SetActive(true);
+
+                if (Rostro_1.activeInHierarchy)
+                {
+
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+
+                }
+
+                if (Rostro_2.activeInHierarchy)
+                {
+
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+
+                }
+
+                DragMultipleObjects.mouseSuelto = false;
+            }
+
             //HERRAMIENTA 1
 
             if (collision.gameObject.CompareTag("Accesorios-1"))
@@ -163,7 +199,17 @@ public class ActivaCapas : MonoBehaviour
             }
 
 
+            //PELO 0 
 
+            if (collision.gameObject.CompareTag("Pelo-0"))
+            {
+                Pelo_1.SetActive(false);
+                Pelo_2.SetActive(false);
+                Pelo_3.SetActive(false);
+                Pelo_0.SetActive(true);
+
+                DragMultipleObjects.mouseSuelto = false;
+            }
 
 
             //PELO 1 
@@ -203,7 +249,54 @@ public class ActivaCapas : MonoBehaviour
             }
 
 
+            //ROSTRO 0
 
+            if (collision.gameObject.CompareTag("Rostro-0"))
+            {
+                Rostro_1.SetActive(false);
+                Rostro_2.SetActive(false);
+                Rostro_3.SetActive(false);
+                Rostro_0.SetActive(true);
+
+                if (accesorio_3.activeInHierarchy)
+                {
+
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+
+                }
+
+                if (accesorio_2.activeInHierarchy)
+                {
+
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_1_Grietas.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+
+                }
+
+                if (accesorio_1.activeInHierarchy)
+                {
+
+                    Rostro_1_Grietas.SetActive(false);
+                    Rostro_1_Pintura.SetActive(false);
+                    Rostro_1_Lava.SetActive(false);
+                    Rostro_2_Lava.SetActive(false);
+                    Rostro_2_Pintura.SetActive(false);
+                    Rostro_2_Grietas.SetActive(false);
+
+                }
+
+
+                DragMultipleObjects.mouseSuelto = false;
+            }
 
 
             //ROSTRO 1 
@@ -356,7 +449,17 @@ public class ActivaCapas : MonoBehaviour
             }
 
 
+            //ROPA 0 
 
+            if (collision.gameObject.CompareTag("Ropa-0"))
+            {
+                Ropa_1.SetActive(false);
+                Ropa_2.SetActive(false);
+                Ropa_3.SetActive(false);
+                Ropa_0.SetActive(true);
+
+                DragMultipleObjects.mouseSuelto = false;
+            }
 
             //ROPA 1 
 

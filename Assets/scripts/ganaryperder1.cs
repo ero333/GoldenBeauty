@@ -16,38 +16,46 @@ using static EventManager;
 public class Ganaryperder : MonoBehaviour
 {
     public SceneController sceneController;
-    [Header("Accesorios Valores")] 
+    [Header("Accesorios Valores")]
+    public GameObject accesorio_0;
     public GameObject accesorio_1;
     public GameObject accesorio_2;
     public GameObject accesorio_3;
-    
+
+    public int ValorAccesorio_0;
     public int ValorAccesorio_1;
     public int ValorAccesorio_2;
     public int ValorAccesorio_3;
 
     [Header("Pelo Valores")]
+    public GameObject Pelo_0;
     public GameObject Pelo_1;
     public GameObject Pelo_2;
     public GameObject Pelo_3;
 
+    public int ValorPelo_0;
     public int ValorPelo_1;
     public int ValorPelo_2;
     public int ValorPelo_3;
 
     [Header("Rostro Valores")]
+    public GameObject Rostro_0;
     public GameObject Rostro_1;
     public GameObject Rostro_2;
     public GameObject Rostro_3;
 
+    public int ValorRostro_0;
     public int ValorRostro_1;
     public int ValorRostro_2;
     public int ValorRostro_3;
 
     [Header("Ropa Valores")]
+    public GameObject Ropa_0;
     public GameObject Ropa_1;
     public GameObject Ropa_2;
     public GameObject Ropa_3;
 
+    public int ValorRopa_0;
     public int ValorRopa_1;
     public int ValorRopa_2;
     public int ValorRopa_3;
