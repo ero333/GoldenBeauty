@@ -1,13 +1,13 @@
 nodo,Texto,next,opcion1,opcion2,opcion3,back,personaje,nosotros
-1,"Liam, Liam, Liam, está todo mal. TODO. Hay que cambiarlo, ¡YA!",2,,,,1,1,0
-2,"Buenos días a tí también, Maddy. ¿A qué te refieres con cambiar ""todo""?",3,,,,1,0,1
-3,Ser una hechicera no funcionó. Solo conseguí 14 mil likes en mi reel de TinkTok. ¿Quieres arruinar mi carrera?,4,,,,2,1,0
-4,"Pero fue el estilo que tú me pediste, ¿recuerdas? Estabas convencida de que era lo correcto.",5,,,,3,0,1
-5,"No.. SÉ lo que quiero, ¿Okay? Soy influencer, no estilista. Apenas me entiendo a mí misma.",6,,,,4,1,0
-6,"...Muy bien, te daré no lo que quieres, sino lo que necesitas. Entonces... ¿Qué quieres?",7,,,,5,0,1
-7,"Quiero un look híper llamativo, que paralice a los usuarios, que ni se les ocurra deslizar hacia abajo.",8,,,,6,1,0
-8,"Ah, entiendo. Yyyy, ¿Por qué quieres ese estilo, exactamente?",9,,,,7,0,1
-9,Duh... es lo que vende. Cuanto más a la moda y llamativo mejor,,10,11,,8,1,0
+1,"Liam, Liam, Liam, NUNCA MÁS me hagas ser hechicera ¿Oíste? NUNCA",2,,,,1,1,0
+2,"Buenos días a tí también, Maddy. ¿Que sucedió?",3,,,,1,0,1
+3,El traje violeta de hechicera no funcionó. Solo conseguí 14 mil likes en TinkTok. ¿Quieres arruinar mi carrera?,4,,,,2,1,0
+4,"Pero fue el estilo que tú me pediste, ¿Recuerdas?",5,,,,3,0,1
+5,"Soy influencer, no estilista. Apenas me entiendo a mí misma, ese es TU trabajo",6,,,,4,1,0
+6,"...Muy bien, te daré lo que necesitas. Entonces... ¿Alguna sugerencia?",7,,,,5,0,1
+7,"Quiero un look híper llamativo, moderno o elegante, ¡Que paralice a la audicencia!",8,,,,6,1,0
+8,¿Por qué quieres esos estilos especificamente?,9,,,,7,0,1
+9,Duh... es lo que vende. Cuanto más a la moda o llamativo mejor,,10,11,,8,1,0
 10,"No veo nada de malo con eso. Si vende, es lo que necesitas.",12,,,,9,0,1
 11,"La semana pasada dijiste lo mismo, y no te dejó muy contenta.",13,,,,9,0,1
 12,"Sí, es lo que dije. Vamos, empecemos sin más.",14,,,,10,1,0
