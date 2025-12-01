@@ -83,15 +83,19 @@ public class Ganaryperder : MonoBehaviour
     public AudioClip sonidoPelo;
     public AudioClip sonidoRopa;
     public AudioClip sonidoAcc;
+    bool wasPelo0Active = false;
     bool wasPelo1Active = false;
     bool wasPelo2Active = false;
     bool wasPelo3Active = false;
+    bool wasRopa0Active = false;
     bool wasRopa1Active = false;
     bool wasRopa2Active = false;
     bool wasRopa3Active = false;
+    bool wasRostro0Active = false;
     bool wasRostro1Active = false;
     bool wasRostro2Active = false;
     bool wasRostro3Active = false;
+    bool wasAcc0Active = false;
     bool wasAcc1Active = false;
     bool wasAcc2Active = false;
     bool wasAcc3Active = false;
@@ -147,6 +151,12 @@ public class Ganaryperder : MonoBehaviour
         }
         */
 
+        if (accesorio_0.activeInHierarchy && !wasAcc0Active)
+        {
+            sonido.PlayOneShot(sonidoAcc);
+        }
+        wasAcc0Active = accesorio_0.activeInHierarchy;
+
         if (accesorio_1.activeInHierarchy && !wasAcc1Active)
         {
             sonido.PlayOneShot(sonidoAcc);
@@ -164,6 +174,12 @@ public class Ganaryperder : MonoBehaviour
             sonido.PlayOneShot(sonidoAcc);
         }
         wasAcc3Active = accesorio_3.activeInHierarchy;
+
+        if (Pelo_0.activeInHierarchy && !wasPelo0Active)
+        {
+            sonido.PlayOneShot(sonidoPelo);
+        }
+        wasPelo0Active = Pelo_0.activeInHierarchy;
 
         if (Pelo_1.activeInHierarchy && !wasPelo1Active)
         {
@@ -183,6 +199,12 @@ public class Ganaryperder : MonoBehaviour
         }
         wasPelo3Active = Pelo_3.activeInHierarchy;
 
+        if (Rostro_0.activeInHierarchy && !wasRostro0Active)
+        {
+            sonido.PlayOneShot(sonidoRostro);
+        }
+        wasRostro0Active = Rostro_0.activeInHierarchy;
+
         if (Rostro_1.activeInHierarchy && !wasRostro1Active)
         {
             sonido.PlayOneShot(sonidoRostro);
@@ -200,6 +222,12 @@ public class Ganaryperder : MonoBehaviour
             sonido.PlayOneShot(sonidoRostro);
         }
         wasRostro3Active = Rostro_3.activeInHierarchy;
+
+        if (Ropa_0.activeInHierarchy && !wasRopa0Active)
+        {
+            sonido.PlayOneShot(sonidoRopa);
+        }
+        wasRopa0Active = Ropa_0.activeInHierarchy;
 
         if (Ropa_1.activeInHierarchy && !wasRopa1Active)
         {
@@ -229,6 +257,13 @@ public class Ganaryperder : MonoBehaviour
         botonSiguiente.SetActive(false);
         yield return new WaitForSeconds(0.5f);
 
+        if (accesorio_0.activeInHierarchy)
+        {
+            Suma_Final += ValorAccesorio_0;
+            currentAcc = 1;
+            // sonido.PlayOneShot(sonidoAcc);
+        }
+
         if (accesorio_1.activeInHierarchy)
         {
             Suma_Final += ValorAccesorio_1;
@@ -248,6 +283,13 @@ public class Ganaryperder : MonoBehaviour
             Suma_Final += ValorAccesorio_3;
             currentAcc = 3;
            // sonido.PlayOneShot(sonidoAcc);
+        }
+
+        if (Pelo_0.activeInHierarchy)
+        {
+            Suma_Final += ValorPelo_0;
+            currentPelo = 1;
+            // sonido.PlayOneShot(sonidoPelo);
         }
 
         if (Pelo_1.activeInHierarchy)
@@ -271,6 +313,13 @@ public class Ganaryperder : MonoBehaviour
            // sonido.PlayOneShot(sonidoPelo);
         }
 
+        if (Rostro_0.activeInHierarchy)
+        {
+            Suma_Final += ValorRostro_0;
+            currentRostro = 1;
+            // sonido.PlayOneShot(sonidoRostro);
+        }
+
         if (Rostro_1.activeInHierarchy)
         {
             Suma_Final += ValorRostro_1;
@@ -290,6 +339,13 @@ public class Ganaryperder : MonoBehaviour
             Suma_Final += ValorRostro_3;
             currentRostro = 3;
            // sonido.PlayOneShot(sonidoRostro);
+        }
+
+        if (Ropa_0.activeInHierarchy)
+        {
+            Suma_Final += ValorRopa_0;
+            currentRopa = 1;
+            // sonido.PlayOneShot(sonidoRopa);
         }
 
         if (Ropa_1.activeInHierarchy)
