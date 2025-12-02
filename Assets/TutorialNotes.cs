@@ -15,6 +15,7 @@ public class TutorialNotes : MonoBehaviour
     public GameObject Pausa;
     public GameObject MenuGanar;
     public GameObject MenuPerder;
+    public GameObject Aviso;
     public GameObject Yomismo;
 
     // Start is called before the first frame update
@@ -26,7 +27,7 @@ public class TutorialNotes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Pausa.activeInHierarchy || MenuGanar.activeInHierarchy || MenuPerder.activeInHierarchy)
+        if (Pausa.activeInHierarchy || MenuGanar.activeInHierarchy || MenuPerder.activeInHierarchy || Aviso.activeInHierarchy)
         {
             Yomismo.SetActive(false);
         }
