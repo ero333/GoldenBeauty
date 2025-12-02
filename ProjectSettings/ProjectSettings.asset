@@ -719,11 +719,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 6108610b-3b7b-42a2-9cfc-6812439d6082
+  cloudProjectId: 69cf74b3-16f9-4f8b-aae4-b878d2d16682
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: GoldenBeautyCloud
-  organizationId: andresmora2k4
+  projectName: GoldenBeautySerra
+  organizationId: unity_8f5fd28350c544eaba27
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
