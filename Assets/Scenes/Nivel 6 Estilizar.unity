@@ -5899,8 +5899,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -128399781, guid: 0ba84904ad87fe249a186a43547617c7, type: 3}
-    m_PressedSprite: {fileID: 699325726, guid: 0ba84904ad87fe249a186a43547617c7, type: 3}
+    m_HighlightedSprite: {fileID: -608593968, guid: a87ed1c41596e8445ad3e0f05292cc4b, type: 3}
+    m_PressedSprite: {fileID: 359229423, guid: a87ed1c41596e8445ad3e0f05292cc4b, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -5946,7 +5946,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7739190, guid: 0ba84904ad87fe249a186a43547617c7, type: 3}
+  m_Sprite: {fileID: -7842753, guid: a87ed1c41596e8445ad3e0f05292cc4b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6881,7 +6881,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.9991565
+  orthographic size: 3.9999998
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8884,7 +8884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378cd8b18350ff640a4ebd5bb1f0674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 1233216995}
   siguiente: {fileID: 1381373461}
   botonPausa: {fileID: 801172188}
   menuPausa: {fileID: 1682976878}
