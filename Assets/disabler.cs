@@ -29,6 +29,7 @@ public class disabler : MonoBehaviour
         }
         else
         {
+            maus.SetActive (true);
             siguiente.SetActive(true);
             botonPausa.SetActive(true);
             wl.SetActive(true);

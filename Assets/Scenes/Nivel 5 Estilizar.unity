@@ -2345,7 +2345,7 @@ GameObject:
   - component: {fileID: 473546822}
   - component: {fileID: 473546821}
   m_Layer: 0
-  m_Name: Ganar-perder
+  m_Name: 'Ganar y perder '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2369,7 +2369,7 @@ MonoBehaviour:
   accesorio_3: {fileID: 1257756493}
   ValorAccesorio_1: 1
   ValorAccesorio_2: 0
-  ValorAccesorio_3: 0
+  ValorAccesorio_3: 1
   Pelo_1: {fileID: 441065990}
   Pelo_2: {fileID: 1648243058}
   Pelo_3: {fileID: 1007252347}
@@ -2379,17 +2379,17 @@ MonoBehaviour:
   Rostro_1: {fileID: 1525765017}
   Rostro_2: {fileID: 1351947040}
   Rostro_3: {fileID: 503847988}
-  ValorRostro_1: 1
-  ValorRostro_2: 0
+  ValorRostro_1: 0
+  ValorRostro_2: 1
   ValorRostro_3: 0
   Ropa_1: {fileID: 1978826121}
   Ropa_2: {fileID: 2022591519}
   Ropa_3: {fileID: 371924762}
-  ValorRopa_1: 1
-  ValorRopa_2: 1
-  ValorRopa_3: 0
+  ValorRopa_1: 0
+  ValorRopa_2: 0
+  ValorRopa_3: 1
   Valordeganar: 2
-  GanarNivel: 0
+  GanarNivel: 1
   botonGanar: {fileID: 241899677}
   botonPerder: {fileID: 1383626503}
   botonSiguiente: {fileID: 41276787}
@@ -4097,7 +4097,7 @@ GameObject:
   - component: {fileID: 921617869}
   - component: {fileID: 921617868}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas IU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7818,7 +7818,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.999072
+  orthographic size: 4.000804
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8628,7 +8628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378cd8b18350ff640a4ebd5bb1f0674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 1035082331}
   siguiente: {fileID: 1381373461}
   botonPausa: {fileID: 424667472}
   menuPausa: {fileID: 975094744}
@@ -9780,27 +9779,27 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1655763120}
-  - {fileID: 923602531}
-  - {fileID: 1752299780}
-  - {fileID: 919493760}
   - {fileID: 38725280}
   - {fileID: 409119612}
   - {fileID: 1127298698}
-  - {fileID: 1723210972}
-  - {fileID: 158492803}
-  - {fileID: 2049193352}
   - {fileID: 847438863}
   - {fileID: 991594044}
   - {fileID: 295458601}
+  - {fileID: 923602531}
+  - {fileID: 1752299780}
+  - {fileID: 919493760}
+  - {fileID: 1723210972}
+  - {fileID: 158492803}
+  - {fileID: 2049193352}
+  - {fileID: 2141361793}
+  - {fileID: 473546822}
   - {fileID: 1705359714}
   - {fileID: 1426792282}
-  - {fileID: 473546822}
   - {fileID: 921617871}
   - {fileID: 483020137}
   - {fileID: 928226968}
   - {fileID: 883545332}
   - {fileID: 953333876}
-  - {fileID: 2141361793}
   - {fileID: 455662180}
   - {fileID: 694383849}
   - {fileID: 286046395}

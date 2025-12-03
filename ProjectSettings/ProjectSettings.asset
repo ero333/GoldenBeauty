@@ -719,11 +719,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 6108610b-3b7b-42a2-9cfc-6812439d6082
+  cloudProjectId: 42784009-32bc-4d01-92ed-943d0bf65dcb
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: GoldenBeautyCloud
-  organizationId: andresmora2k4
+  projectName: "Final_Taller-IV_BRICE\xD1O_PEDRO"
+  organizationId: pedrobriceo1
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

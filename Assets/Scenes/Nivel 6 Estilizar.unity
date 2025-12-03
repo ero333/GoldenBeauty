@@ -2240,7 +2240,7 @@ MonoBehaviour:
   Ropa_1: {fileID: 623397818}
   Ropa_2: {fileID: 582824999}
   Ropa_3: {fileID: 324656628}
-  ValorRopa_1: 1
+  ValorRopa_1: 0
   ValorRopa_2: 0
   ValorRopa_3: 1
   Valordeganar: 3
@@ -6881,7 +6881,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.9991565
+  orthographic size: 4.000804
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8884,7 +8884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378cd8b18350ff640a4ebd5bb1f0674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 1233216995}
   siguiente: {fileID: 1381373461}
   botonPausa: {fileID: 801172188}
   menuPausa: {fileID: 1682976878}
@@ -8895,15 +8894,15 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1655763120}
+  - {fileID: 923602531}
+  - {fileID: 1752299780}
+  - {fileID: 919493760}
   - {fileID: 38725280}
   - {fileID: 409119612}
   - {fileID: 1127298698}
   - {fileID: 847438863}
   - {fileID: 991594044}
   - {fileID: 295458601}
-  - {fileID: 923602531}
-  - {fileID: 1752299780}
-  - {fileID: 919493760}
   - {fileID: 1723210972}
   - {fileID: 158492803}
   - {fileID: 2049193352}
