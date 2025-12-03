@@ -2768,7 +2768,7 @@ MonoBehaviour:
   Pelo_1: {fileID: 441065990}
   Pelo_2: {fileID: 1648243058}
   Pelo_3: {fileID: 1007252347}
-  ValorPelo_0: 0
+  ValorPelo_0: 1
   ValorPelo_1: 0
   ValorPelo_2: 0
   ValorPelo_3: 1
@@ -2779,7 +2779,7 @@ MonoBehaviour:
   ValorRostro_0: 0
   ValorRostro_1: 1
   ValorRostro_2: 0
-  ValorRostro_3: 1
+  ValorRostro_3: 0
   Ropa_0: {fileID: 1435704963}
   Ropa_1: {fileID: 1978826121}
   Ropa_2: {fileID: 2022591519}
