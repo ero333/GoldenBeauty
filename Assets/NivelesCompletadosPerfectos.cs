@@ -40,7 +40,7 @@ public class NivelesCompletadosPerfectos : MonoBehaviour
         // Nivel 2
         if (!recuadroNivel2.activeInHierarchy)
         {
-            EventManager.SafeLogEvent("End", new Dictionary<string, object> {
+            EventManager.SafeLogEvent("Perfect", new Dictionary<string, object> {
                     { "level", 2 }
                     });
         }
@@ -48,7 +48,7 @@ public class NivelesCompletadosPerfectos : MonoBehaviour
         // Nivel 3
         if (!recuadroNivel3.activeInHierarchy)
         {
-            EventManager.SafeLogEvent("End", new Dictionary<string, object> {
+            EventManager.SafeLogEvent("Perfect", new Dictionary<string, object> {
                     { "level", 3 }
                     });
         }
@@ -56,7 +56,7 @@ public class NivelesCompletadosPerfectos : MonoBehaviour
         // Nivel 4
         if (!recuadroNivel4.activeInHierarchy)
         {
-            EventManager.SafeLogEvent("End", new Dictionary<string, object> {
+            EventManager.SafeLogEvent("Perfect", new Dictionary<string, object> {
                     { "level", 4 }
                     });
         }
@@ -64,7 +64,7 @@ public class NivelesCompletadosPerfectos : MonoBehaviour
         // Nivel 5
         if (!recuadroNivel5.activeInHierarchy)
         {
-            EventManager.SafeLogEvent("End", new Dictionary<string, object> {
+            EventManager.SafeLogEvent("Perfect", new Dictionary<string, object> {
                     { "level", 5 }
                     });
         }
@@ -72,7 +72,7 @@ public class NivelesCompletadosPerfectos : MonoBehaviour
         // Nivel 6
         if (!recuadroNivel6.activeInHierarchy)
         {
-            EventManager.SafeLogEvent("End", new Dictionary<string, object> {
+            EventManager.SafeLogEvent("Perfect", new Dictionary<string, object> {
                     { "level", 6 }
                     });
         }
@@ -80,7 +80,7 @@ public class NivelesCompletadosPerfectos : MonoBehaviour
         // CuadroDesbloqueado
         if (!recuadroNivel6.activeInHierarchy && !recuadroNivel5.activeInHierarchy && !recuadroNivel4.activeInHierarchy && !recuadroNivel3.activeInHierarchy && !recuadroNivel2.activeInHierarchy && !recuadroNivel1.activeInHierarchy)
         {
-            EventManager.SafeLogEvent("End", new Dictionary<string, object> {
+            EventManager.SafeLogEvent("Perfect", new Dictionary<string, object> {
                     { "level", 7 }
                     });
         }

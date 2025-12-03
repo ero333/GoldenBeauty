@@ -1560,12 +1560,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ad5444a7b45e243b9351db1ec2ef67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recuadroNivel1: {fileID: 0}
-  recuadroNivel2: {fileID: 0}
-  recuadroNivel3: {fileID: 0}
-  recuadroNivel4: {fileID: 0}
-  recuadroNivel5: {fileID: 0}
-  recuadroNivel6: {fileID: 0}
+  recuadroNivel1: {fileID: 1945005739}
+  recuadroNivel2: {fileID: 69582578}
+  recuadroNivel3: {fileID: 692823120}
+  recuadroNivel4: {fileID: 1249774927}
+  recuadroNivel5: {fileID: 1248180637}
+  recuadroNivel6: {fileID: 1662929933}
 --- !u!4 &631290390
 Transform:
   m_ObjectHideFlags: 0
