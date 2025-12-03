@@ -4405,56 +4405,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678685659}
   m_CullTransparentMesh: 1
---- !u!1 &1678813968
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1678813970}
-  - component: {fileID: 1678813971}
-  m_Layer: 0
-  m_Name: Puntajes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1678813970
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678813968}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8611609, y: 0.20995022, z: 1.424172}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1678813971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678813968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60ddef6ad17eded46b99e9015ab0a52e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recuadroNivel1: {fileID: 0}
-  recuadroNivel2: {fileID: 0}
-  recuadroNivel3: {fileID: 0}
-  recuadroNivel4: {fileID: 0}
-  recuadroNivel5: {fileID: 0}
-  recuadroNivel6: {fileID: 0}
 --- !u!1 &1813464791
 GameObject:
   m_ObjectHideFlags: 0
@@ -4971,7 +4921,6 @@ SceneRoots:
   - {fileID: 150750365}
   - {fileID: 1084557459}
   - {fileID: 537871958}
-  - {fileID: 1678813970}
   - {fileID: 372091838}
   - {fileID: 655006039}
   - {fileID: 386080028}

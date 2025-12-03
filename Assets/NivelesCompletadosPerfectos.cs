@@ -18,7 +18,7 @@ public class NivelesCompletadosPerfectos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(VerificarRetraso());
     }
 
     // Update is called once per frame
@@ -27,6 +27,11 @@ public class NivelesCompletadosPerfectos : MonoBehaviour
         
     }
 
+    private IEnumerator VerificarRetraso()
+    {
+        yield return new WaitForSeconds(1.5f);
+        VerificarPerfects();
+    }
     void VerificarPerfects()
     {
         // Nivel 1
