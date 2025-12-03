@@ -439,7 +439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 323.16003, y: -188.79999}
+  m_AnchoredPosition: {x: 323.16003, y: -194.2}
   m_SizeDelta: {x: 480, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137556333
@@ -471,8 +471,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -659755983, guid: 39050e1fb54977b40a33829db4620721, type: 3}
-    m_PressedSprite: {fileID: -719525367, guid: 39050e1fb54977b40a33829db4620721, type: 3}
+    m_HighlightedSprite: {fileID: -128399781, guid: 0ba84904ad87fe249a186a43547617c7, type: 3}
+    m_PressedSprite: {fileID: -128399781, guid: 0ba84904ad87fe249a186a43547617c7, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -488,7 +488,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1063402288}
         m_TargetAssemblyTypeName: Pausa, Assembly-CSharp
-        m_MethodName: VolverAlInicio
+        m_MethodName: SiguienteNivel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -287017208, guid: 39050e1fb54977b40a33829db4620721, type: 3}
+  m_Sprite: {fileID: 7739190, guid: 0ba84904ad87fe249a186a43547617c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2859,7 +2859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378cd8b18350ff640a4ebd5bb1f0674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 681867543}
   siguiente: {fileID: 137556331}
   botonPausa: {fileID: 1324819268}
   menuPausa: {fileID: 1347981734}
@@ -3822,7 +3821,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.9991565
+  orthographic size: 3.9999998
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

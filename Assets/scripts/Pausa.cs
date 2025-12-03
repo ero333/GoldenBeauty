@@ -129,6 +129,36 @@ public class Pausa : MonoBehaviour
         fondoDePausa.SetActive(false);
     }
 
+
+    public void RetrocederDos()
+    {
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        int targetIndex = currentIndex - 3;
+
+        if (targetIndex >= 0)
+        {
+            SceneManager.LoadScene(targetIndex);
+        }
+        else
+        {
+            Debug.Log("No hay escenas anteriores suficientes.");
+        }
+    }
+    public void SiguienteNivel()
+    {
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        int targetIndex = currentIndex  +2;
+
+        if (targetIndex >= 0)
+        {
+            SceneManager.LoadScene(targetIndex);
+        }
+        else
+        {
+            Debug.Log("No hay escenas anteriores suficientes.");
+        }
+    }
+
     public void VolverAlInicio()
     {
         detener = false;

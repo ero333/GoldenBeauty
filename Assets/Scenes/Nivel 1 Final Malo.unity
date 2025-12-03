@@ -422,7 +422,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1063402288}
         m_TargetAssemblyTypeName: Pausa, Assembly-CSharp
-        m_MethodName: VolverAlInicio
+        m_MethodName: RetrocederDos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2189,7 +2189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378cd8b18350ff640a4ebd5bb1f0674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 858941438}
   siguiente: {fileID: 137556331}
   botonPausa: {fileID: 1452523130}
   menuPausa: {fileID: 1897445310}
@@ -4521,7 +4520,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.9991565
+  orthographic size: 3.9999998
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

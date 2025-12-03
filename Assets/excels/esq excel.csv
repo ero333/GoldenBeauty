@@ -1,41 +1,41 @@
 nodo,Texto,next,opcion1,opcion2,opcion3,back,personaje,nosotros
-1,"¡BUENOS DÍAS, mi queridísimo estilista! Hoy es el debut de mi gran show, y debo verme increíble para la ocasión.",2,,,,,1,0
-2,"Señor Fémur, es un placer tenerlo devuelta. Me enteré de su nuevo programa, espero poder verlo hoy a la noche.",3,,,,2,0,1
-3,"Oh, no sabes cuanto me alegra oir eso. Pero basta de palabreríos, necesito sus servicios lo más pronto posible.",4,,,,3,1,0
-4,"Wow, noto mucha emoción. Muy bien, dígame qué es lo que quiere y le prometo dejarlo de maravilla.",5,,,,4,0,1
-5,"No lo se... Estoy emocionado, pero estos ejecutivos son muy estrictos,y si mi estilo no es de de su agrado?",,6,7,8,5,1,0
-6,"Es decir, crees que tu estilo es demasiado dramático.",9,,,,5,0,1
-7,"¿Muy patético, dices?",10,,,,5,0,1
-8,¿Quizás son los chistes?,11,,,,5,0,1
-9,"Un poco... sí. Ansío deslumbrar a todos y cada uno de mis espectadores, pero ya no hay público para cadáveres como yo.",,12,13,,6,1,0
+1,"¡Buenos días, Liam! Hoy debuto en un gran show, debo verme increíble.",2,,,,,1,0
+2,"Señor Fémur, un gusto verlo. Felicitaciones.",3,,,,2,0,1
+3,"Gracias, pero necesito su ayuda urgente.",4,,,,3,1,0
+4,"Claro, ¿qué busca?",5,,,,4,0,1
+5,Estoy emocionado… pero los ejecutivos son estrictos. ¿Y si mi estilo no les gusta?,,6,7,8,5,1,0
+6,¿Teme ser demasiado dramático?,9,,,,5,0,1
+7,¿O muy exagerado?,10,,,,5,0,1
+8,¿O por sus chistes?,11,,,,5,0,1
+9,"Puede ser… quiero deslumbrar, pero ya no hay público para un cadáver como yo.",,12,13,,6,1,0
 10,¡Para nada! No existe cosa más emocionante que mis juegos y fuegos artificiales.,,12,14,,7,1,0
-11,"A decir verdad, no realmente. Amo ser simpático y divertido, pero no soy un payaso. Mi rol es entretener, no ser el hazmereir.",,13,14,,8,1,0
+11,"Sí, pero no soy un payaso. Quiero entretener, no hacer el ridículo.",,13,14,,8,1,0
 12,"Pero, ¿tú disfrutas del glamour y la picardía?",15,,,,8,0,1
 13,"Entonces te piden ser algo más formal, serio.",16,,,,8,0,1
-14,"Bueno, con un show de juegos es difícil aburrirse.",17,,,,8,0,1
-15,"De aquí a la luna. Eso es otra cosa que amo, la luna. La vestimenta elegante, anti-sistema, vivo por esa adrenalina.",18,,,,12,1,0
-16,"Exacto, y yo quiero lo opuesto a eso. No es que me hayan dicho explícitamente que no lo haga, solo... lo presiento.",19,,,,13,1,0
-17,"Te ríes, pero es así mismo. ¿Qué quieres de mí? ¿Un show de cocina? Detesto esos programas. No, yo vivo por el espectáculo.",20,,,,14,1,0
+14,"Igual, con su show es difícil aburrirse.",17,,,,8,0,1
+15,Amo la elegancia y la adrenalina.,18,,,,12,1,0
+16,"Lo sé, pero esta vez quieren lo opuesto. Lo presiento.",19,,,,13,1,0
+17,"No quiero cambiar mi esencia, no soy un chef aburrido. Vivo del espectáculo.",20,,,,14,1,0
 18,¿Y el peligro?,21,,,,15,0,1
-19,"Espera, ¿No te han dicho nada de manera puntual?",22,,,,16,0,1
-20,"Entiendo, entiendo. Juegos, diversión, emoción. Esas cosas.",23,,,,17,0,1
-21,"Y EL PELIGRO. Es decir, nadie va a resultar herido, ¿Qué problema hay con aparentar que sí?",24,,,,18,1,0
-22,"No, pero yo los conozco, siempre con sus notas de ""bajar la intensidad"". Quieren diluir mi esencia. Lo sé.",24,,,,19,1,0
-23,"Sí, y nada de señor cascarrabias, viejo, herido. Cadáver o no, soy un joven lleno de furia y pasión.",24,,,,20,1,0
-24,"En fin, ¿Tú que piensas, mi estimado?",,25,26,27,20,1,0
-25,"Tienes que hacerlo. Es triste, pero así son los negocios.",29,,,,24,0,1
-26,"Comprendo tu preocupación, pero debe haber un punto medio.",30,,,,24,0,1
-27,"Al diablo con esos ejecutivos. Si te contrataron, tienes talento.",28,,,,24,0,1
-28,"Debes ser tu mismo. A ellos quizás no les guste, pero la audiencia lo amará.",31,,,,27,0,1
-29,"...Creo... creo que tienes razón. Aunque, si te soy honesto, me siento un poco herido ahora.",32,,,,25,1,0
-30,"Claro, claro. Eso es lo ideal, creo. Es decir... yo que sé. Creo que confiaré en tu criterio.",33,,,,26,1,0
-31,...Eso fue lo más hermoso que alguna vez escuché. Ahora recuerdo por qué empecé esta profesión en primer lugar.,34,,,,28,1,0
-32,"Lo lamento, pero es lo que debías escuchar.",35,,,,29,0,1
-33,"Algo de brillo no hará daño a nadie. Un poco de elegancia, vamos. Es un show de televisión nocturo al fin y al cabo.",36,,,,30,0,1
-34,Es por gente como tú. Tú haces que levantarme todos los días sea motivo de orgullo.,37,,,,31,1,0
-35,"(Sniff... sniff) Muy bien, queridísimo. Hagamos esto de una vez...",40,,,,32,1,0
-36,"Tienes razón, en fin. Espero que les guste. Al menos a mí me va a gustar. Eso es lo importante.",40,,,,33,1,0
+19,¿Pero nadie le dijo nada puntual?,22,,,,16,0,1
+20,"Entiendo: juegos, emoción.",23,,,,17,0,1
+21,Y EL PELIGRO. Nadie saldrá herido.,24,,,,18,1,0
+22,Pero esos ejecutivos siempre piden “bajar la intensidad”. Quieren diluirme.,24,,,,19,1,0
+23,No soy un viejo cascarrabias. Soy un joven lleno de furia y pasión.,24,,,,20,1,0
+24,¿Qué piensa usted?,,25,26,27,20,1,0
+25,"Es duro, pero así funciona el negocio.",29,,,,24,0,1
+26,Debe encontrar un punto medio.,30,,,,24,0,1
+27,"Si lo contrataron, es porque tiene talento.",28,,,,24,0,1
+28,Sea usted mismo. La audiencia lo amará.,31,,,,27,0,1
+29,Sí… creo que tienes razón.,32,,,,25,1,0
+30,Confiaré en su criterio.,33,,,,26,1,0
+31,Eso me inspira. Recordé por qué hago esto.,34,,,,28,1,0
+32,Era necesario decirlo.,35,,,,29,0,1
+33,Un poco de brillo y elegancia no hace mal. Es TV nocturna.,36,,,,30,0,1
+34,Gente como usted me impulsa.,37,,,,31,1,0
+35,"Sniff… bien, hagámoslo.",40,,,,32,1,0
+36,Ojalá les guste. A mí me va a encantar.,40,,,,33,1,0
 37,"Y si tu crees en mí, entonces yo debo creer el doble.",38,,,,34,1,0
-38,"Esa es la actitud, ¡Hagamos un look para los libros de historia!",39,,,,37,0,1
+38,"Esa es la actitud, ¡Hagamos un look histórico!",39,,,,37,0,1
 39,"¡Sí, señor!",40,,,,38,1,0
 40,A estilizar,,,,,,0,1
