@@ -1410,7 +1410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378cd8b18350ff640a4ebd5bb1f0674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 642673077}
   siguiente: {fileID: 817644195}
   botonPausa: {fileID: 1734392193}
   menuPausa: {fileID: 2052461800}
