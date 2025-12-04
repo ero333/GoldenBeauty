@@ -57,10 +57,36 @@ public class SceneController : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    private int levelSelectEntradas = 0;
+    private const string LEVELSELECT_ENTRADAS_KEY = "LevelSelectEntradas";
+    public GameObject aviso;
 
     void Start()
     {
-       
+        Scene currentScene = SceneManager.GetActiveScene();
+        levelSelectEntradas = PlayerPrefs.GetInt(LEVELSELECT_ENTRADAS_KEY, 0);
+
+        if (currentScene.name == "LevelSelect")
+        {
+            levelSelectEntradas++; // sumar 1 entrada
+            PlayerPrefs.SetInt(LEVELSELECT_ENTRADAS_KEY, levelSelectEntradas);
+            Debug.Log(levelSelectEntradas);
+            PlayerPrefs.Save(); // guardar
+
+            // Activar aviso SOLO la tercera vez
+            if (levelSelectEntradas == 3)
+            {
+                aviso.SetActive(true);
+            }
+            else if (levelSelectEntradas == 7)
+            {
+                aviso.SetActive(true);
+            }
+            else
+            {
+                aviso.SetActive(false);
+            }
+        }
 
         // Seguridad para evitar NullReferenceException
         if (audio != null) audio.Play();
@@ -83,7 +109,6 @@ public class SceneController : MonoBehaviour
             volumeSlider2.onValueChanged.AddListener(SetSounds);
         }
         // finales
-        Scene currentScene = SceneManager.GetActiveScene();
 
         if (currentScene.name == "Nivel 1 Final Bueno")
         {
@@ -180,6 +205,14 @@ public class SceneController : MonoBehaviour
 
     void Update()
     {
+        /*
+         if (Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
+            Debug.Log("PlayerPrefs deleted!");
+        }
+        */
 
     }
 
