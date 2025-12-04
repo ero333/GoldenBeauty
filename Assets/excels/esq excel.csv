@@ -5,8 +5,8 @@ nodo,Texto,next,opcion1,opcion2,opcion3,back,personaje,nosotros
 4,"Claro, ¿qué busca?",5,,,,4,0,1
 5,Estoy emocionado… pero los ejecutivos son estrictos. ¿Y si mi estilo no les gusta?,,6,7,8,5,1,0
 6,¿Teme ser demasiado dramático?,9,,,,5,0,1
-7,¿O muy exagerado?,10,,,,5,0,1
-8,¿O por sus chistes?,11,,,,5,0,1
+7,¿Teme a ser muy exagerado?,10,,,,5,0,1
+8,¿Teme por sus chistes?,11,,,,5,0,1
 9,"Puede ser… quiero deslumbrar, pero ya no hay público para un cadáver como yo.",,12,13,,6,1,0
 10,¡Para nada! No existe cosa más emocionante que mis juegos y fuegos artificiales.,,12,14,,7,1,0
 11,"Sí, pero no soy un payaso. Quiero entretener, no hacer el ridículo.",,13,14,,8,1,0
