@@ -200,6 +200,19 @@ public class EventManager : MonoBehaviour
         AnalyticsService.Instance.RecordEvent(GameOverEvent);
         AnalyticsService.Instance.Flush();
     }
+
+    public void LogPerfect(int level)
+    {
+        var parameters = new Dictionary<string, object> { { "level", level }};
+        LogEvent("Perfect", parameters);
+
+        CustomEvent RateEvent = new CustomEvent("Perfect")
+        {
+            { "level", level },
+        };
+        AnalyticsService.Instance.RecordEvent(RateEvent);
+        AnalyticsService.Instance.Flush();
+    }
 }
 
 

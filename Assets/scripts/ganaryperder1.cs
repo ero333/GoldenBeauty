@@ -16,11 +16,11 @@ using static EventManager;
 public class Ganaryperder : MonoBehaviour
 {
     public SceneController sceneController;
-    [Header("Accesorios Valores")] 
+    [Header("Accesorios Valores")]
     public GameObject accesorio_1;
     public GameObject accesorio_2;
     public GameObject accesorio_3;
-    
+
     public int ValorAccesorio_1;
     public int ValorAccesorio_2;
     public int ValorAccesorio_3;
@@ -88,11 +88,12 @@ public class Ganaryperder : MonoBehaviour
     bool wasAcc2Active = false;
     bool wasAcc3Active = false;
 
+    public GameObject aviso;
     // Start is called before the first frame update
     void Start()
     {
 
-        
+
         Scene currentScene = SceneManager.GetActiveScene();
         if (currentScene.name == "Nivel 1 Estilizar")
         {
@@ -217,6 +218,9 @@ public class Ganaryperder : MonoBehaviour
 
     private IEnumerator aura()
     {
+
+
+
         //botonSiguiente.SetActive(false);
         botonSiguiente.SetActive(false);
         yield return new WaitForSeconds(0.5f);
@@ -225,84 +229,84 @@ public class Ganaryperder : MonoBehaviour
         {
             Suma_Final += ValorAccesorio_1;
             currentAcc = 1;
-           // sonido.PlayOneShot(sonidoAcc);
+            // sonido.PlayOneShot(sonidoAcc);
         }
 
         if (accesorio_2.activeInHierarchy)
         {
             Suma_Final += ValorAccesorio_2;
             currentAcc = 2;
-           // sonido.PlayOneShot(sonidoAcc);
+            // sonido.PlayOneShot(sonidoAcc);
         }
 
         if (accesorio_3.activeInHierarchy)
         {
             Suma_Final += ValorAccesorio_3;
             currentAcc = 3;
-           // sonido.PlayOneShot(sonidoAcc);
+            // sonido.PlayOneShot(sonidoAcc);
         }
 
         if (Pelo_1.activeInHierarchy)
         {
             Suma_Final += ValorPelo_1;
             currentPelo = 1;
-           // sonido.PlayOneShot(sonidoPelo);
+            // sonido.PlayOneShot(sonidoPelo);
         }
 
         if (Pelo_2.activeInHierarchy)
         {
             Suma_Final += ValorPelo_2;
             currentPelo = 2;
-           // sonido.PlayOneShot(sonidoPelo);
+            // sonido.PlayOneShot(sonidoPelo);
         }
 
         if (Pelo_3.activeInHierarchy)
         {
             Suma_Final += ValorPelo_3;
             currentPelo = 3;
-           // sonido.PlayOneShot(sonidoPelo);
+            // sonido.PlayOneShot(sonidoPelo);
         }
 
         if (Rostro_1.activeInHierarchy)
         {
             Suma_Final += ValorRostro_1;
             currentRostro = 1;
-           // sonido.PlayOneShot(sonidoRostro);
+            // sonido.PlayOneShot(sonidoRostro);
         }
 
         if (Rostro_2.activeInHierarchy)
         {
             Suma_Final += ValorRostro_2;
             currentRostro = 2;
-           // sonido.PlayOneShot(sonidoRostro);
+            // sonido.PlayOneShot(sonidoRostro);
         }
 
         if (Rostro_3.activeInHierarchy)
         {
             Suma_Final += ValorRostro_3;
             currentRostro = 3;
-           // sonido.PlayOneShot(sonidoRostro);
+            // sonido.PlayOneShot(sonidoRostro);
         }
 
         if (Ropa_1.activeInHierarchy)
         {
             Suma_Final += ValorRopa_1;
             currentRopa = 1;
-           // sonido.PlayOneShot(sonidoRopa);
+            // sonido.PlayOneShot(sonidoRopa);
         }
 
         if (Ropa_2.activeInHierarchy)
         {
             Suma_Final += ValorRopa_2;
             currentRopa = 2;
-           // sonido.PlayOneShot(sonidoRopa);
+            // sonido.PlayOneShot(sonidoRopa);
         }
 
         if (Ropa_3.activeInHierarchy)
         {
             Suma_Final += ValorRopa_3;
             currentRopa = 3;
-           // sonido.PlayOneShot(sonidoRopa);
+            // sonido.PlayOneShot(sonidoRopa);
         }
 
         if (Suma_Final > Valordeganar)
@@ -323,7 +327,7 @@ public class Ganaryperder : MonoBehaviour
 
         if (!GanarNivel)
         {
-            
+
             EventManager.SafeLogEvent("GameOver", new Dictionary<string, object> {
         { "level", currentLevel },
         {"time", contador },
@@ -342,8 +346,30 @@ public class Ganaryperder : MonoBehaviour
 
     public void Ganar()
     {
-        StartCoroutine(aura());
-        
+        if (!accesorio_1.activeSelf && !accesorio_2.activeSelf && !accesorio_3.activeSelf)
+        {
+            aviso.SetActive(true);
+        }
+        else if (!Ropa_1.activeSelf && !Ropa_2.activeSelf && !Ropa_3.activeSelf)
+        {
+            aviso.SetActive(true);
+        }
+        else if (!Rostro_1.activeSelf && !Rostro_2.activeSelf && !Rostro_3.activeSelf)
+        {
+            aviso.SetActive(true);
+        }
+        else if (!Pelo_1.activeSelf && !Pelo_2.activeSelf && !Pelo_3.activeSelf)
+        {
+            aviso.SetActive(true);
+        }
+        else
+        {
+            StartCoroutine(aura());
+        }
+
+
     }
 
 }
+
+

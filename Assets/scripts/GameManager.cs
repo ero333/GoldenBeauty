@@ -1,11 +1,13 @@
 //using System.Diagnostics;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public SceneController sceneController;
+    public GameObject aviso;
     // Variables de progreso
     public int currentZone;
     public int nvlSuperado;
@@ -14,6 +16,7 @@ public class GameManager : MonoBehaviour
     private const string CURRENT_ZONE_KEY = "CurrentZone";
     private const string NIVL_SUPERADO_KEY = "NvlSuperado";
 
+    public int puntaje2;
     void Awake()
     {
         // Implementación del Singleton
@@ -29,6 +32,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Start ()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "LevelSelect")
+        {
+         if (nvlSuperado == 1)
+            {
+                aviso.SetActive(true);
+            }   
+        }
+    }
     // Cargar datos guardados
     public void LoadGameData() // Cambiado a público
     {
@@ -88,16 +102,29 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // Detectar tecla R para resetear progreso
-       /* if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetProgress();
-        }
-       */
+
     }
 
 
 
     //eventos de recoleccion de data acá
+
+
+    //CODIGO NUEVO
+
+    /*public void GuardarPuntajeMaximo(int nivel, int puntaje)
+    {
+        string key = "Nivel_" + nivel + "_BestScore";
+
+        int bestScore = PlayerPrefs.GetInt(key, 0);
+
+        if (puntaje > bestScore)
+        {
+            PlayerPrefs.SetInt(key, puntaje);
+            PlayerPrefs.Save();
+        }
+    }*/
+
+
 
 }
