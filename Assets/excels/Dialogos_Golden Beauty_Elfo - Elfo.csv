@@ -29,13 +29,13 @@ nodo,Texto,next,opcion1,opcion2,opcion3,back,personaje,nosotros
 28,"Pero... yo soy un poco distinto, así que quiero un estilo que me haga más autentico ¡Único!",29,,,,,1,0
 29,"¿Pero como puedo ser único, si no termino de entender quien soy?",,30,31,32,,1,0
 30,Lo mejor es adaptarse a lo que al resto le gusta,33,,,,27,0,1
-31,Tal vez deberías dejar de temer de mostrar tu verdadero tú,34,,,,27,0,1
+31,"Tal vez deberías dejar de temer de mostrar tu verdadero tú",34,,,,27,0,1
 32,¡Confia en mis habilidades!,36,,,,27,0,1
 33,...,40,,,,30,1,0
-34,"""Tienes razón, mon ami! Si quiero ser auténtico y único sin caer en el drama élfico, ¡debo destacar mis facciones y mostrar mi lado noble! Necesito:""",35,,,,31,1,0
-35,"""Un Rostro muy iluminado para el gran reflector, y un Pelo que no me cubra la cara.""",40,,,,31,1,0
-36,"¡Oh oui oui oui! ¡Nunca dudaria de ti, mon ami! ",40,,,,32,1,0
-37,"Asi que necesito lucir la parte, pero no te dejes llevar por lo ""dramático"".",38,,,,11,1,0
-38,"Nada de oscuros, ¡necesito brillar!",39,,,,37,1,0
-39,Y absolutamente nada de verde. Detesto como queda con mi complexión... Sin ofender.,18,,,,38,1,0
-40,,,,,,,,
+34,"Puede que tengas razón, mon ami... Aun que si hay algo...",35,,,,31,1,0  <-- CAMBIO DE NEXT
+35,"¡Necesito un Rostro muy *iluminado* para el gran reflector, y un peinado que no me cubra la cara!",37,,,,34,1,0  <-- NUEVO: Pistas Rostro y Pelo
+36,"Sí, confío ciegamente... pero por favor, que mi estilo muestre mi valor.",39,,,,32,1,0
+37,"También, algo en mi ropa que parezca *antiguo y noble* pero que sea *ligero*.",38,,,,35,1,0  <-- NUEVO: Pista Ropa
+38,"Y para el accesorio, que sea algo que atrape la luz, ¡algo que brille por sí mismo!",40,,,,37,1,0  <-- NUEVO: Pista Accesorio
+39,"...",40,,,,36,1,0
+40,Perfecto, ¡manos a la obra!,0,,,,38,0,1
