@@ -15,7 +15,7 @@ nodo,Texto,next,opcion1,opcion2,opcion3,back,personaje,nosotros
 14,"Se trata de un personaje algo... inusual, quizá hasta algo polémico.",15,,,,12,1,0
 15,"Es sobre un cambiaformas ¡Pero no cualquier cambiaformas, querido!",16,,,,14,1,0
 16,"Uno distinto, autentico, ¡Único! ehm...",17,,,,15,1,0
-17, Es decir un cambiaformas que viene a demostrarnos que no todo es como dicen los conspiranoicos...,18,,,,16,1,0
+17,Es decir un cambiaformas que viene a demostrarnos que no todo es como dicen los conspiranoicos...,18,,,,16,1,0
 18,"En fin, ¡Imagino que cuando salga la obra vendrás a verme!, ¿Verdad, mon ami?~ ♡ ",,19,20,21,17,1,0
 19,Todo depende de que tan ocupado esté.,22,,,,18,0,1
 20,¡Sin dudarlo! No me lo perdería por nada del mundo.,23,,,,18,0,1
@@ -32,8 +32,8 @@ nodo,Texto,next,opcion1,opcion2,opcion3,back,personaje,nosotros
 31,Tal vez deberías dejar de temer de mostrar tu verdadero tú,34,,,,27,0,1
 32,¡Confia en mis habilidades!,36,,,,27,0,1
 33,...,40,,,,30,1,0
-34,"Puede que tengas razón, mon ami... Aun que si hay algo de lo que estoy seguro...",35,,,,31,1,0
-35,¡Es que hacer feliz a la gente es lo que más me llena el corazón!,40,,,,31,1,0
+34,"""Tienes razón, mon ami! Si quiero ser auténtico y único sin caer en el drama élfico, ¡debo destacar mis facciones y mostrar mi lado noble! Necesito:""",35,,,,31,1,0
+35,"""Un Rostro muy iluminado para el gran reflector, y un Pelo que no me cubra la cara.""",40,,,,31,1,0
 36,"¡Oh oui oui oui! ¡Nunca dudaria de ti, mon ami! ",40,,,,32,1,0
 37,"Asi que necesito lucir la parte, pero no te dejes llevar por lo ""dramático"".",38,,,,11,1,0
 38,"Nada de oscuros, ¡necesito brillar!",39,,,,37,1,0
