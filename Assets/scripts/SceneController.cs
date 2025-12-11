@@ -205,14 +205,14 @@ public class SceneController : MonoBehaviour
 
     void Update()
     {
-        /*
+        
          if (Input.GetKeyDown(KeyCode.R))
         {
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
             Debug.Log("PlayerPrefs deleted!");
         }
-        */
+        
 
     }
 
