@@ -593,7 +593,7 @@ PlayerSettings:
   webGLTemplate: APPLICATION:Default
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
-  webGLCompressionFormat: 0
+  webGLCompressionFormat: 1
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
@@ -621,7 +621,7 @@ PlayerSettings:
     QNX: 1
     Stadia: 1
     VisionOS: 1
-    WebGL: 3
+    WebGL: 1
     Windows Store Apps: 1
     XboxOne: 1
     iPhone: 1
@@ -719,11 +719,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 42784009-32bc-4d01-92ed-943d0bf65dcb
+  cloudProjectId: be839d6d-cd6a-4473-a1bc-b85044d87197
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: "Final_Taller-IV_BRICE\xD1O_PEDRO"
-  organizationId: pedrobriceo1
+  projectName: Golden Beauty
+  organizationId: goldenbeautygaraydelrio
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

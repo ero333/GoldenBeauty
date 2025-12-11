@@ -213,6 +213,9 @@ public class Ganaryperder : MonoBehaviour
         }
         wasRopa3Active = Ropa_3.activeInHierarchy;
 
+        //
+        VerificarSeleccionCompleta();
+
     }
 
     private IEnumerator aura()
@@ -338,6 +341,48 @@ public class Ganaryperder : MonoBehaviour
         }
 
 
+    }
+
+    // -------------------
+    // VALIDACIÓN DE CATEGORÍAS
+    // -------------------
+
+    private bool ExactamenteUno(params bool[] valores)
+    {
+        int total = 0;
+        foreach (var val in valores)
+            if (val) total++;
+
+        return total == 1; // Solo uno activo
+    }
+
+    private void VerificarSeleccionCompleta()
+    {
+        bool accesorioOK = ExactamenteUno(
+            accesorio_1.activeInHierarchy,
+            accesorio_2.activeInHierarchy,
+            accesorio_3.activeInHierarchy
+        );
+
+        bool rostroOK = ExactamenteUno(
+            Rostro_1.activeInHierarchy,
+            Rostro_2.activeInHierarchy,
+            Rostro_3.activeInHierarchy
+        );
+
+        bool peloOK = ExactamenteUno(
+            Pelo_1.activeInHierarchy,
+            Pelo_2.activeInHierarchy,
+            Pelo_3.activeInHierarchy
+        );
+
+        bool ropaOK = ExactamenteUno(
+            Ropa_1.activeInHierarchy,
+            Ropa_2.activeInHierarchy,
+            Ropa_3.activeInHierarchy
+        );
+
+        botonSiguiente.SetActive(accesorioOK && rostroOK && peloOK && ropaOK);
     }
 
     public void Ganar()
