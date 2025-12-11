@@ -1512,7 +1512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378cd8b18350ff640a4ebd5bb1f0674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 1138300017}
   siguiente: {fileID: 0}
   botonPausa: {fileID: 1391308566}
   menuPausa: {fileID: 1353972196}
@@ -2334,7 +2333,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 715854819}
         m_TargetAssemblyTypeName: Pausa, Assembly-CSharp
-        m_MethodName: VolverAlInicio
+        m_MethodName: backSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4029,7 +4028,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.000804
+  orthographic size: 3.9999998
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

@@ -166,4 +166,17 @@ public class Pausa : MonoBehaviour
         sonido.PlayOneShot(sonido2);
     }
 
-}
+    public void backSelect()
+    {
+        detener = false;
+        sonido.PlayOneShot(sonido1);
+        if (isEnd)
+        {
+            EventManager.SafeLogEvent("End", new Dictionary<string, object> {
+                    { "time", contador }
+                    });
+        }
+
+        SceneManager.LoadScene("LevelSelect");
+    }
+    }
