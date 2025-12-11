@@ -260,7 +260,7 @@ public class Ganaryperder : MonoBehaviour
         if (accesorio_0.activeInHierarchy)
         {
             Suma_Final += ValorAccesorio_0;
-            currentAcc = 1;
+            currentAcc = 0;
             // sonido.PlayOneShot(sonidoAcc);
         }
 
@@ -288,7 +288,7 @@ public class Ganaryperder : MonoBehaviour
         if (Pelo_0.activeInHierarchy)
         {
             Suma_Final += ValorPelo_0;
-            currentPelo = 1;
+            currentPelo = 0;
             // sonido.PlayOneShot(sonidoPelo);
         }
 
@@ -316,7 +316,7 @@ public class Ganaryperder : MonoBehaviour
         if (Rostro_0.activeInHierarchy)
         {
             Suma_Final += ValorRostro_0;
-            currentRostro = 1;
+            currentRostro = 0;
             // sonido.PlayOneShot(sonidoRostro);
         }
 
@@ -344,7 +344,7 @@ public class Ganaryperder : MonoBehaviour
         if (Ropa_0.activeInHierarchy)
         {
             Suma_Final += ValorRopa_0;
-            currentRopa = 1;
+            currentRopa = 0;
             // sonido.PlayOneShot(sonidoRopa);
         }
 
