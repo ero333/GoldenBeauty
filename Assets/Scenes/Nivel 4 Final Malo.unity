@@ -383,7 +383,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1063402288}
         m_TargetAssemblyTypeName: Pausa, Assembly-CSharp
-        m_MethodName: VolverAlInicio
+        m_MethodName: backSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4315,7 +4315,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.9991565
+  orthographic size: 3.9999998
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

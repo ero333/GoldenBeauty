@@ -3079,7 +3079,7 @@ MonoBehaviour:
   GanarNivel: 0
   botonGanar: {fileID: 241899677}
   botonPerder: {fileID: 1383626503}
-  botonSiguiente: {fileID: 1381373461}
+  botonSiguiente: {fileID: 1858528627}
   currentLevel: 0
   contador: 0
   detener: 0
@@ -8092,7 +8092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1381373462
 RectTransform:
   m_ObjectHideFlags: 0

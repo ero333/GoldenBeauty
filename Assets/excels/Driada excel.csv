@@ -1,21 +1,21 @@
 nodo,Texto,next,opcion1,opcion2,opcion3,back,personaje,nosotros
 1,"Liam, Liam, Liam, NUNCA MÁS me hagas ser hechicera ¿Oíste? NUNCA",2,,,,1,1,0
 2,"Buenos días a tí también, Maddy. ¿Que sucedió?",3,,,,1,0,1
-3,El traje violeta de hechicera no funcionó. Solo conseguí 14 mil likes en TinkTok. ¿Quieres arruinar mi carrera?,4,,,,2,1,0
+3,<color=red><b>El traje violeta de hechicera no funcionó</b></color>. Solo conseguí 14 mil likes en TinkTok. ¿Quieres arruinar mi carrera?,4,,,,2,1,0
 4,"Pero fue el estilo que tú me pediste, ¿Recuerdas?",5,,,,3,0,1
 5,"Soy influencer, no estilista. Apenas me entiendo a mí misma, ese es TU trabajo",6,,,,4,1,0
 6,"...Muy bien, te daré lo que necesitas. Entonces... ¿Alguna sugerencia?",7,,,,5,0,1
-7,"Quiero un look híper llamativo, moderno o elegante, ¡NADA DE TRAJES VIOLETAS!",8,,,,6,1,0
+7,"Quiero un look <color=green><b>híper llamativo</b></color>, <color=red><b>¡NADA DE TRAJES VIOLETAS!</b></color>",8,,,,6,1,0
 8,¿Por qué quieres esos estilos especificamente?,9,,,,7,0,1
-9,Duh... es lo que vende. Cuanto más a la moda o llamativo mejor,,10,11,,8,1,0
+9,Duh... es lo que vende. Cuanto más <color=green><b>a la moda y llamativo</b></color> mejor,,10,11,,8,1,0
 10,"No veo nada de malo con eso. Si vende, es lo que necesitas.",12,,,,9,0,1
 11,"La semana pasada dijiste lo mismo, y no te dejó muy contenta.",13,,,,9,0,1
 12,"Sí, es lo que dije. Vamos, empecemos sin más.",14,,,,10,1,0
 13,Pero esta vez estoy en lo cierto. Creo. Ví a Janet Harp tener 100k likes con ese estilo.,15,,,,11,1,0
 14,"Ok, ok. Solo voy a necesitar un par de detalles más.",16,,,,12,0,1
 15,"Si quieres mi criterio, entonces debes ir más a fondo. ¿Qué es lo que realmente te apasiona?",17,,,,13,0,1
-16,"Uhh bueno, pelo colorido, cara brillante, ropa cool y juvenil, ya sabes, lo ""deslumbrante"".",18,,,,14,1,0
-17,"Hmmmph. Qué se yo... bueno, hace tiempo que pensaba hacer un reel algo más... teatral.",,19,20,,15,1,0
+16,"Uhh bueno, <color=green><b>pelo colorido, cara brillante, ropa cool y juvenil</b></color>, ya sabes, lo ""<color=green><b>deslumbrante</b></color>"".",18,,,,14,1,0
+17,"Hmmmph. Qué se yo... bueno, hace tiempo que pensaba hacer un reel algo más... <color=green><b>teatral.</b></color>",,19,20,,15,1,0
 18,"Quizás una estética no tan moderna. No, olvida que dijo eso. Es tonto.",21,,,,16,1,0
 19,"¿Teatral? Eres una influencer, Maddy.",22,,,,17,0,1
 20,Ajá... y ¿Por qué quieres hacer eso? ¿Le dio fama a Duncan Tante?,23,,,,17,0,1
@@ -26,7 +26,7 @@ nodo,Texto,next,opcion1,opcion2,opcion3,back,personaje,nosotros
 25,"Vamos, seamos sensatos. Necesitas apelar al público hasta cierto punto, ¿Verdad?",28,,,,22,0,1
 26,¿Y no crees que eso ahuyentará a tus fans?,29,,,,23,0,1
 27,Manos a la obra.,40,,,,24,0,1
-28,"Supongo que sí. Hagamos lo que te dije, algo llamativo, emocionante, rebelde. Espero que les guste...",30,,,,25,1,0
+28,"Supongo que sí. Hagamos lo que te dije, algo <color=green><b>llamativo, emocionante, rebelde</b></color>. Espero que les guste...",30,,,,25,1,0
 29,"Sí, por eso no quiero hacerlo. Pero, es decir... vaya que sería divertido.",,31,32,,26,1,0
 30,De seguro lo amarán. ¡Adelante!,40,,,,28,0,1
 31,"Si ahuyenta a tus fans, mejor no hacerlo.",33,,,,29,0,1
